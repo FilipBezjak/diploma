@@ -1,0 +1,22 @@
+# Fdb version 3
+["bibtex Minimalni"] 0 "Minimalni.aux" "Minimalni.bbl" "Minimalni" 0
+  "C:/Users/An≈æe/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/bibtex/plain.bst" 0 -1 0 ""
+  "Minimalni.aux" 0 -1 0 "pdflatex"
+  "osnutek.bib" 0 -1 0 ""
+  (generated)
+  "Minimalni.blg"
+  "Minimalni.bbl"
+["pdflatex"] 1679609260 "c:/Users/Anûe/Desktop/dipl/cela/Minimalni.tex" "c:/Users/Anûe/Desktop/dipl/cela/Minimalni.pdf" "Minimalni" 1679609260
+  "Minimalni.aux" 0 -1 0 "pdflatex"
+  "Minimalni.bbl" 0 -1 0 "bibtex Minimalni"
+  "Minimalni.out" 0 -1 0 "pdflatex"
+  "Minimalni.tex" 1679609255 10703 ac3154a3b85dd8290f032f281025615d ""
+  "c:/Users/Anûe/Desktop/dipl/cela/Minimalni.aux" 1679609260 9 a94a2480d3289e625eea47cd1b285758 ""
+  "c:/Users/Anûe/Desktop/dipl/cela/Minimalni.tex" 1679609255 10703 ac3154a3b85dd8290f032f281025615d ""
+  (generated)
+  "Minimalni.log"
+  "c:/Users/Anûe/Desktop/dipl/cela/Minimalni.pdf"
+  "Minimalni.pdf"
+  "Minimalni.aux"
+  "c:/Users/Anûe/Desktop/dipl/cela/Minimalni.log"
+  "Minimalni.out"

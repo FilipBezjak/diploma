@@ -1,0 +1,20 @@
+# Fdb version 3
+["bibtex osnutek"] 0 "osnutek.aux" "osnutek.bbl" "osnutek" 0
+  "C:/Users/An≈æe/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/bibtex/plain.bst" 0 -1 0 ""
+  "osnutek.aux" 0 -1 0 "pdflatex"
+  "osnutek.bib" 1646094403 420 85d6d17fe8057b7e06d3b7606d06d989 ""
+  (generated)
+  "osnutek.bbl"
+  "osnutek.blg"
+["pdflatex"] 1649117089 "c:/Users/Anûe/Documents/dipl/osnutek/osnutek.tex" "c:/Users/Anûe/Documents/dipl/osnutek/osnutek.pdf" "osnutek" 1649117089
+  "c:/Users/Anûe/Documents/dipl/osnutek/osnutek.aux" 1649117089 9 a94a2480d3289e625eea47cd1b285758 ""
+  "c:/Users/Anûe/Documents/dipl/osnutek/osnutek.tex" 1646101434 9468 2fcd4783542e7cf41aa9651ca54c1b01 ""
+  "osnutek.aux" 0 -1 0 "pdflatex"
+  "osnutek.bbl" 0 -1 0 "bibtex osnutek"
+  "osnutek.tex" 1646101434 9468 2fcd4783542e7cf41aa9651ca54c1b01 ""
+  (generated)
+  "c:/Users/Anûe/Documents/dipl/osnutek/osnutek.log"
+  "osnutek.pdf"
+  "c:/Users/Anûe/Documents/dipl/osnutek/osnutek.pdf"
+  "osnutek.log"
+  "osnutek.aux"

@@ -1,0 +1,98 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{verbatim}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\title{Minimalni končni modeli prostorov}
+\author{Filip Bezjak \\
+Fakulteta za matematiko in fiziko \\ Oddelek za matematiko}
+\date{29.11.2021}
+
+\begin{document}
+
+\maketitle
+
+Moja tema sodi na področje algebraične topologije na končnih prostorih. Topologije na končnih prostorih so večkrat spregledane, saj je vsaka $T_2$ topologija
+na končnem prostoru diskretna. Če pa lastnosti $T_2$ ne zahtevamo, postanejo veliko bolj 
+zanimive.Poglejmo si naslednji primer: imamo prostor $X = \{a,b,c,d\}$ s topologijo 
+$\{0,\{a\}, \{b\}, \{a,b,c\}, \{a,b,d\},  X\}$. Ni $T_2$, saj $c$ in $d$ nimata disjunktnih okolic.
+Definirajmo preslikavo $ \varphi :[0,1] -> X$ii $ \varphi ((0,1) = a, \varphi (1) = c$.
+Ta preslikava je zvezna, saj je praslika vsake odprte množice odprta. Vidimo, da je
+možno interval zvezno in nekonstantno preslikati v X, torej v tem prostoru obstajajo
+nekonstantne poti. \\Poglejmo še preslikavo $\psi : S^1 : X$, ki $-1 $in$1$ preslika v
+$c$ in $d$, odprta loka pa v $a$ in $b$. Tudi ta preslikava je zvezna. (in Homotopsko
+netrivialna?).Torej obstaja tudi nekonstantna preslikava iz krožnice v X.
+Poglejmo še si naslednjo topologijo na 6 točkah $\{a\},\{b\},\{c\},\{d\},\{e\},\{f\}$.
+Podobno lahko v ta prostor preslikamo trikotnik, s preslikavo ---. Topologije smo do zdaj 
+navajali z eksplicitnim naštevanjem odprtih množic, ampak to hitro postane precej zamudno 
+in nepregledno, predvsem pri zato se temu radi izognemo.
+Za vsako točko $x$ obstaja najmanjša odprta množica $U_x$, ki jo vsebuje. Oziroma 
+presek vseh odprtih množic, ki vsebujejo $x$.Ta množica je odprta, saj je topologija 
+zaprta za končne preseke. Točke lahko uredimo s pravilom $ x\le y \Leftrightarrow U_x 
+\subseteq  U_y$. Če točke tako uredimo, dobimo šibko urejenost. Torej refleksivno in 
+tranzitivno relacijo. To je očitno. Šibka urejenost postane delna, natanko takrat, ko 
+je topologija $t_0$. In disktretna, ko je Topologija $T_2$. Vse zanimivo se torej dogaja
+v precepu med $T_0$ in $T_2$. Če torej prejšnji množici uredimo na tak način, dobimo To
+Naslenja Hassejeva diagrama:---
+Homotopski razred preslikav K --> X, [K,X] je ekvivalenčni razred, kjer sta si 2 preslikavi ekvivalentni,
+če sta homotopni. Za X rečemo, da je končni model geometrijskega prostora P, Če za vsak polieder
+K obstaja bijekcija med [K,P] in [K,X]. Torej če obstaja preslikava $\mu$: P--> X, ki preko kompozicije
+inducira preslikavo $\mu_*$: [K,P] --> [K,X]. Preslikavi $\mu$ pravimo McCordova preslikava.
+Končni model je minimalni, če ima izmed vseh modelov najmanjšo kardinalnost.
+končni prostor X je model prostorq (simplicialnega
+kompleksa) P, če obstaja preslikava mi: P --> X, ki preko kompozicije inducira bijekcijo med homotopskimi
+razredi preslikav mi_*: [K,P]--> [K,X] za poljuben simplicialni kompleks K
+
+$Y = \{a,b,c,d, e, f\}$\\
+$\tau = \{\emptyset, X, \{a\}, \{b\}, \{a,b,c\}, \{a,b,d\}\}$
+
+
+\begin{frame}
+    $$X = \{a,b,c,d\}$$\\
+    $$\tau = \{\emptyset, X, \{a\}, \{b\}, \{a,b,c\}, \{a,b,d\}\}$$ \\
+    $$\gamma : I \rightarrow X$$
+    $$  \gamma  (t)  = a, \text{ za }t \in [0,1)\text{, }  \gamma  (1) = c$$\\
+    \pause
+
+    $$\psi: S^1 \rightarrow X$$
+    $$\psi(-1) = c, \psi(1) = d$$
+    $$ \psi(e^{it}) = a\text{ , za } t\in (0,\pi), \psi(e^{it}) = b\text{ , za } t\in (\pi,2\pi)$$
+
+
+\end{frame}
+\begin{frame}
+    $$Y = \{a,b,c,d, e, f\}$$
+    $$ \tau = \{ \emptyset, Y , \{e\}, \{f\} , \{c,e,f\},\{d,e,f\} ,\{a, c, d, e, f \}, \{b, c, d, e, f\}\}$$
+    $$\varphi: \blacktriangle \rightarrow Y$$\\
+    $\varphi ,\gamma$ in $ \psi$ so zvezne. \\Poliedri se dajo nekonstantno preslikati v končne prostore.
+\end{frame}
+
+\begin{frame}
+    $$\text{Naj bo } U_x \text{ najmanjša odprta množica, ki vsebuje x}$$
+    $$ \forall x \in X \text{ obstaja } U_x. $$
+    $$x \le y \Leftrightarrow U_x \subseteq U_y $$
+    $$\text{Za } T_0 \text{ topologije je to delna urejenost, za $T_2$ pa diskretna}$$
+    $$ T_0 \text{ topologije na končnih prostorih predstavimo s Hassejevimi diagrami}$$
+\end{frame}
+
+\begin{frame}
+    $$X = \{a,b,c,d\}$$
+    $$\tau = \{\emptyset, X, \{a\}, \{b\}, \{a,b,c\}, \{a,b,d\}\}$$
+    $$U_a = \{a\}, U_b=\{b\},$$
+    $$ U_c = \{a, b, c\}, U_d = \{a, b, d\}$$
+    \pause
+    $$Y = \{a,b,c,d, e, f\}$$
+    $$ \tau = \{ \emptyset, Y , \{e\}, \{f\} , \{c,e,f\},\{d,e,f\} ,\{a, c, d, e, f \}, \{b, c, d, e, f\}\}$$
+    $$U_e = \{e\}, U_f=\{f\},$$
+    $$U_c = \{c, e, f\}, U_d = \{d, e, f\}$$
+    $$U_a = \{a,c,f,e,d\}, U_b=\{b,c,f,e,d\}$$
+\end{frame}
+
+\end{document}

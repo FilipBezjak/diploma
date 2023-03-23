@@ -1,0 +1,153 @@
+\documentclass[t]{beamer} % [t] pomeni poravnavo na vrh slida
+
+% \usepackage{etex} % vključi ta paket, če ti javi napako, da imaš naloženih preveč paketov.
+
+% standardni paketi
+\usepackage[slovene]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{graphicx}
+
+% paket, ki ga rabimo za risanje
+\usepackage{tikz}
+
+\usepackage{lmodern}                            % to get rid of font warnings
+\renewcommand\textbullet{\ensuremath{\bullet}}  % to get rid of font warnings
+
+% podatki
+\title{Minimalni modeli prostorov}
+\author{Filip Bezjak}
+\institute{mentor: prof. dr. Petar Pavešić}
+% tvoj izbran stil predstavitve
+\usetheme{Singapore}
+\usecolortheme{crane}
+
+% \setbeamertemplate{footline}{}            % pri nekaterih temah je potrebno odstraniti
+% \setbeamertemplate{navigation symbols}{}  % nogo, v tem primeru to odkomentiraj
+
+%  ukaz za počrnitev enega slida. Nariše črn pravokotnik višine #1 na dno.
+\newcommand{\fillblack}[1]{
+\begin{tikzpicture}[remember picture, overlay]
+    \node [shift={(0 cm,0cm)}]  at (current page.south west)
+        {%
+        \begin{tikzpicture}[remember picture, overlay] at (current page.south west)
+            \draw [fill=black] (0, 0) -- (0,#1 \paperheight) --
+                              (\paperwidth,#1 \paperheight) -- (\paperwidth,0) -- cycle ;
+        \end{tikzpicture}
+        };
+        \draw (current page.north west) rectangle (current page.south east);
+\end{tikzpicture}
+}
+
+% Projektor, ki sveti na tablo je zoprn, ker zavzema prostor za pisanje.
+% Praktična rešitev je, da se platno spusti samo do table, spodnji del
+% predstavitve pa naredimo popolnoma črn. Tako projektor na tablo ne projecira
+% svetlobe in je pisanje nemoteno s strani predstavitve, ki je cela nad tablo.
+
+% Za to da dobite spodaj zatemnjen slide, je potrebno na konec frame-a dodati
+% ukaz \fillblack{delež}, kjer je delež številka med 0 in 1, ki pove, kakšen
+% delež slida želite imeti zapolnjen s črnim pravokotnikom. Spodaj so 4 slidi,
+% ki imajo začrnjenih: 33%, 50%, 33% in 20%.  Za šolske table v 2.02 in 2.03 je
+% 33% ravno prav, da lahko pišete po celi tabli.
+
+% Črni pravokotnik ne zavzema prostora na slidu -- preprosto nariše se čez
+% spodnjo tretjino (ali kolikor pač želite). To pomeni, da se pokrijve tudi ves
+% tekst spodaj. Za to je na začetku dokumenta tudi nastavljena vertikalna
+% poravnava na ``zgoraj'', z razliko od običajne sredinske (to je tisti [t]).
+% Tako se ves tekst obdrži na vidnem delu slida, dokler je to možno. Tretji
+% slide spodaj demonstrira, kaj se zgodi v primeru preveč besedila.
+
+% Kod demonstrira zadnji slide, je vseeno, kjer napišemo ukaz, toda ponavadi ga
+% napišemo na dnu, da se izognemo morebitnim nevšečnostim ali neželenemu
+% spacingu. Pri nekaterih temah se izriše tudi noga, ki se izriše na koncu
+% slida, torej po tem ko je naš pravokotnik že narisan, kar zna biti moteče.
+% To se na primer zgodi tudi pri standardni temi Warsaw. Rešitev je, da nogo
+% odstranimo (saj bi bila itak prekrita). V preambuli so zakomentirani ukazi,
+% kako to naredimo.
+
+\begin{document}
+
+\begin{frame}
+  \maketitle
+  \fillblack{0.33}
+\end{frame}
+
+\begin{frame}
+    \fillblack{0.33}
+    \begin{block}{Definicija}
+        \textit{šibka ureditev} - tranzitivna in refleksivna relacija. \\
+        Če je relacija še antisimetrična, dobimo \textit{delno ureditev}.
+    \end{block}
+    \pause
+    \begin{block}{primer}
+        $X = \{a,b,c,d\}$ s topologijo 
+        $\{\emptyset,\{a\}, \{b\}, \{a,b,c\}, \{a,b,d\},  X\}$
+    \end{block}
+    \pause
+    \begin{block}{Izrek}
+        Preslikava $f: X \longrightarrow Y$ med končnima prostoroma je zvezna, natanko tedaj ko je monotona
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \fillblack{0.5}
+    \begin{block}{definicija}
+    \textit{Simpleks} ali $n$-simpleks je $n$-razsežni analog trikotnika.\\
+    Zaprt simpleks $\bar{\sigma}$ je množica formalnih konveksnih combinacij $\Sigma_{i=0}^{n}\alpha_i v_i$, pri čemer $\alpha_i \ge 0$ in $\Sigma \alpha_i = 1$.
+    \end{block}
+    \pause
+    \begin{block}{Primer}
+        $K=\{\{a\},\{b\},\{c\},\{d\},\{a, b\},\{a, c
+   \}, \{ b, c\},\{a, d\}, \{ a, b, c\}\}$
+    \end{block}
+  \end{frame}
+
+\begin{frame}
+    \fillblack{0.5}
+    \begin{block}{izrek}
+        relacija homotopije na poteh s fiksnima krajiščema je ekvivalenčna relacija za vsak topološki prostor.
+    \end{block}
+    \pause
+    \begin{block}{izrek}
+        $\pi_1(X,x_0)$ opremljena s produktom $[f][g] = [f\cdot g]$ je grupa.
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \fillblack{0.33}
+    \begin{block}{izrek}
+        $\pi_n(X,x_0)$ opremljena s produktom $[f][g] = [f\cdot g]$ je grupa za vsak $n \in N$.
+    \end{block}
+    \pause
+\begin{block}{definicija}
+    Topološka prostora sta \textit{šibko homotopsko ekvivalentna}, če so njune homotopske grupe izomorfne za vsak $n \in N$.    
+\end{block}
+\end{frame}
+
+
+  \begin{frame}
+    \fillblack{0.5}
+    \begin{block}{definicija}
+      $\mathcal{K}$-\textit{McCordova} preslikava: $\mu_X:|\mathcal{K}
+      (X)|\rightarrow X$, $\mu_X(\alpha) =
+      min(\textit{support}(\alpha))$.
+    \end{block}
+    \pause
+    \begin{block}{izrek}
+      $\mathcal{K}$-\textit{McCordova} preslikava je šibka homotopska 
+      ekvivalenca za vsak končen $T_0$-prostor.
+    \end{block}
+    \end{frame}
+
+    \begin{frame}
+        \fillblack{0.5}
+        \begin{block}{definicija}
+            Končni topološki prostor je \textit{model} prostora $X$, če mu je šibko homotopsko ekvivalenten. 
+      \\  \pause
+            Model je \textit{minimalen}, če ima izmed vseh modelov najmanjšo kardinalnost.
+        \end{block}
+        \end{frame}
+    \end{document}

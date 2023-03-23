@@ -1,0 +1,248 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{verbatim}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{hyperref}
+
+
+
+\makeatletter
+\DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
+\newcommand{\morphic@sqcdot}[2]{%
+\sbox\z@{$\m@th#1\centerdot$}%
+\ht\z@=.33333\ht\z@
+\vcenter{\box\z@}%
+}
+\makeatother
+
+\makeatletter
+\DeclareRobustCommand{\k}{
+    \mathcal{K}
+}
+
+\newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
+
+\title{Minimalni končni modeli prostorov}
+\author{Filip Bezjak \\ Mentor: dr. Petar Pavešić}
+
+
+\setlength\parindent{24pt}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+
+\theoremstyle{plain}
+\newtheorem{primer}{Primer}
+
+\theoremstyle{plain}
+\newtheorem{trditev}{Trditev}
+
+\theoremstyle{plain}
+\newtheorem{opomba}{Opomba}
+
+\theoremstyle{plain}
+\newtheorem{lema}{Iema}
+
+\newenvironment{dokaz}{\begin{proof}[\bfseries\upshape\proofname]}{\end{proof}}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{izrek}{McCordov}\label{iz:mccord}
+    Naj bosta $X$ in $Y$ topološka prostora in naj bo $f:X\rightarrow Y$ zvezna. Če je zožitev
+    $$
+    f|_{f^{-1}}:f^{-1}(U)\rightarrow U
+    $$
+    Šibka homotopska ekvivalenca za vsako bazno množico $U$, potem je $f:X\rightarrow Y$  šibka homotopska ekvivalenca.
+\end{izrek}
+
+\begin{opomba}
+    Izrek ne velja le za zožitev na bazne množice, ampak tudi na vsako \textit{basis like open cover}, torej za vsako pokritje, ki je baza za kako drugo topologijo.
+\end{opomba}
+
+\begin{definicija}
+    Naj bo $X$ končen $T_0$ prostor. \textit{Simplicialni kompleks} $\mathcal{K}(X)$ \textit{prirejen X}, je simplicialni kompleks, čigar simpleksi so neprazne verige v $X$. Če je $f: X\rightarrow Y$ zvezna preslikava med dvema $T_0$ prostoroma. \textit{prirejena simplicialna preslikava} $\mathcal{K}(f):\mathcal{K}(X) \rightarrow \mathcal{K}(Y)$ definiramo kot $\mathcal{K}(f)(x) = f(x)$.
+\end{definicija}
+
+Vidimo, če je $f: X\rightarrow Y$ zvezna , je $\mathcal{K}(f):\mathcal{K}(X) \rightarrow \mathcal{K}(Y)$ simplicialna, saj ohranja ureditev in slika verige v verige.
+
+\begin{lema}\label{lem:sibka}
+    Naj bo $x\in X$ in naj bo $L=X\ \backslash \
+    U_x\subseteq \mathcal{K}(X)$. Potem se vsak $\alpha \in \k(X)\ \backslash \ |L|$ da napisati, kot $\alpha = t\beta + (1-t)\gamma$, za $\beta \in \k(U_x), \ \gamma \in |L|$ in $0<t\leq 1$, pri čemer je $\alpha$ zvezno odvisna od $\beta, \gamma$ in $t$. $\beta, \gamma$ in $t$ so enolični.
+\end{lema}
+\begin{dokaz}
+    $L$ je subkompleks, ki ga napenjajo ogljišča, ki niso v $U_x$. Za vsak $\alpha \in |\k(X)|\ \backslash \ |L|$, 
+    $$\alpha = \sum_{i=1}^{n} \alpha_i v_i 
+    = \sum_{i=1}^{r} \alpha_i u_i + \sum_{i=r+1}^{n}\alpha_i v_i,\ \text{pri čemer}\ \sum_{i=1}^{n} \alpha_i=1
+    $$
+    za $u_i \in U_x$ in $v_i \in X \ \backslash \ U_x$ in $\alpha_i \in \mathbb{R}$, za $r\in \{1,2, \cdots, n-1\}$ in $\forall i \in \{1,2, \cdots, n\}$. S t označimo $\sum_{i=1}^{r} \alpha_i$, torej je $1-t=\sum_{i=r+1}^{n} \alpha_i$ in $0<t\leq 1$. Potem $\beta =\sum_{i=1}^{r} \alpha_i u_i/t \in \k(U_x)$, saj je $\sum_{i=1}^{r} \alpha_i/t=1$ in podobno $\gamma=\sum_{i=r+1}^{n} 
+    \alpha_i v_i/(1-t) \in \k(X \ \backslash \ U_x)$. Zveznost in enoličnost sledi iz konstrukcije.
+
+\end{dokaz}
+
+\begin{izrek}
+    $\mathcal{K}$-\textit{McCordova} preslikava je šibka homotopska 
+    ekvivalenca za vsak končen $T_0$-prostor.
+\end{izrek}
+
+\begin{dokaz}
+    Definirajmo retrakcijo $r:U_x\rightarrow \{x\}$ kot 
+    $r(y)=x$, za vsak $y\in X$. Ker je $x$ maksimum v 
+    $U_x$, je $r\geq 1_X$, zato je po izreku 
+    \ref{iz:ograje} $r\simeq 1_X$, zato je $U_x$ 
+    kontraktibilna množica. Dokazali bomo, da je za vsak 
+    $x\in X$, $\mu_X^{-1}(U_x)$ odprta in kontraktibilna. S 
+    tem bomo pokazali, da je $\mu_X$ zvezna in da so 
+    zožitve $\mu_X|_{\mu_X^{-1}(U_x)}:\mu_X^{-1}(U_x)\rightarrow 
+    U_x$ šibke homotopske ekvivalence.
+
+    Naj bo $x\in X$ in naj bo $L=X\ \backslash \
+    U_x\subseteq \mathcal{K}(X)$. $L$ je torej 
+    subkompleks, ki ga napenjajo ogljišča, ki niso v $U_x$. 
+    Trdimo, da 
+    $$
+    \mu_X^{-1}(U_x)=|\mathcal{K}(X)|\ \backslash \ |L|.
+    $$
+    Pokažimo najprej, da $\mu_X^{-1}(U_x)\subseteq 
+    |\mathcal{K}(X)|\ \backslash \ |L|$. Naj bo $\alpha \in 
+    \mu_X^{-1}(U_x)$, torej je min$(\textit{support}
+    (\alpha))\in U_x$, zato \textit{support}($\alpha$) vsebuje 
+    ogljišče iz $U_x$, zato $\alpha \notin |L|$, torej $\alpha 
+    \in |\mathcal{K}(X)|\ \backslash \ |L|$.
+
+    Pokažimo še, da $|\mathcal{K}(X)|\ \backslash \
+    |L|\subseteq \mu_X^{-1}(U_x)$. Naj $\alpha \in |\mathcal{K}(X)|\ \backslash \ |L|$
+    Če  $\alpha \notin |L|$, potem obstaja $y\in 
+    \textit{support}(X)$, tak, da $y \in U_x$, zato je 
+    min$(\textit{support}(X))\leq y \leq x$, zato je 
+    $\mu_X(\alpha) \in U_x$, zato $\alpha \in \mu_X^{-1}
+    (U_x)$.
+    Ker je $L$ zaprta podmnožica $\mathcal{K}(X)$, je 
+    $\mu_X^{-1}(U_x)$ odprta.
+
+    Pokažimo, da je $\mu_X^{-1}(U_x)$ kontrabilna. Prvo pokažimo, da je 
+    $|\mathcal{K}(U_x)|$ krepak deformacijski retrakt 
+    od $|\mathcal{K}(X)|$. Naj bo $i:|\k(U_x)|\hookrightarrow |\mathcal{K}
+    (X)|\ \backslash \ |L|$ inkluzija. Če je $\alpha \in |\mathcal{K}(X)|\ 
+    \backslash \ |L|$, potem je po lemi \ref{lem:sibka}  $\alpha = t\beta + 
+    (1-t)\gamma$, za $\beta \in \k(U_x), \ \gamma \in |L|$ in $0<t\leq 1$. 
+    Definirajmo $r:|\mathcal{K}(X)|\ \backslash \ |L|\rightarrow \k(U_x)$ 
+    kot $r(\alpha)=\beta$. Ker je $\alpha$ zvezna in je zožitev $r|_{(|\mathcal{K}(X)|\ \backslash \ |L|)\cap 
+    \overline{\sigma}}:(|\mathcal{K}(X)|\ \backslash \ |L|)\cap 
+    \overline{\sigma} \rightarrow \overline{\sigma}$ zvezna, za vsak 
+    $\sigma \in \k(X)$ , sledi in je da je $r$ zvezna. Definirajmo zdaj linearno homotopijo $H:(|\mathcal{K}(X)|\ \backslash \ |L|) \times I \rightarrow (|\mathcal{K}(X)|\ \backslash \ |L|)$ med $1_{(|\mathcal{K}(X)|\ \backslash \ |L|)}$ in $ir$ kot 
+    $$
+    H(\alpha,s)=(1-s)\alpha + s\beta.
+    $$
+    H je dobro definirana, in zvezna, saj je vsaka zožitev 
+    $$
+    H|_{((|\mathcal{K}(X)|\ \backslash \ |L|)\cap 
+    \overline{\sigma})\times I}:((|\mathcal{K}(X)|\ \backslash \ |L|)\cap 
+    \overline{\sigma})\times I \rightarrow \overline{\sigma}
+    $$
+    dobro definirana in zvezna, $\sigma \in \k(X)$.
+
+    Ker je vsak element iz $U_x$ primerljiv z $x$, je $\k(U_x)$ 
+    simplicialni stožec, zato je po trditvi \ref{kr neki} $|\k(U_x)|$ 
+    kontraktibilen in zato je kontraktibilen tudi $\mu_X^{-1}
+    (U_x)=|\mathcal{K}(X)|\ \backslash \ |L|$.
+\end{dokaz}
+
+\begin{definicija}
+    Naj bo $K$ končen simplicialni kompleks. Končen $T_0$-
+    prostor $\chi(K)$ prirejen k $K$ je delno urejena množica simpleksov v $K$, urejena glede na inkluzijo.
+    Naj bo $phi:K\rightarrow L$ preslikava med simplicialnima kompleksoma, potem preslikavo  $\chi(phi):\chi(K)\rightarrow \chi(L)$ definiramo kot 
+    $\chi(phi)(\sigma)=\phi(\sigma)$ za vsak simpleks $\sigma \in K$
+\end{definicija}
+
+\begin{primer}
+    primer iz knjige.
+\end{primer}
+\begin{lema}
+    \label{lem:komutira}
+    Naj bo $f :X\rightarrow Y$ zvezna preslikava med dvema $T_0$ prostoroma, potem naslednji diagram komutira
+\end{lema}
+
+\begin{dokaz}
+    \begin{align*}
+        $$
+        f\mu_X(\alpha)&=f(min(\textit{support}(\alpha)))\overset{*}{=}min(f(\textit{support}(\alpha))) \\
+        &=min(\textit{support}(|\k(f)(\alpha)))=\mu_Y|\k(f)|(\alpha)
+        $$
+    \end{align*}
+
+    Pri čemer $*$ velja zaradi zveznosti $f$, druge enakosti pa veljajo kar po definiciji.
+\end{dokaz}
+
+Če je $K$ končen kompleks, potem je $\k(\chi(K))$ prva baricentrična subdivizija.
+definirajmo $\chi$-\textit{McCordovo preslikavo} $\mu_K=\mu_{\chi(K)}S_K^{-1}: |K|\rightarrow \chi(K)$. 
+Ker je kompozitum dveh šibkih homotopskih ekvivalenc tudi šibka homotopska ekvivalenca, takoj sledi naslednji izrek.
+
+\begin{izrek}
+    \chi-McCordova preslkava $\mu_K$ je šibka homotopska ekvivalenca za vsak končen simplicialni kompleks $K$.
+\end{izrek}
+
+\begin{trditev}
+    Naj bo $\phi: K\rightarrow L$ simplicialna preslikava med končnima kompleksoma. Potem naslednji diagram komutira do homotopije natančno
+\end{trditev}
+
+\begin{proof}
+    Najprej poiščimo homotopijo med $|\phi|s_K$ in $s_L|\phi'|$
+    Naj bo $S=\{\sigma_1,\sigma_2,\cdots,\sigma_r\}$ simpleks 
+    v $K'$ in naj bo $\sigma_1 \subsetneq \sigma_2 \subsetneq 
+    \cdots \subsetneq \sigma_r$ veriga simpleksov $K$. Naj bo $\alpha$
+    točka v zaprtem simpleksu $\overline{S}$. Potem je $S_K(\alpha)
+    \in \overline{\sigma_r}\subseteq |K|$ in  $|\phi|S_K(\alpha) \in 
+    \overline{\phi_r}\subseteq |L|.$ \
+    Velja pa tudi $|\phi'|(\alpha)\in\{\phi{\sigma_1},\phi{\sigma_2},\cdots,\phi{\sigma_r}\}$
+    in potem $S_L|\phi'|(\alpha) \in \overline{\phi(\sigma_r)}.$ Zato je linearna homotopija
+    $$
+    H:|K'|
+    $$
+\end{proof}
+
+\section{Zanke v Hassejevem diagramu}
+
+Pokazali bomo, kako se fundamentalna grupa končnega $T_0$ prostora izraža preko prirejenega Hassejevega diagrama.
+Hassejev diagram končnega $T_0$ prostora $X$ označimo z $H(X)$, z $E(H(X))$ pa označimo množico njegovih robov.
+
+\textit{Edge path} simplicialnega kompleksa $K$ je zaporedje
+$(v_0,v_1)(v_1,v_2),...,(v_{r-1},v_{r})$ urejenih parov 
+ogljišč, pri čemer je $\{v_1,v_{i+1}\}$ simpleks za vsak $i$. 
+Če \textit{edge path} vsebuje dva zaporedna para 
+$(v_i,v_{i+1})$ in $(v_{i+1},_v_{i+2})$ in je 
+$\{v_i,v_{i+1},_v_{i+2}\}$ simpleks, potem ju lahko 
+zamenjamo z parom $(v_i,v_{i+1})$ in dobimo ekvivalentno a 
+krajšo pot. Za poti $(v_0,v_1)(v_1,v_2),...,(v_{r-1},v_{r})$ 
+in $(u_0,u_1)(u_1,u_2),...,(u_{s-1},u_{s})$ definiramo stik 
+poti.....???
+Omejili se bomo na zanke, torej poti, ki se začnejo in končajo z $v_0$. Z $E(K,v_0)$ označimo množico ekvivalenčnih razredov zank z začetno točko $v_0$.....
+
+
+Naj bo $(X,x_0)$ končen pointed $T_0$ prostor. Urejen par 
+$e=(x,y)$ imenujemo $H-rob$ od $X$, če $(x,y)\in 
+E(\mathcal{H}(\mathcal{X}))$, ali $(y,x)\in 
+E(H(X))$. Točki $x$ rečem \textit{začetek} $x$ in označimo 
+$x=\mathfrak{o}(e)$, točki $y$ pa \textit{konec} od $e$, 
+pznačimo $\mathfrak{e}(e)=y$
+\nocite{*}
+
+
+\bibliography{osnutek}
+\bibliographystyle{plain}
+
+\end{document}

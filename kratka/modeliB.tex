@@ -1,0 +1,84 @@
+\documentclass[70]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[slovene]{babel}
+\usepackage{lmodern}
+\usepackage{array}     % določili <{...} in >{...} pri tabelah
+\usepackage{tikz}
+
+\usetheme{Berlin}
+\usecolortheme{default}
+\useinnertheme[shadows]{rounded}
+\useoutertheme{infolines}
+\beamertemplatenavigationsymbolsempty
+
+% pisava
+\usepackage{palatino}
+\usefonttheme{serif}
+
+\begin{document}
+
+
+\title{Minimalni končni modeli prostorov}
+\institute[FMF]{Fakulteta za matematiko in fiziko}
+\date{29.11.2021}
+
+\begin{frame}
+   \titlepage
+\end{frame}
+
+\begin{frame}
+    $$X = \{a,b,c,d\}$$\\
+    $$\tau = \{\emptyset, X, \{a\}, \{b\}, \{a,b,c\}, \{a,b,d\}\}$$ \\ \pause
+    $$\gamma : I \rightarrow X$$
+    $$  \gamma  (t)  = a, \text{ za }t \in [0,1)\text{, }  \gamma  (1) = c$$\\
+    \pause
+
+    $$\psi: S^1 \rightarrow X$$
+    $$\psi(-1) = c, \psi(1) = d$$
+    $$ \psi(e^{it}) = a\text{ , za } t\in (0,\pi), \psi(e^{it}) = b\text{ , za } t\in (\pi,2\pi)$$
+
+
+\end{frame}
+\begin{frame}
+    $$Y = \{a,b,c,d, e, f\}$$
+    $$ \tau = \{ \emptyset, Y , \{e\}, \{f\} , \{c,e,f\},\{d,e,f\} ,\{a, c, d, e, f \}, \{b, c, d, e, f\}\}$$
+    $$\varphi: \blacktriangle \rightarrow Y$$\\ \pause
+    $\varphi ,\gamma$ in $ \psi$ so zvezne. \\ \pause
+    Poliedri se dajo nekonstantno preslikati v končne prostore.
+\end{frame}
+
+\begin{frame}
+    $$\text{Naj bo } U_x \text{ najmanjša odprta množica, ki vsebuje x}$$ \pause
+    $$ \forall x \in X \text{ obstaja } U_x. $$ \pause
+    $$x \le y \Leftrightarrow U_x \subseteq U_y $$ \pause
+    $$\text{Za } T_0 \text{ topologije je to delna urejenost, za $T_2$ pa diskretna}$$ \pause
+    $$ T_0 \text{ topologije na končnih prostorih predstavimo s Hassejevimi diagrami}$$
+\end{frame}
+
+\begin{frame}
+    $$X = \{a,b,c,d\}$$
+    $$\tau = \{\emptyset, X, \{a\}, \{b\}, \{a,b,c\}, \{a,b,d\}\}$$
+    $$U_a = \{a\}, U_b=\{b\},$$
+    $$ U_c = \{a, b, c\}, U_d = \{a, b, d\}$$
+    \pause
+    $$Y = \{a,b,c,d, e, f\}$$
+    $$ \tau = \{ \emptyset, Y , \{e\}, \{f\} , \{c,e,f\},\{d,e,f\} ,\{a, c, d, e, f \}, \{b, c, d, e, f\}\}$$
+    $$U_e = \{e\}, U_f=\{f\},$$
+    $$U_c = \{c, e, f\}, U_d = \{d, e, f\}$$
+    $$U_a = \{a,c,f,e,d\}, U_b=\{b,c,f,e,d\}$$
+\end{frame}
+
+
+\begin{frame}
+    Homotopski razred preslikav $K \rightarrow X$ je ekvivalenčni razred \\
+    $ [f] = [g] \Leftrightarrow f \cong  g$
+    \pause \\
+    $[K,X]$ je množica homotopskih razredov    \\ \pause
+    $X$ je končni model geometrijskega prostora $P$, če za poljuben polieder K
+    obstaja bijekcija $\mu_*:[K,P] \rightarrow [K,X]$\pause \\
+    Model je minimalen, če ima med vsemi modeli najmanjše število točk.\\ \pause
+    Minimalni modeli sfer in končnih grafov.
+\end{frame}
+\end{document}

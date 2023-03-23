@@ -1,0 +1,218 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{verbatim}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{amssymb}
+
+
+
+\makeatletter
+\DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
+\newcommand{\morphic@sqcdot}[2]{%
+\sbox\z@{$\m@th#1\centerdot$}%
+\ht\z@=.33333\ht\z@
+\vcenter{\box\z@}%
+}
+\makeatother
+
+\newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
+
+\title{Minimalni končni modeli prostorov}
+\author{Filip Bezjak \\ Mentor: dr. Petar Pavešić}
+
+
+\setlength\parindent{24pt}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+
+\theoremstyle{plain}
+\newtheorem{lema}{Iema}
+
+\newenvironment{dokaz}{\begin{proof}[\bfseries\upshape\proofname]}{\end{proof}}
+
+\begin{document}
+
+\maketitle
+
+\section{Uvod}
+Moja tema sodi na področje algebraične topologije na končnih prostorih. Topologije na končnih prostorih so večkrat spregledane, saj je vsaka $T_1$ topologija
+na končnem prostoru diskretna. Če pa lastnosti $T_1$ ne zahtevamo, postanejo veliko bolj
+zanimive.
+
+\section{Končni topološki prostori in delno urejene množice}
+
+\textit{Končni topološki prostor} je topološki prostor s končno mnogo točkami, \textit{šibko urejena} množica je množica s tranzitivno in z refleksivno relacijo. Če je relacija še antisimetrična, dobimo \textit{delno} ureditev.
+\\ \indent Naj bo $X$ končni topološki prostor. Za vsako točko $x \in X$ obstaja najmanjša odprta množica $U_x$, ki jo
+vsebuje, oziroma presek vseh odprtih množic, ki vsebujejo $x$. Ta množica je odprta, saj je topologija zaprta za končne preseke.
+    Točke uredimo s pravilom $ x\le y \text{, če } U_x \subseteq  U_y$. S tem dobimo šibko ureditev. Relacija postane delna ureditev, natanko takrat, ko je topologija $t_0$, in disktretna, ko je topologija $T_1$.
+    \\ \indent Obratno, naj bo $X$ šibko urejena množica. Na njej lahko definiramo topologijo z bazo $\{y \in X | y\le x\}_{x \in X}$. Če je
+$y \le x$, je $y$ vsebovan v vsaki bazni množici, ki vsebuje $x$, torej je $y \in U_x$. Po drugi strani, če je $y\in
+U_x$, potem je $y \in \{y \in X | y \le x\}$, torej velja, da je $y \le x$ natanko tedaj ko je $y \in U_x$. Iz tega je razvidno, da so končni prostori in šibke ureditve enaki objekti, gledani z drugačnega stališča.
+
+\begin{definicija}
+    Točka $x \in X$ je \textit{navzdol odpravljiva}, če ima $\{y\in X | y \le x}\}$ maksimum in \textit{navzgor odpravljiva}, če ima $\{y\in X | y \ge x}\}$ minimum. Točka je odpravljiva, če je eno ali drugo.
+\end{definicija}
+
+\begin{definicija}
+    $T_0$ prostor je \textit{minimalen}, če nima odpravljivih točk.
+\end{definicija}
+
+\section{Homotopska in šibka homotopska ekvivalenca}
+
+Pot v prostoru $X$ je zvezna preslikava $ f: I \rightarrow X$, pri čemer je $I$ enotski interval $[0,1]$. Poti sta si homotopni, če lahko eno zvezno deformiramo v drugo, brez da bi premaknili krajišči poti.
+\begin{definicija}
+    
+    Homotopija poti v $X$ je družina preslikav $f_t:I \rightarrow X, 0\le t \le 1$, taka da
+    \begin{itemize}
+        \item 
+        sta krajišči $f_t(0) = x_0$ in $f_t(1) = x_1$ neodvisni od $t$ in
+        
+        \item 
+        je prirejena preslikava $F:I\times X \rightarrow X$ definirana s $F(s,t) = f_t(s)$ zvezna.
+    \end{itemize}
+    Za preslikavi $f_1$ in $f_0$, ki sta povezani s homotopiijo $f_t$ rečemo, da sta homotopni in označimo $f_1 \simeq f_0$.
+\end{definicija}
+
+\begin{definicija}
+    Preslikava  $f : X \rightarrow Y$ je \textit{homotopska ekvivalenca} prostorov $X$ in $Y$, če obstaja preslikava $g: Y\rightarrow X$, taka da
+    je $f g \simeq \mathds{1}$ in $gf \simeq \mathds{1}$. Rečemo, da sta si prostora $X$ in
+    $Y$  \textit{homotopsko ekvivalentna}.
+\end{definicija}
+
+\begin{izrek}
+    relacija homotopije na poteh s fiksnima krajiščema je ekvivalenčna relacija za vsak topološki prostor.
+\end{izrek}
+
+Za poljubni poti $f,g : I \rightarrow X$, za kateri velja $f(1) = g(0)$ lahko definiramo produkt $f\sqcdot g$, ki preteče f in g z dvojno hitrostjo v enotskem intervalu.
+$$ f\sqcdot g(s) \begin{cases}
+    f(2s), & 0\le s\le 1/2 \\
+    g(2s-1), & 1/2 \le s \le 1
+\end{cases}
+$$
+
+Če se omejimo samo na poti $f:I \rightarrow X$ z enako začetno in končno točko $f(0) = f(1) = x_0$, govorimo o zankah, za $x_0$ pa rečemo, da je bazna točka.
+Množico vseh homotopskih razredov $[f]$, z bazno točko $x_0$ označimo z $\pi_1(X,x_0)$.
+
+\begin{izrek}
+    $\pi_1(X,x_0)$ opremljena s produktom $[f][g] = [f\sqcdot g]$ je grupa.
+\end{izrek}
+
+Tej grupi pravimo fundamentalna grupa prostora $X$, z bazno točko $x_0$. $\pi_1(X,x_0)$ je prva v zaporedju analogogno definiranih grup $\pi_n(X,x_0)$, pri katerih namesto iz $I$ slikamo iz $n$-dimenzionalne kocke $I^n$.
+
+
+Naj bo $I^n$ $n$-dimenzionalna kocka. Rob $\partial I^n \text{ od } I^n$ je podprostor točk pri katerih je vsaj ena koordinata enaka $1$ ali $0$. Definirajmo $\pi_n(X,x_0)$, množico homotopskih razredov preslikav $f:(I^n,\partial I^n) \rightarrow (X,x_0)$ pri čemer velja $f(\partial I^n) = x_0$.
+
+
+Za $n\ge 2$ posplošimo množenje definirano pri fundamentalni grupi.
+$$ f\sqcdot g(s) \begin{cases}
+    f(2s_1,s_2,\ldots,s_n), & 0\le s_1\le 1/2 \\
+    g(2s_1-1,s_2,\ldots,s_n), & 1/2 \le s_1 \le 1
+\end{cases}
+$$
+
+\begin{izrek}
+    $\pi_n(X,x_0)$ opremljena s produktom $[f][g] = [f\sqcdot g]$ je grupa za vsak $n \in \mathds{N}$.
+\end{izrek}
+
+Grupam $\pi_n(X,x_0)$ pravimo \textit{homotopske grupe}.
+
+\begin{definicija}
+    Topološka prostora sta \textit{šibko homotopsko ekvivalentna}, če so njune homotopske grupe izomorfne za vsak $n \in \mathds{N}$.
+\end{definicija}
+
+Homotopsko ekvivalentni prostori so si tudi šibsko homotopsko ekvivalentni.
+
+\begin{definicija}
+    Preslikava je \textit{šibka homotopska ekvivalenca}, če preko kompozicije inducira izomorfizem na vse homotopske grupe.
+\end{definicija}
+
+
+\section{Simpleksi}
+
+\textit{Simpleks} ali $n$-simpleks je $n$-razsežni analog trikotnika. Točka je $0$-simpleks, $1$-simpleks je daljica, $2$-simpleks je trikotnik,
+$3$-simpleks je tetraeder. $n$-simpleks definiramo kot množico svojih $n+1$ oglišč.
+
+\textit{Simplicialni kompleks $K$} je sestavljen iz množice oglišč $V_K$ in množice simpleksov $S_K$, sestavljene iz končnih nepraznih podmnožic od $V_k$, pri čemer je vsak element $S_k$ simpleks in vsaka podmnožica simpleksa je simpleks. 
+
+
+Naj bo $\sigma = \{v_0,v_1,\ldots,v_n\}$ $n$-simpleks. Zaprt
+Simpleks $\bar{\sigma}$ je množica formalnih konveksnih combinacij $\mymathop{\Sigma}_{i=0}^{n}\alpha_i v_i$
+pri čemer je $\alpha_i \ge 0$ za vsak $0\le i \le n$ in $\Sigma \alpha_i = 1$. Zaprt simpleks je metričen prostor z metriko
+$$
+d(\underset{v \in K}{\Sigma}\alpha_v v,\underset{v \in K}{\Sigma}\beta_v v) = \sqrt{\underset{v \in K}{\Sigma}(\alpha_v - \beta_v)^2}
+$$
+
+\textit{Geometrijska realizacija} $|K|$ simplicialnega kompleksa $K$ je 
+množica formalnih konveksnih kombinacij $\underset{v \in K}{\Sigma}\alpha_v v$, takih da je $\{v | \alpha_v \textgreater 0\}$ simpleks v $K$.
+
+
+\section{Minimalni modeli prostorov}
+
+\begin{definicija}
+    Končni topološki prostor je \textit{model} prostora $X$, če mu je šibko homotopsko ekvivalenten. Model je \textit{minimalen}, če ima izmed vseh modelov najmanjšo kardinalnost.
+\end{definicija}
+
+\begin{izrek}
+    Homotopska ekvivalenca med minimalnima $T_0$ prostoroma je homeomorfizem.
+\end{izrek}
+
+\begin{izrek}Naj bo $X$ $T_0$ prostor in $x$ navzdol odpravljiva točka, tedaj je $r: X \rightarrow X - \{x\}$, $$
+    r(u) = \begin{cases}
+        u, & u \neq x \\
+        max(u), & u = x
+    \end{cases}$$
+homotopska ekvivalenca.
+\end{izrek}
+
+Preslikavo lahko analogno definiramo za navzgor odpravljive točke, le da namesto v \textit{max(u)} slikamo v \textit{min(u)}. 
+Iz poljubnega modela prostora torej dobimo minimalnega, s postopnim odstranjevanjem odpravljivih točk.
+
+\begin{definicija}
+    Vsak končen $T_0$-prostor $X$ ima \textit{prirejen} simplicialni kompleks $\mathcal{K}(X)$, katerega simpleksi so neprazne verige v prirejeni delni urejenosti na $X$.
+\end{definicija}
+
+
+
+Točka $\alpha$ v geometrijski realizaciji $|\mathcal{K(X)}|$ je
+konveksna kombinacija oblike
+$\alpha = t_1x_1+t_2x_2 + \ldots + t_r x_r$, pri čemer 
+$\sum_{i=1}^{r}t_i=1$, za vsak $1 \le i \le r$, $t_i \ge 0$ in 
+velja, da je $x_1 \textless x_2 \textless \ldots \textless x_r$ veriga v $X$.
+ Nosilec $\alpha$ je množica \textit{support}($\alpha$)$= \{x_1,x_2,\ldots,x_r\}$. Pomembno vlogo igra 
+ preslikava $\alpha \mapsto x_1$.
+ 
+ \begin{definicija}
+    Naj bo $X$ končen $T_0$ prostor, Definirajmo
+    $\mathcal{K}$-\textit{McCordovo} preslikavo $\mu_X:|\mathcal{K}
+    (X)|\rightarrow X$, z $\mu_X(\alpha) =$
+    min(\textit{support}($\alpha))$.
+\end{definicija}
+
+\begin{izrek}
+    $\mathcal{K}$-\textit{McCordova} preslikava je šibka homotopska 
+    ekvivalenca za vsak končen $T_0$-prostor.
+\end{izrek}
+
+
+Moja naloga v tem delu bo poiskati minimalne končne modele sfer in grafov.
+
+
+\nocite{*}
+
+
+\bibliography{osnutek}
+\bibliographystyle{plain}
+
+\end{document}
