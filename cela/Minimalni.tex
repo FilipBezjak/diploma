@@ -166,7 +166,7 @@ Vidimo, če je $f: X\rightarrow Y$ zvezna , je $\mathcal{K}(f):\mathcal{K}(X) \r
     Naj bo $K$ končen simplicialni kompleks. Končen $T_0$-
     prostor $\chi(K)$ prirejen k $K$ je delno urejena množica simpleksov v $K$, urejena glede na inkluzijo.
     Naj bo $phi:K\rightarrow L$ preslikava med simplicialnima kompleksoma, potem preslikavo  $\chi(phi):\chi(K)\rightarrow \chi(L)$ definiramo kot 
-    $\chi(phi)(\sigma)=\phi(\sigma)$ za vsak simpleks $\sigma \in K$
+    $\chi(phi)(\sigma)=\varphi(\sigma)$ za vsak simpleks $\sigma \in K$
 \end{definicija}
 
 \begin{primer}
@@ -193,27 +193,54 @@ definirajmo $\chi$-\textit{McCordovo preslikavo} $\mu_K=\mu_{\chi(K)}S_K^{-1}: |
 Ker je kompozitum dveh šibkih homotopskih ekvivalenc tudi šibka homotopska ekvivalenca, takoj sledi naslednji izrek.
 
 \begin{izrek}
-    \chi-McCordova preslkava $\mu_K$ je šibka homotopska ekvivalenca za vsak končen simplicialni kompleks $K$.
+    $\chi$-McCordova preslkava $\mu_K$ je šibka homotopska
+     ekvivalenca za vsak končen simplicialni kompleks $K$.
 \end{izrek}
 
 \begin{trditev}
-    Naj bo $\phi: K\rightarrow L$ simplicialna preslikava med končnima kompleksoma. Potem naslednji diagram komutira do homotopije natančno
+    Naj bo $\varphi: K\rightarrow L$ simplicialna preslikava med končnima kompleksoma. Potem naslednji diagram komutira do homotopije natančno
 \end{trditev}
 
 \begin{proof}
-    Najprej poiščimo homotopijo med $|\phi|s_K$ in $s_L|\phi'|$
+    Najprej poiščimo homotopijo med $|\varphi|s_K$ in $s_L|\varphi'|$
     Naj bo $S=\{\sigma_1,\sigma_2,\cdots,\sigma_r\}$ simpleks 
     v $K'$ in naj bo $\sigma_1 \subsetneq \sigma_2 \subsetneq 
     \cdots \subsetneq \sigma_r$ veriga simpleksov $K$. Naj bo $\alpha$
     točka v zaprtem simpleksu $\overline{S}$. Potem je $S_K(\alpha)
-    \in \overline{\sigma_r}\subseteq |K|$ in  $|\phi|S_K(\alpha) \in 
-    \overline{\phi_r}\subseteq |L|.$ \
-    Velja pa tudi $|\phi'|(\alpha)\in\{\phi{\sigma_1},\phi{\sigma_2},\cdots,\phi{\sigma_r}\}$
-    in potem $S_L|\phi'|(\alpha) \in \overline{\phi(\sigma_r)}.$ Zato je linearna homotopija
-    $$
-    H:|K'|
-    $$
+    \in \overline{\sigma_r}\subseteq |K|$ in  $|\varphi|S_K(\alpha) \in 
+    \overline{\varphi_r}\subseteq |L|.$ \
+    Velja pa tudi $|\varphi'|(\alpha)\in\
+    {\varphi(\sigma_1),\varphi(\sigma_2),\cdots,\varphi(\sigma_r)\}$
+    in potem $S_L|\varphi'|(\alpha) \in \overline{\varphi(\sigma_r)}.$ Zato 
+    je linearna homotopija
+
+
+
+    \begin{centering}
+        $$
+        H:|K'|\times I \rightarrow |L| \\
+        H: (\alpha,t) \mapsto (1-t)|\varphi|S_K(\alpha) + tS_L|\varphi'|(\alpha)\\
+        $$
+    \end{centering}
+
+Zvezna in dobro definirana in zato $|\varphi|S_K(\alpha) \simeq 
+S_L|\varphi'|$. Iz leme \ref{lem:komutira} potem sledi
+\begin{align*}
+$$
+\mu_L|\varphi|=\mu_{\chi(L)}S_L^{-1}|\varphi|&\simeq mu_{\chi(L)}|\varphi'|S_K^{-1} \\
+\chi(\varphi)\mu_{\chi(K)}S_K^{-1}&=\chi(\varphi)\mu_K
+
+$$
+
+
+\end{align*}
 \end{proof}
+
+Iz lastnosti 2 od 3 in dejstva, da je preslikava, ki je homotopna šibki homotopski ekvivalenci isto šibka homotopska ekvivalenca, takoj sledi naslednja trditev.
+
+\begin{trditev}
+    Naj bo $\varphi : K\rightarrow L$ simplicialna preslikava med končnima kompleksoma, potem je $|\varphi|$ šibka homotopska ekvivalenca, natanko tedaj, ko je $\chi(\varphi)$ šibka homotopska ekvivalenca.
+\end{trditev}
 
 \section{Zanke v Hassejevem diagramu}
 

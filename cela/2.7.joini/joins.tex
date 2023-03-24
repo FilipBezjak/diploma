@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{verbatim}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{hyperref}
+
+
+
+\makeatletter
+\DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
+\newcommand{\morphic@sqcdot}[2]{%
+\sbox\z@{$\m@th#1\centerdot$}%
+\ht\z@=.33333\ht\z@
+\vcenter{\box\z@}%
+}
+\makeatother
+
+\makeatletter
+\DeclareRobustCommand{\k}{
+    \mathcal{K}
+}
+
+\newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
+
+\title{Minimalni končni modeli prostorov}
+\author{Filip Bezjak \\ Mentor: dr. Petar Pavešić}
+
+
+\setlength\parindent{24pt}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+
+\theoremstyle{plain}
+\newtheorem{primer}{Primer}
+
+\theoremstyle{plain}
+\newtheorem{trditev}{Trditev}
+
+\theoremstyle{plain}
+\newtheorem{opomba}{Opomba}
+
+\theoremstyle{plain}
+\newtheorem{lema}{Iema}
+
+\newenvironment{dokaz}{\begin{proof}[\bfseries\upshape\proofname]}{\end{proof}}
+
+\begin{document}
+V tem poglavju bomo definirali nekaj osnovnih konstrukcij iz algebraične topologije in jih uporabili na simplicialnih kompleksih in končnih ter splošnih topoloških prostorih
+
+\textit{Join} Topoloških prostorov $X$ in $Y$ je topološki prostor $X\ast Y = X\times Y 
+\times I /_{\sim}$, pri čemer $(x, y1, 0) \sim (x, y2, 0)$ in  $(x_1, y, 1) \sim (x2, y, 1)$. 
+Torej $X\times Y\times \{0\}$ strnemo na $X$ in $X\times Y\times \{1\}$ na $Y$. Intuitivno, 
+to pomeni, da vsako točko na $X$ z intervalom povežemo z vsako točko na $Y$
+Posebna primera joina sta "stožec" $CX$, ki je join točke in prostora $X$, 
+$$\{\bullet\}\ast X=X\times I /_{(X\times \{0\})}$$
+in \textit{suspenzija} $\Sigma X$, ki je join $X$ in prostora na dveh točkah, $S^0$.
+
+$$
+\Sigma X=S^0\ast X = X\times I /_{(X\times \{0\},X\times \{1\})}
+$$
+
+
+
+
+
+
+\textit{Simplicialni "Join" $K\ast L$} (včasih tudi $KL$) kompleksov $K$ in $L$ z disjunktnima množicama ogljišč je kompleks
+
+$$
+K\ast L=K\cup L \cup \{\sigma \cup \tau| \sigma \in K, \tau \in L \}
+$$
+
+\begin{primer}
+    simplicialni join dveh 1-simpleksov je 3 simpleks. Slika?
+\end{primer}
+
+\textit{Simplicialni stožec} $aK$ z bazo $K$ je join $K$ in ogljišča $a\notin K$
+Za vsaka končna simplicialna kompleksa $K$ in $L$ velja, da je geometrijska realizacija $|K\ast L|$ homeomorfna topološkemu joinu $|K|\ast |L|$ !!!dokaz?!!.
+
+Če je $K$ 0-kompleks z dvema ogljiščema, potem je $|K\ast L|=|K|\ast |L|=S^0\ast |L|$. $S^0\ast |L|$
+imenujemo suspenzija od $L$ in oz
+\end{document}
