@@ -47,6 +47,9 @@
 \newtheorem{primer}{Primer}
 
 \theoremstyle{plain}
+\newtheorem{posledica}{Posledica}
+
+\theoremstyle{plain}
 \newtheorem{trditev}{Trditev}
 
 \theoremstyle{plain}
@@ -72,6 +75,82 @@ Spomnimo se, da je minimalni končni prostor, prostor brez odpravljivih točk, k
 \end{trditev}
 
 \begin{dokaz}
-    po opombi \ref{op:nekaj} velja $|\k(\mathcal{S}^n(S^0))|=|\k(\S^0\circledast S^0 \circledast \cdots \circledast S^0)|=
+    po opombi \ref{op:nekaj} velja $|\k(\mathcal{S}^n(S^0))|=|\k(S^0\circledast S^0 \circledast \cdots \circledast S^0)|=|\k(S^0)\ast
+    \k(S^0) \ast \cdots \ast \k(S^0)|=|\k(S^0)|\ast
+    |\k(S^0)| \ast \cdots \ast |\k(S^0)|=S^0\ast
+    S^0 \ast \cdots \ast S^0$
 \end{dokaz}
+
+Zdaj bomo še dokazali, da je $\mathcal{S}^n(S^0)$ minimalni končni model za $S^n$. Še več, pokazali bomo, da ima vsak prostor, šibko homotopsko ekvivalenten $S^n$ vsaj $2n+2$ točk, če ima pa natanko $2n+2$ točk pa je homeomorfen $\k(\mathcal{S}^n(S^0))$.
+
+\begin{definicija}
+    \textit{Višina} $ht(X)$ končne delno urejene množice je ena manj kot dožina najdaljše verige v $X$. Z $#X$ pa označimo število elementov v $X$.
+\end{definicija}
+Dimenzija prirejenega kompleksa $\k(X)$ sovpada z $ht(X)$.
+
+
+\begin{izrek}
+    Naj bo $X\neq\ast$ minimalen prostor, potem ima vsaj $2ht(X)+2$ točk. Če ima natanko $2ht(X)+2$ točk, potem je homeomorfen $\mathds{S}^{ht(X)}(S^0)$
+\end{izrek}    
+
+\begin{dokaz}
+    Naj bo $x_0\le x_1 \le \cdots \le x_h$ veriga dolžine $h=ht(X)$. Ker je $X$
+     minimalen, $x_i$ ni odpravljiva točka za noben $0\leq i \le h$. Potem za 
+     vsak $0\leq i \le h$ obstaja $y_{i+1}$, tak da $y_{i+1}\ge x_i$ in $y_{i+1}
+     \ngeq x_{i+1}$. Trdimo, da so vse točke $y_i$ med seboj različne, za vsak
+      $0\le i \leq h$ in da nobena ni enaka $x_j$ za noben $0\leq i \leq h$.
+
+      Ker $y_{i+1}\geq x_i$, sledi, da $y_{i+1}\neq x_j$ za noben $j\leq i$, 
+      ker velja tudi $y_{i+1}\ngeq x_{i+1}$ pa sledi, da $y_{i+1}\neq x_j$ za 
+      noben $j> i$
+
+      Če je $y_{i+1}= y_{j+1}$ za nek $i\le j$, potem je $y_{i+1}= y_{j+1}\geq
+       x_j \geq x_{i+1}$, kar je pa v protislovju z predpodstavko $y_{i+1} 
+       \ngeq x_{i+1}$.
+
+       Ker je vsak končen prostor z minimumom ali z maksimumom kontraktibilen 
+       in je $X\neq \ast$, minimalen prostor, sledi da $X$ nima minimuma, 
+       torej mora obstajati točka $y_0\in X$, za katero velja $y_0 \ngeq x_0$.
+        Zato je $y_0$ različna od drugih $2h+1$ točk in zato $#X\geq 2h+2$.
+
+        Predpodstavimo zdaj, da ima $X$ natanko $2h+2$ točk, torej 
+        $$
+        X=\{x_0,x_1,\cdots x_h,y_0,y_1,\cdots y_h,\}
+        $$
+        Če bi bil $x_i\ge y_i$, za $0<i\leq h$ bi bilo to v nasprotju z 
+        maksimalnostjo verige $x_0 <\cdots <x_h$, saj bi potem veljalo $x_{i-1} 
+        < y_i < x_i$. Tudi $y_i \ngeq x_i$ za $0\leq i \leq h$, zata sta $x_i $ in $y_i$ neprimerljiva za $0\leq i \leq h$.
+
+        Z indukcijo na $j$ pokažimo, da $y_i < x_j$ za vse $i<j$. Za $j=0$ to 
+        očitno drži. Naj bo $0\leq k <h$ in recimo, da trditev drži za $j=k$, 
+        dokažimo, da drži tudi za $j=k+1$. Ker $x_{k+1}$ ni navzdol odpravljiva, 
+        obstaja $z$, da $z< x_{k+1}$ in $z\nleq x_k$, ker sta $x_{k+1}$ in 
+        $y_{k+1}$ neprimerljiva, velja tudi $z\neq y_{k+1}$. Iz indukcijske 
+        predpodstavke sledi, da je vsaka točka z izjemo $y_k$ in $y_{k+1}$ večja 
+        od $x_{k+1}$ ali manjša od $x_k$. Ker $y_{k+1} \nleq x_{k+1}$, je potem
+        $z=y_k$ in zato $y_k<x_{k+1}$. Dokažimo še, da $x_k\leq y_{k+1}$. Ker 
+        $y_{k+1}$ ni navzdol odpravljiva, obstaja $w\in X$, da je $w<y_{k+1}$ in 
+        $w\nleq x_k$. Iz indukcije in dejstva, da $y_{k+1}\ngeq x_{k+1}$, sklepamo,
+        da $w=y_k$ in zato $y_k<y_{k+1}$. Za $i<k$ pa velja $y_i<x_k<x_{k+1}$ in
+        $y_i<x_k<y_{k+1}$.
+
+        Dokazali smo, da za vsak $i<j$,  velja $y_i < x_j,\ y_i < y_j,\ x_i < x_j$ in
+        $x_i < y_j$ in, da sta $x_i$ in $y_i$ neprimerljiva za vsak $0\leq j \leq h$.
+        To je pa urejenost v $\mathds{S}^h(S^0)$ in zato je $X$ homeomorfen 
+        $\mathds{S}^h(S^0)$.
+
+\end{dokaz}
+
+
+%\begin{izrek}
+ %   Vsak prostor, ki ima iste homotopske grupe kot $S^n$ (to pomeni, da mu je šhe?) ima vsaj $2n+2$ točk. Edini prostor z $2n+2$ točkami s to lastnostjo je $\mathds{S}^n(S^0)$.
+%\end{izrek}
+
+Ker je $\mathds{S}^n(S^0)$ model za $S^n$, čigar višina je enaka $n$ in ima 
+$2n+2$ točk, je $\mathds{S}^n(S^0)$ minimalni model za $S^n$. Model je 
+enoličen, saj je vsak model za $S^n$ na $2n+2$ točkah homeomorfen 
+$\mathds{S}^n(S^0)$.
+
+\begin{\section{Minimalni model končnega grafa}
+    
 \end{document}

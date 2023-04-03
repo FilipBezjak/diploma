@@ -109,4 +109,31 @@ Ta join je asociativen in v splošnem ni komutativen, tako kot pri topološkem
   \begin{opomba}
     Velja $\k(X\circledast Y) = \k(Y)\ast \k(X)$
   \end{opomba}
+
+
+  \begin{proof}
+    Najprej poiščimo homotopijo med $|\varphi|s_K$ in $s_L|\varphi'|$
+    Naj bo $S=\{\sigma_1,\sigma_2,\cdots,\sigma_r\}$ simpleks 
+    v $K'$ in naj bo $\sigma_1 \subsetneq \sigma_2 \subsetneq 
+    \cdots \subsetneq \sigma_r$ veriga simpleksov iz $K$. Naj bo $\alpha$
+    točka v zaprtem simpleksu $\overline{S}$. Potem je $S_K(\alpha)
+    \in \overline{\sigma_r}\subseteq |K|$ in  $|\varphi|S_K(\alpha) \in 
+    \overline{\varphi_r}\subseteq |L|.$ \
+    Velja pa tudi $|\varphi'|(\alpha)\in\
+    {\varphi(\sigma_1),\varphi(\sigma_2),\cdots,\varphi(\sigma_r)\}$
+    in potem $S_L|\varphi'|(\alpha) \in \overline{\varphi(\sigma_r)}.$ Zato 
+    je linearna homotopija
+    \begin{centering}
+        $$
+        H:|K'|\times I \rightarrow |L| \\
+        H: (\alpha,t) \mapsto (1-t)|\varphi|S_K(\alpha) + tS_L|\varphi'|(\alpha)\\
+        $$
+    \end{centering}
+zvezna in dobro definirana in zato $|\varphi|S_K(\alpha) \simeq 
+S_L|\varphi'|$. Iz leme \ref{lem:komutira} potem sledi
+
+
+
+
+\end{proof}
 \end{document}
