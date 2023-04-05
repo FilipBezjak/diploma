@@ -1,0 +1,90 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{verbatim}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{tikz-cd}
+
+\makeatletter
+\DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
+\newcommand{\morphic@sqcdot}[2]{%
+\sbox\z@{$\m@th#1\centerdot$}%
+\ht\z@=.33333\ht\z@
+\vcenter{\box\z@}%
+}
+\makeatother
+
+\makeatletter
+\DeclareRobustCommand{\k}{
+    \mathcal{K}
+}
+
+\makeatletter
+\DeclareRobustCommand{\h}{
+    \mathcal{H}
+}
+\makeatletter
+\DeclareRobustCommand{\si}{
+    \bar{\sigma}
+}
+
+
+\makeatletter
+\DeclareRobustCommand{\pot}{
+    $\h-$pot
+}
+
+
+
+\newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
+
+\title{Minimalni končni modeli prostorov}
+\author{Filip Bezjak \\ Mentor: dr. Petar Pavešić}
+
+
+\setlength\parindent{24pt}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+
+\theoremstyle{definition}
+\newtheorem{primer}{Primer}
+
+\theoremstyle{plain}
+\newtheorem{trditev}{Trditev}
+
+\theoremstyle{plain}
+\newtheorem{posledica}{Posledica}
+
+\theoremstyle{plain}
+\newtheorem{opomba}{Opomba}
+
+\theoremstyle{plain}
+\newtheorem{lema}{Iema}
+
+\newenvironment{dokaz}{\begin{proof}[\bfseries\upshape\proofname]}{\end{proof}}
+
+\begin{document}
+
+
+
+    \[\begin{tikzcd}[row sep=large, column sep=large]
+         {|\k(\chi(K))|}\arrow{r}
+        {|\k(\chi(\varphi)|} \arrow[swap]{d}{\mu_{\chi(K)}} & {|\k(\chi(L))|} \arrow{d}{\mu_{\chi(L)}} \\
+        \chi(K) \arrow{r}{\chi(\varphi)} & \chi(L)
+        \end{tikzcd}
+        \]
+
+\end{document}

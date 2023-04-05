@@ -12,9 +12,8 @@
 \usepackage{dsfont}
 \usepackage{amssymb}
 \usepackage{hyperref}
+\usepackage{tikz-cd}
 
-\usepackage{pgfpages}
-\pgfpagesuselayout{2 on 1}[a4paper,landscape]
 
 \makeatletter
 \DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
@@ -91,18 +90,17 @@ zanimive.
 
 Ena izmed glavnih nalog algebraične topologije je iskanje prostorov, ki so si 
 na nek način podobni oziroma ekvivalentni. Prvi pojem podobnosti, ki ga spoznamo
-je homeomorfizem. Dva prostora sta homeomorfna, če lahko enega zvezno deformiramo
-v drugega oziroma če med njima obstaja homeomorfizem. Ekvivalenco med dvema 
-prostoroma pa lahko definiramo na način, ki je veliko širši kot homeomorfizem, 
-na primer torus $S^1\times B^2$ in sfera $S^1$ imata podobno obliko, vendar nista
- homeomorfna. Zato bomo definirali homotopsko in šibko homotopsko ekvivalenco.
+je homeomorfizem. Dva prostora sta homeomorfna, če lahko enega zvezno spremenimo v drugega in pri tem prostora ne lepimo in ga ne trgamo oziroma če med njima obstaja homeomorfizem. Ekvivalenco med dvema 
+prostoroma pa lahko definiramo na načine, ki so veliko širši kot homeomorfizem
+Na primer torus $S^1\times B^2$ in sfera $S^1$ imata podobno obliko, vendar nista
+ homeomorfna. Zato bomo definirali homotopsko in šibko homotopsko ekvivalenco, ki bosta povezali prostore s podobnimi oblikami.
 
 Spomnimo se, \textit{homotopija} je taka družina preslikav $f_t(x):X \rightarrow Y$, da je prirejena preslikava $F(x,t)=f_t(x):X \times I \rightarrow Y$ zvezna. Rečemo, da sta preslikavi $f_0$ in $f_1$ homotopni in pišemo $f_0 \simeq f_1$
 
 
 \begin{definicija}
     Preslikava  $f : X \rightarrow Y$ je \textit{homotopska ekvivalenca} prostorov $X$ in $Y$, če obstaja preslikava $g: Y\rightarrow X$, taka da
-    je $f g \simeq \mathds{1}$ in $gf \simeq \mathds{1}$. Rečemo, da sta si prostora $X$ in
+    je $f g \simeq \mathds{1}$ in $gf \simeq \mathds{1}$. Rečemo, da sta prostora $X$ in
     $Y$  \textit{homotopsko ekvivalentna}.
 \end{definicija}
 
@@ -203,7 +201,7 @@ Množico vseh homotopskih razredov $[f]$, z bazno točko $x_0$ označimo z $\pi_
 
 \begin{dokaz}
     Najprej preverimo dobro definiranost produkta. Naj velja $[f]=[f']$, preko homotopije $f_t$ in $[g]=[g']$ preko $g_t$. Potem sta $f\sqcdot g$ in $f'\sqcdot g'$ homotopni preko
-    $h_t(s) =f_t \sqcdot g_t$. Vidimo, da $h_0=f_0 \sqcdot g_0=f cdot g$ in $h_1=f_1 \sqcd g_1=f'\sqcdot g'$. Ker je $f_t(1)=g_t(0)$ za vsak t in sta $ft(s)$ in $g_t(s)$ zvezni, sledi, da je tudi $h_t(s)$ zvezna, torej velja [$f\sqcdot g$]=[$f'\sqcdot g'$].
+    $h_t(s) =f_t \sqcdot g_t$. Vidimo, da $h_0=f_0 \sqcdot g_0=f \sqcdot g$ in $h_1=f_1 \sqcdot g_1=f'\sqcdot g'$. Ker je $f_t(1)=g_t(0)$ za vsak t in sta $ft(s)$ in $g_t(s)$ zvezni, sledi, da je tudi $h_t(s)$ zvezna, torej velja [$f\sqcdot g$]=[$f'\sqcdot g'$].
 
     Definirajmo še \textit{reparametrizacijo} poti $f$ kot kompozitum $f 
     \phi$, kjer je $\phi: I \rightarrow I$ neka zvezna preslikava, za 
@@ -272,7 +270,11 @@ Homeomorfni prostori so homotopsko ekvivalentni, homotopsko ekvivalentni prostor
 \begin{definicija}
     Preslikava je \textit{šibka homotopska ekvivalenca}, če preko kompozicije inducira izomorfizem na vse homotopske grupe.
 \end{definicija}
-Če med prostoroma obstaja šibka homotopska ekvivalenca, potam sta prostora šibko homotopsko ekvivalentna.
+Če med prostoroma obstaja šibka homotopska ekvivalenca, potem sta prostora šibko homotopsko ekvivalentna.
+
+\begin{trditev}
+    
+\end{trditev}
 
 \section{Simpleksi}
 
@@ -708,17 +710,28 @@ je šibko homotopsko ekvivalenten.
 \begin{definicija}
     Naj bo $K$ končen simplicialni kompleks. Končen $T_0$-
     prostor $\chi(K)$ prirejen k $K$ je delno urejena množica simpleksov v $K$, urejena glede na inkluzijo.
-    Naj bo $phi:K\rightarrow L$ preslikava med simplicialnima kompleksoma, potem preslikavo  $\chi(phi):\chi(K)\rightarrow \chi(L)$ definiramo kot 
-    $\chi(phi)(\sigma)=\varphi(\sigma)$ za vsak simpleks $\sigma \in K$
+    Naj bo $\varphi:K\rightarrow L$ simplicialna preslikava, potem preslikavo  $\chi(\varphi):\chi(K)\rightarrow \chi(L)$ definiramo kot 
+    $\chi(\varphi)(\sigma)=\varphi(\sigma)$ za vsak simpleks $\sigma \in K$
 \end{definicija}
 
+
 \begin{primer}
-    primer iz knjige.
+    primer preslikave
 \end{primer}
+
 \begin{lema}
     \label{lem:komutira}
     Naj bo $f :X\rightarrow Y$ zvezna preslikava med dvema $T_0$ prostoroma, potem naslednji diagram komutira
+
+    \[\begin{tikzcd}
+        {|\k(X)|}\arrow{r}{|\k(f)|} \arrow[swap]{d}{\mu_X} & {|\k(Y)|} \arrow{d}{\mu_Y} \\
+       X \arrow{r}{f} & Y
+       \end{tikzcd}
+       \]
+    
 \end{lema}
+
+
 
 \begin{dokaz}
     \begin{align*}
@@ -740,8 +753,16 @@ Ker je kompozitum dveh šibkih homotopskih ekvivalenc tudi šibka homotopska ekv
      ekvivalenca za vsak končen simplicialni kompleks $K$.
 \end{izrek}
 
+
 \begin{trditev}
     Naj bo $\varphi: K\rightarrow L$ simplicialna preslikava med končnima kompleksoma. Potem naslednji diagram komutira do homotopije natančno
+    \\
+  
+\[\begin{tikzcd}
+    {|K|} \arrow{r}{|\varphi|} \arrow[swap]{d}{\mu_K} & {|L|} \arrow{d}{\mu_L} \\
+    \chi(K) \arrow{r}{\chi(\varphi)} & \chi(L)
+    \end{tikzcd}
+    \]
 \end{trditev}
 
 \begin{proof}
@@ -765,12 +786,14 @@ Ker je kompozitum dveh šibkih homotopskih ekvivalenc tudi šibka homotopska ekv
         H: (\alpha,t) \mapsto (1-t)|\varphi|S_K(\alpha) + tS_L|\varphi'|(\alpha)\\
         $$
     \end{centering}
-
-Zvezna in dobro definirana in zato $|\varphi|S_K(\alpha) \simeq 
+zvezna in dobro definirana in zato $|\varphi|S_K(\alpha) \simeq 
 S_L|\varphi'|$. Iz leme \ref{lem:komutira} sledi, da naslednji diagram komutira 
-$$
-|\k(\chi(K))| --|\k(\chi(\varphi)|----> |\k(\chi(L))|
-$$
+\[\begin{tikzcd}[row sep=large, column sep=large]
+    {|\k(\chi(K))|}\arrow{r}
+   {|\k(\chi(\varphi)|} \arrow[swap]{d}{\mu_{\chi(K)}} & {|\k(\chi(L))|} \arrow{d}{\mu_{\chi(L)}} \\
+   \chi(K) \arrow{r}{\chi(\varphi)} & \chi(L)
+   \end{tikzcd}
+   \]
 in zato
 
 \begin{align*}
@@ -781,7 +804,7 @@ in zato
   \end{align*}
 \end{proof}
 
-Iz lastnosti 2 od 3 in dejstva, da je preslikava, ki je homotopna šibki homotopski ekvivalenci isto šibka homotopska ekvivalenca, takoj sledi naslednja trditev.
+Iz lastnosti 2 od 3 (to je treba še dokazati) in dejstva, da je preslikava, ki je homotopna šibki homotopski ekvivalenci isto šibka homotopska ekvivalenca, takoj sledi naslednja trditev.
 
 \begin{trditev}
     Naj bo $\varphi : K\rightarrow L$ simplicialna preslikava med končnima kompleksoma, potem je $|\varphi|$ šibka homotopska ekvivalenca, natanko tedaj, ko je $\chi(\varphi)$ šibka homotopska ekvivalenca.
@@ -822,7 +845,7 @@ $$
 \end{primer}
 
 \textit{Simplicialni stožec} $aK$ z bazo $K$ je join $K$ in ogljišča $a\notin K$
-Za vsaka končna simplicialna kompleksa $K$ in $L$ velja, da je geometrijska realizacija $|K\ast L|$ homeomorfna topološkemu joinu $|K|\ast |L|$ !!!dokaz?!!.
+Za vsaka končna simplicialna kompleksa $K$ in $L$ velja, da je geometrijska realizacija $|K\ast L|$ homeomorfna topološkemu joinu $|K|\ast |L|$ (dokaz).
 
 Če je $K$ 0-kompleks z dvema ogljiščema, potem je $|K\ast L|=|K|\ast |L|=S^0\ast |L| = \Sigma |L|$.
 
@@ -837,9 +860,10 @@ Ta join je asociativen in v splošnem ni komutativen, tako kot pri topološkem
   D^0$ in ne Hausdorffova Suspenzija $\mathds{S}(X)=X \circledast S^0$. 
   $D^0$ pomeni 0 dimenzionalni disk, kar je točka.
 
-  Ne-Hausdorffova suspenzija reda $n$ je definirana rekurzivno, kot $\mathds{S}(\mathds{S}(X))$.
+  Ne-Hausdorffova suspenzija reda $n$ je definirana rekurzivno, kot $\mathds{S}(\mathds{S}^{n-1}(X))$.
   \begin{opomba}
-    Velja $\k(X\circledast Y) = \k(Y)\ast \k(X)$
+    \label{op:join}
+    Velja $\k(X\circledast Y) = \k(Y)\ast \k(X)$ (dokaz?)
   \end{opomba}
 
 
@@ -853,14 +877,15 @@ Ta join je asociativen in v splošnem ni komutativen, tako kot pri topološkem
 Spomnimo se, da je minimalni končni prostor, prostor brez odpravljivih točk, ker pa je vsak končen prostor homotopen svojemu jedru, sledi, da je vsak minimalni končni model prostora tudi minimalen končen prostor.
 
 \begin{trditev}
-    Končen prostor $\mathcal{S}^n(S^0)$ je končni model n-dimenzionalne sfere $S^n$ za vsak $n\geq 0$
+    Končen prostor $\mathds{S}^n(S^0)$ je končni model n-dimenzionalne sfere $S^n$ za vsak $n\geq 0$
 \end{trditev}
 
 \begin{dokaz}
-    po opombi \ref{op:nekaj} velja $|\k(\mathcal{S}^n(S^0))|=|\k(S^0\circledast S^0 \circledast \cdots \circledast S^0)|=|\k(S^0)\ast
-    \k(S^0) \ast \cdots \ast \k(S^0)|=|\k(S^0)|\ast
+    Vemo že, da je $\mathds{S}^n(S^0)$ šibko homotopsko ekvivalenten $|\k(\mathds{S}^n(S^0))|$,
+    po opombi \ref{op:join} pa velja $|\k(\mathds{S}^n(S^0))|=|\k(\underbrace{S^0\circledast S^0 \circledast \cdots \circledast S^0}_\text{$n+1$-krat})|=
+    |\k(S^0)\ast\k(S^0) \ast \cdots \ast \k(S^0)|=|\k(S^0)|\ast
     |\k(S^0)| \ast \cdots \ast |\k(S^0)|=S^0\ast
-    S^0 \ast \cdots \ast S^0$
+    S^0 \ast \cdots \ast S^0=S^n$
 \end{dokaz}
 
 Zdaj bomo še dokazali, da je $\mathcal{S}^n(S^0)$ minimalni končni model za $S^n$. Še več, pokazali bomo, da ima vsak prostor, šibko homotopsko ekvivalenten $S^n$ vsaj $2n+2$ točk, če ima pa natanko $2n+2$ točk pa je homeomorfen $\k(\mathcal{S}^n(S^0))$.
@@ -894,7 +919,6 @@ Dimenzija prirejenega kompleksa $\k(X)$ sovpada z $ht(X)$.
        in je $X\neq \ast$, minimalen prostor, sledi da $X$ nima minimuma, 
        torej mora obstajati točka $y_0\in X$, za katero velja $y_0 \ngeq x_0$.
         Zato je $y_0$ različna od drugih $2h+1$ točk in zato $#X\geq 2h+2$.
-
         Predpodstavimo zdaj, da ima $X$ natanko $2h+2$ točk, torej 
         $$
         X=\{x_0,x_1,\cdots x_h,y_0,y_1,\cdots y_h,\}
@@ -934,8 +958,6 @@ enoličen, saj je vsak model za $S^n$ na $2n+2$ točkah homeomorfen
 $\mathds{S}^n(S^0)$.
 
 
-
-
 \section{Zanke v Hassejevem diagramu}
 
 Pokazali bomo, kako se fundamentalna grupa končnega $T_0$ 
@@ -967,7 +989,7 @@ označimo $\mathfrak{e}(e)=y$. \textit{Inverz} $\h-$roba $e=(x,y)$ je $\h-$rob $
 
 $\h-$pot v $(X,x_0)$ je zaporedje (lahko tudi prazno), $\h-$robov $\xi=e_1e_2\cdots e_n$, 
 za katero velja, da je $\mathfrak{e}(e_i)=\mathfrak{o}(e_i+1)$, za vsak $0\leq i \leq n-1$.
- Začetek $\h-$poti $\xi$ je  $\mathfrak{o}(\xi)=e_1$, konez pa $\mathfrak{e}(\xi)=e_n$, 
+ Začetek $\h-$poti $\xi$ je  $\mathfrak{o}(\xi)=e_1$, konec pa $\mathfrak{e}(\xi)=e_n$, 
  začetek in konec prazne poti je $\mathfrak{o}(\emptyset)=\mathfrak{e}(\emptyset)=x_0$
  Če je $\xi=e_1,e_2\cdots e_n$ $\h-$pot, definiramo $\overline{\xi}=e_n^{-1},\cdots 
  e_2^{-1}e_n^{-1}$. Če sta $\xi$ in $\xi'$ $\h-$poti in velja $\mathfrak{e}(\xi)=
@@ -978,13 +1000,13 @@ za katero velja, da je $\mathfrak{e}(e_i)=\mathfrak{o}(e_i+1)$, za vsak $0\leq i
  E(\h(X))$ za vsak $1\leq i \leq n$ ali pa je $e_i^{-1}\in E(\h(X))$ za vsak $1\leq i \leq n$.
  \textit{Zanka} iz $x_0$ je \pot, ki se začne in konča v $x_0$. Za zanki $\xi$ in
   $\xi'$ rečemo, da sta blizu, če obstajajo monotone $\h-$poti $\xi_1,\xi_2,\xi_3,\xi_4$,
-   take, da  sta množici $\{\xi,\xi'}$ in $\{\xi_1\xi_2\xi_3\xi_4,\xi_1\xi_4\}$ enaki.
+   take, da  sta množici $\{\xi,\xi'\}$ in $\{\xi_1\xi_2\xi_3\xi_4,\xi_1\xi_4\}$ enaki.
 
  \begin{primer}
     poti ki sta si blizu.
  \end{primer}
 
-
+hkjhkjhkjhkjhkj
 
  \end{document}
 
