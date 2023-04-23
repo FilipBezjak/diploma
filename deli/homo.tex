@@ -1,0 +1,271 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{verbatim}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{tikz-cd}
+
+
+\makeatletter
+\DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
+\newcommand{\morphic@sqcdot}[2]{%
+\sbox\z@{$\m@th#1\centerdot$}%
+\ht\z@=.33333\ht\z@
+\vcenter{\box\z@}%
+}
+\makeatother
+
+\makeatletter
+\DeclareRobustCommand{\k}{
+    \mathcal{K}
+}
+
+\makeatletter
+\DeclareRobustCommand{\h}{
+    \mathcal{H}
+}
+\makeatletter
+\DeclareRobustCommand{\si}{
+    \bar{\sigma}
+}
+
+
+\makeatletter
+\DeclareRobustCommand{\pot}{
+    $\h-$pot
+}
+
+
+
+\newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
+
+\title{Minimalni končni modeli prostorov}
+\author{Filip Bezjak \\ Mentor: dr. Petar Pavešić}
+
+
+\setlength\parindent{24pt}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+
+\theoremstyle{definition}
+\newtheorem{primer}{Primer}
+
+\theoremstyle{plain}
+\newtheorem{trditev}{Trditev}
+
+\theoremstyle{plain}
+\newtheorem{posledica}{Posledica}
+
+\theoremstyle{plain}
+\newtheorem{opomba}{Opomba}
+
+\theoremstyle{plain}
+\newtheorem{lema}{Iema}
+
+\newenvironment{dokaz}{\begin{proof}[\bfseries\upshape\proofname]}{\end{proof}}
+
+\begin{document}
+
+
+\section{Homotopska in šibka homotopska ekvivalenca}
+
+Ena izmed glavnih nalog algebraične topologije je iskanje prostorov, ki so si 
+na nek način podobni oziroma ekvivalentni. Prvi pojem podobnosti, ki ga spoznamo
+je homeomorfizem. Dva prostora sta homeomorfna, če lahko enega zvezno spremenimo v drugega in pri tem prostora ne lepimo in ga ne trgamo oziroma če med njima obstaja homeomorfizem. Ekvivalenco med dvema 
+prostoroma pa lahko definiramo na načine, ki so veliko širši kot homeomorfizem
+Na primer torus $S^1\times B^2$ in sfera $S^1$ imata podobno obliko, vendar nista
+ homeomorfna. Zato bomo definirali homotopsko in šibko homotopsko ekvivalenco, ki bosta povezali prostore s podobnimi oblikami.
+
+Spomnimo se, \textit{homotopija} je taka družina preslikav $f_t(x):X \rightarrow Y$, da je prirejena preslikava $F(x,t)=f_t(x):X \times I \rightarrow Y$ zvezna. Rečemo, da sta preslikavi $f_0$ in $f_1$ homotopni in pišemo $f_0 \simeq f_1$
+
+
+\begin{definicija}
+    Preslikava  $f : X \rightarrow Y$ je \textit{homotopska ekvivalenca} prostorov $X$ in $Y$, če obstaja preslikava $g: Y\rightarrow X$, taka da
+    je $f g \simeq \mathds{1}$ in $gf \simeq \mathds{1}$. Rečemo, da sta prostora $X$ in
+    $Y$  \textit{homotopsko ekvivalentna}.
+\end{definicija}
+
+\begin{definicija}
+    Naj bo $A \subseteq X$. Preslikavo $r : X \rightarrow A$ za katero 
+    velja $r|A = \mathds{1}_A$ imenujemo \textit{retrakcija}, podprostor
+     $A$ pa retrakt prostora $A$. Podprostor $A \subseteq X$ je 
+     \textit{deformacijski retrakt}, če obstaja homotopija $H : X \times
+      I \rightarrow X$ med $\mathds{1}_X$ in kakšno retrakcijo $r : X 
+      \rightarrow A$. Homotopijo $H$ imenujemo \textit{deformacijska 
+      retrakcija}. Če homotopija $H$ miruje na množici $A$ jo imenujemo 
+      \textit{krepka deformacijska retrakcija} prostor $A$ pa 
+      \textit{krepak deformacijski} retrakt prostora X.
+\end{definicija}
+
+Če je $A\subseteq X$ in je $A$ deformacijski retrakt od $X$, potem sta 
+$X$ in $A$ homotopsko ekvivalentna prostora. Res, če je $i:A\rightarrow
+ X$ inkluzija, $r:X\rightarrow A$ retrakcija, potem je $ir=\mathds{1}_A$
+  in $ri\simeq\mathds{1}_X$. Eden izmed načinov, da preverimo, ali sta
+   prostora $A$ in $B$ homotopsko ekvivalentna, je, da poiščemo prostor
+    $X$, ki vsebuje $A$ in $B$, kot deformacijska retrakta. 
+
+Homotopija $f_t: X\rightarrow X$, ki nam da deformacijsko retrakcijo 
+prostora $X$ na podprostor $A$, ima lastnost, da velja 
+$f_t|A=\mathds{1}_A$, za vse $t$. V splošnem, homotopija 
+$f_t:X\rightarrow Y$, katere zožitev na podprostor $A\subseteq X$ je 
+neodvisna od $t$ imenujemo \textit{homotopija relativno A?}. Krepka 
+deformacijskia retrakcija $X$ na $A$ je torej homotopija med retraktom
+ $r:X\rightarrow A$ in identiteto $\mathds{1}_X$, relativno $A$.
+
+
+\begin{primer}
+    nek primer.
+\end{primer}
+
+Šibko homotopsko ekvivalenco pa opišemo s pomočjo homotopskih grup, ki
+ jih bomo definirali v nadaljevanju. Prva homotopska grupa se imenuje
+  fundamentalna grupa in je grupa ekvivalenčnih razredov zank v prostoru, 
+ tj. poti z enako začetno in končno točko.
+
+Pot v prostoru $X$ je zvezna preslikava $ f: I \rightarrow X$, pri čemer je $I$ enotski interval $[0,1]$. Poti sta si homotopni, če lahko eno zvezno deformiramo v drugo, brez da bi premaknili krajišči poti.
+\begin{definicija}
+    
+    Homotopija poti v $X$ je družina preslikav $f_t:I \rightarrow X, 0\le t \le 1$, taka da
+    \begin{itemize}
+        \item 
+        sta krajišči $f_t(0) = x_0$ in $f_t(1) = x_1$ neodvisni od $t$ in
+%t po homotopiji, s po intervalu poti
+        \item 
+        je prirejena preslikava $F:I\times X \rightarrow X$ definirana s $F(s,t) = f_t(s)$ zvezna.
+    \end{itemize}
+    Za poti $f_1$ in $f_0$, ki sta povezani s homotopiijo $f_t$ rečemo, da sta homotopni in označimo $f_1 \simeq f_0$.
+\end{definicija}
+
+
+
+\begin{trditev}
+    Relacija homotopije na poteh s fiksnima krajiščema je ekvivalenčna relacija za vsak topološki prostor.
+\end{izrek}
+
+\begin{dokaz}
+    Preveriti moramo 3 lastnosti ekvivalenčnih relacij, refleksivnost, simetričnost in tranzitivnost.
+
+    Najprej preverimo refleksivnost. Naj bo $f : I \rightarrow X$ pot v prostoru $X$. Homotopijo definiramo kot $f_t(s)=f(s)$.
+
+    Naj velja $f \simeq g$ in naj bo $f_t(s)$ homotopija med $f$ in $g$, 
+    torej $f_0=f$ in $f_1=g$. Homotopijo med $g$ in $f$ definiramo kot 
+    $g_t(s)=f_{1-t}(s)$. Velja $g_0=f_1=g$ in $g_1=f_0=f$ in ker je 
+    $g_t(s)$ kompozitum zveznih preslikav, je zvezna. Sledi, da je 
+    relacija homotopije simetrična.
+
+    Naj bodo $f, g \text{ in } h$ poti v $X$ in naj velja $f \simeq g$ 
+    in $g \simeq h$. in naj bo $f_t(s)$ homotopija med $f$ in $g$ in 
+    $g_t(s)$ homotopija med $g$ in $h$. Definirajmo 
+    $$h_t(s)=\begin{cases}
+        f_{2t}(s), & t \in [0,\frac{1}{2}] \\
+        g_{2t-1}(s), & t \in [\frac{1}{2},1]
+    \end{cases}
+    $$
+    Velja $h_0=f_0=f$ in $h_1=g_1=h$, ker je $h_t(s)$ sestavljena iz dveh zveznih poti, ki se ujemata na preseku, je zvezna, sledi, da je relacija tranzitivna.
+\end{dokaz}
+
+Za poljubni poti $f,g : I \rightarrow X$, za kateri velja $f(1) = g(0)$ 
+lahko definiramo njun stik $f\sqcdot g$, ki preteče $f$ in $g$ z dvojno 
+hitrostjo v enotskem intervalu.
+$$ f\sqcdot g(s) \begin{cases}
+    f(2s), &s \in [0,\frac{1}{2}] \\
+    g(2s-1), & s \in [\frac{1}{2},1]
+\end{cases}
+$$
+
+Če se omejimo samo na poti $f:I \rightarrow X$ z enako začetno in končno točko $f(0) = f(1) = x_0$, govorimo o zankah, za $x_0$ pa rečemo, da je bazna točka.
+Množico vseh homotopskih razredov $[f]$, z bazno točko $x_0$ označimo z $\pi_1(X,x_0)$.
+
+\begin{izrek}
+    $\pi_1(X,x_0)$ opremljena s produktom $[f][g] = [f\sqcdot g]$ je grupa.
+\end{izrek}
+
+\begin{dokaz}
+    Najprej preverimo dobro definiranost produkta. Naj velja $[f]=[f']$, preko homotopije $f_t$ in $[g]=[g']$ preko $g_t$. Potem sta $f\sqcdot g$ in $f'\sqcdot g'$ homotopni preko
+    $h_t(s) =f_t \sqcdot g_t$. Vidimo, da $h_0=f_0 \sqcdot g_0=f \sqcdot g$ in $h_1=f_1 \sqcdot g_1=f'\sqcdot g'$. Ker je $f_t(1)=g_t(0)$ za vsak t in sta $ft(s)$ in $g_t(s)$ zvezni, sledi, da je tudi $h_t(s)$ zvezna, torej velja [$f\sqcdot g$]=[$f'\sqcdot g'$].
+
+    Definirajmo še \textit{reparametrizacijo} poti $f$ kot kompozitum $f 
+    \phi$, kjer je $\phi: I \rightarrow I$ neka zvezna preslikava, za 
+    katero velja $\phi(0)= 0$ in $\phi(1)=1$. Reparametrizacija poti 
+    ohranja homotopski razred, saj sta $f\phi$ in $f$ povezani preko 
+    $f\phi_t$, pri čemer je $\phi_t(s)=(1-t)\phi(s)+ts$. Vidimo, da 
+    $\phi_t(s)$ leži med $\phi(s)$ in $s$, torej na $I$, zato je 
+    $f\phi_t(s)$ dobro definirana.
+
+    Naj bodo $f$, $g$ in $h$ poti v $X$ in naj bo $f(1)=g(0)$ in 
+    $g(1)=h(0)$, potem sta oba stika $(f\sqcdot g) \sqcdot h$ in 
+    $f\sqcdot (g \sqcdot h)$ definirana, $(f\sqcdot g) \sqcdot h$ pa je
+     reparametrizacija $f\sqcdot (g \sqcdot h)$ preko odsekoma linearne 
+     funkcije
+    $$
+    \phi(s)=\begin{cases}
+        \frac{s}{2}, &s \in [0,\frac{1}{2}] \\
+        s, & s \in [\frac{1}{2},\frac{3}{4}]\\
+        2s, & s \in [\frac{3}{4},1],
+    \end{cases}
+    $$ zato sta poti homotopni, torej je množenje v $\pi_1(X,x_0)$ asociativno.
+
+    Naj bo $f$ pot v $X$ in naj bo $c$ konstantna pot definirana s $c(s)=f(1)$, $fc$ je reparametrizacija $f$ preko 
+    $$\phi(s)=\begin{cases}
+        2s, &s \in [0,\frac{1}{2}] \\
+        1, & s \in [\frac{1}{2},1],\\
+        \end{cases}
+    $$, zato velja $fc\simeq f$, podobno velja tudi  $cf\simeq f$, kjer je $c$ konstantna pot $c(s)=f(0)$. Sklepamo, da je $c(s)=x_0$ dvostranska enota v grupi  $\pi_1(X,x_0)$
+
+    Inverz poti $f$ definiramo kot $\bar{f}(s)=f(1-s)$. Definirajmo $h_t=f_t\sqcdot \bar{f_t}$, pri čemer je 
+    $$
+    f_t(s)=
+    \begin{cases}
+        f(s), &s \in [0,1-t] \\
+        f(1-t), & s \in [1-t,1] \\
+        \end{cases}
+$$
+Ker je $h_0=f\sqcdot \bar{f}$ in $h_1=f(0)=c$, sledi, da je $f\sqcdot \bar{f}$ homotopna konstantni poti v $x_0$. Če $f$ zamenjamo z $\bar{f}$, sledi, da $\bar{f}\sqcdot f\simeq c$, zato je $[\bar{f}]$ obojestranski inverz od $[f]$.
+\end{dokaz}
+
+Kot že povedano, tej grupi pravimo fundamentalna grupa prostora $X$, z bazno točko $x_0$. $\pi_1(X,x_0)$ je prva v zaporedju analogogno definiranih homotopskih grup $\pi_n(X,x_0)$, pri katerih namesto iz $I$ slikamo iz $n$-dimenzionalne kocke $I^n$.
+
+
+Naj bo $I^n$ $n$-dimenzionalna kocka. Rob $\partial I^n \text{ od } I^n$ je podprostor točk pri katerih je vsaj ena koordinata enaka $1$ ali $0$. Definirajmo $\pi_n(X,x_0)$, množico homotopskih razredov preslikav $f:(I^n,\partial I^n) \rightarrow (X,x_0)$ pri čemer velja $f(\partial I^n) = x_0$.
+
+
+Za $n\ge 2$ posplošimo stik definiran pri fundamentalni grupi.
+$$ f\sqcdot g(s) \begin{cases}
+    f(2s_1,s_2,\ldots,s_n), & s_1\in [0,\frac{1}{2}] \\
+    g(2s_1-1,s_2,\ldots,s_n), & s_1 \in [\frac{1}{2},1]
+\end{cases}
+$$
+
+\begin{izrek}
+    $\pi_n(X,x_0)$ opremljena s produktom $[f][g] = [f\sqcdot g]$ je grupa za vsak $n \in \mathds{N}$.
+\end{izrek}
+
+Dokaz te trditve je enak dokazu za $n=1$, saj je v stik poti vpletena le prva komponenta poti.
+
+\begin{definicija}
+    Topološka prostora sta \textit{šibko homotopsko ekvivalentna}, če so njune homotopske grupe izomorfne za vsak $n \in \mathds{N}$.
+\end{definicija}
+
+Homeomorfni prostori so homotopsko ekvivalentni, homotopsko ekvivalentni prostori so si tudi šibsko homotopsko ekvivalentni. Obratno v splošnem ne velja.
+
+\begin{definicija}
+    Preslikava je \textit{šibka homotopska ekvivalenca}, če preko kompozicije inducira izomorfizem na vse homotopske grupe.
+\end{definicija}
+Če med prostoroma obstaja šibka homotopska ekvivalenca, potem sta prostora šibko homotopsko ekvivalentna.
+
+\begin{trditev}
+    
+\end{trditev}

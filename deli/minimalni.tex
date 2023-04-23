@@ -1,0 +1,253 @@
+
+\section{Minimalni modeli prostorov}
+
+\begin{definicija}
+    Končni topološki prostor je \textit{model} prostora $X$, če mu je šibko homotopsko ekvivalenten. Model je \textit{minimalen}, če ima izmed vseh modelov najmanjšo kardinalnost.
+\end{definicija}
+
+Spomnimo se, če je $X$ $T_0$ prostor in $x$ navzdol odpravljiva točka, tedaj je $r: X \rightarrow X - \{x\}$, $$
+r(u) = \begin{cases}
+    u, & u \neq x \\
+    max(u), & u = x
+\end{cases}$$
+homotopska ekvivalenca.
+
+Preslikavo lahko analogno definiramo za navzgor odpravljive točke, le da namesto v \textit{max(u)} slikamo v \textit{min(u)}. 
+Iz poljubnega modela prostora torej dobimo minimalnega, s postopnim odstranjevanjem odpravljivih točk.
+
+
+\begin{definicija}
+    Naj bo $X$ končen $T_0$ prostor. \textit{Simplicialni kompleks} $\mathcal{K}(X)$ \textit{prirejen X}, je simplicialni kompleks, čigar simpleksi so neprazne verige v $X$. Če je $f: X\rightarrow Y$ zvezna preslikava med dvema $T_0$ prostoroma. \textit{prirejena simplicialna preslikava} $\mathcal{K}(f):\mathcal{K}(X) \rightarrow \mathcal{K}(Y)$ definiramo kot $\mathcal{K}(f)(x) = f(x)$.
+\end{definicija}
+Vidimo, če je $f: X\rightarrow Y$ zvezna , je $\mathcal{K}(f):\mathcal{K}(X) \rightarrow \mathcal{K}(Y)$ simplicialna, saj ohranja ureditev in slika verige v verige.
+Točka $\alpha$ v geometrijski realizaciji $|\mathcal{K(X)}|$ je
+konveksna kombinacija oblike
+$\alpha = t_1x_1+t_2x_2 + \ldots + t_r x_r$, pri čemer 
+$\sum_{i=1}^{r}t_i=1$, za vsak $1 \le i \le r$, $t_i \ge 0$ in 
+velja, da je $x_1 \textless x_2 \textless \ldots \textless x_r$ veriga v $X$.
+Nosilec $\alpha$ je množica \textit{support}($\alpha$)$= \{x_1,x_2,\ldots,x_r\}$. Pomembno vlogo igra 
+ preslikava $\alpha \mapsto x_1$.
+ 
+ \begin{definicija}
+    Naj bo $X$ končen $T_0$ prostor, Definirajmo
+    $\mathcal{K}$-\textit{McCordovo} preslikavo $\mu_X:|\mathcal{K}
+    (X)|\rightarrow X$, z $\mu_X(\alpha) =$
+    min(\textit{support}($\alpha))$.
+\end{definicija}
+
+\begin{izrek}
+    $\mathcal{K}$-\textit{McCordova} preslikava je šibka homotopska 
+    ekvivalenca za vsak končen $T_0$-prostor.
+\end{izrek}
+
+
+\begin{izrek}{\textbf{McCordov}}\label{iz:mccord}
+    Naj bosta $X$ in $Y$ topološka prostora in naj bo $f:X\rightarrow Y$ zvezna. Če je zožitev
+    $$
+    f|_{f^{-1}}:f^{-1}(U)\rightarrow U
+    $$
+    Šibka homotopska ekvivalenca za vsako bazno množico $U$, potem je $f:X\rightarrow Y$  šibka homotopska ekvivalenca.
+\end{izrek}
+
+\begin{opomba}
+    Izrek ne velja le za zožitev na bazne množice, ampak tudi na vsako \textit{basis like open cover}, torej za vsako pokritje, ki je baza za kako drugo topologijo.
+\end{opomba}
+
+
+
+\begin{lema}\label{lem:sibka}
+    Naj bo $x\in X$ in naj bo $L=X\ \backslash \
+    U_x\subseteq \mathcal{K}(X)$. Potem se vsak $\alpha \in \k(X)\ \backslash \ |L|$ da napisati, kot $\alpha = t\beta + (1-t)\gamma$, za $\beta \in \k(U_x), \ \gamma \in |L|$ in $0<t\leq 1$, pri čemer je $\alpha$ zvezno odvisna od $\beta, \gamma$ ter $t$ in $\beta, \gamma$ ter $t$ so enolično določeni.
+\end{lema}
+\begin{dokaz}
+    $L$ je subkompleks, ki ga napenjajo ogljišča, ki niso v $U_x$. Za vsak $\alpha \in |\k(X)|\ \backslash \ |L|$, 
+    $$\alpha = \sum_{i=1}^{n} \alpha_i v_i 
+    = \sum_{i=1}^{r} \alpha_i u_i + \sum_{i=r+1}^{n}\alpha_i v_i,\ \text{pri čemer}\ \sum_{i=1}^{n} \alpha_i=1
+    $$
+    za $u_i \in U_x$ in $v_i \in X \ \backslash \ U_x$ in $\alpha_i \in \mathbb{R}$, za $r\in \{1,2, \cdots, n-1\}$. S t označimo $\sum_{i=1}^{r} \alpha_i$, torej je $1-t=\sum_{i=r+1}^{n} \alpha_i$ in $0<t\leq 1$. Potem $\beta =\sum_{i=1}^{r} \alpha_i u_i/t \in \k(U_x)$, saj je $\sum_{i=1}^{r} \alpha_i/t=1$ in podobno $\gamma=\sum_{i=r+1}^{n} 
+    \alpha_i v_i/(1-t) \in \k(X \ \backslash \ U_x)$. Zveznost in enoličnost sledi iz konstrukcije.
+
+\end{dokaz}
+
+\begin{izrek}
+    $\mathcal{K}$-\textit{McCordova} preslikava je šibka homotopska 
+    ekvivalenca za vsak končen $T_0$-prostor.
+\end{izrek}
+
+\begin{dokaz}
+    Definirajmo retrakcijo $r:U_x\rightarrow \{x\}$ kot 
+    $r(y)=x$, za vsak $y\in X$. Ker je $x$ maksimum v 
+    $U_x$, je $r\geq 1_X$, zato je po trditvi 
+    \ref{iz:ograje} $r\simeq 1_X$, zato je $U_x$ 
+    kontraktibilna množica. Dokazali bomo, da je za vsak 
+    $x\in X$, $\mu_X^{-1}(U_x)$ odprta in kontraktibilna. S 
+    tem bomo pokazali, da je $\mu_X$ zvezna in da so 
+    zožitve $\mu_X|_{\mu_X^{-1}(U_x)}:\mu_X^{-1}(U_x)\rightarrow 
+    U_x$ šibke homotopske ekvivalence, kar pa po McCordovem izreku \ref*{iz:mccord}
+    pomeni, da je cela preslikava $\mu_X$ Šibka homotopska ekvivalenca.
+
+    Naj bo $x\in X$ in naj bo $L=X\ \backslash \
+    U_x\subseteq \mathcal{K}(X)$. $L$ je torej 
+    subkompleks, ki ga napenjajo ogljišča, ki niso v $U_x$. 
+    Trdimo, da 
+    $$
+    \mu_X^{-1}(U_x)=|\mathcal{K}(X)|\ \backslash \ |L|.
+    $$
+    Pokažimo najprej, da $\mu_X^{-1}(U_x)\subseteq 
+    |\mathcal{K}(X)|\ \backslash \ |L|$. Naj bo $\alpha \in 
+    \mu_X^{-1}(U_x)$, torej je min$(\textit{support}
+    (\alpha))\in U_x$, zato \textit{support}($\alpha$) vsebuje 
+    ogljišče iz $U_x$, zato $\alpha \notin |L|$, torej $\alpha 
+    \in |\mathcal{K}(X)|\ \backslash \ |L|$.
+
+    Pokažimo še, da $|\mathcal{K}(X)|\ \backslash \
+    |L|\subseteq \mu_X^{-1}(U_x)$. Naj $\alpha \in |\mathcal{K}(X)|\ \backslash \ |L|$
+    Če  $\alpha \notin |L|$, potem obstaja $y\in 
+    \textit{support}(X)$, tak, da $y \in U_x$, zato je 
+    min$(\textit{support}(X))\leq y \leq x$, zato je 
+    $\mu_X(\alpha) \in U_x$, zato $\alpha \in \mu_X^{-1}
+    (U_x)$.
+    Ker je $L$ zaprta podmnožica $\mathcal{K}(X)$, je 
+    $\mu_X^{-1}(U_x)$ odprta.
+
+    Pokažimo, da je $\mu_X^{-1}(U_x)$ kontrabilna. Prvo pokažimo, da je 
+    $|\mathcal{K}(U_x)|$ krepak deformacijski retrakt 
+    od $|\mathcal{K}(X)|$. Naj bo $i:|\k(U_x)|\hookrightarrow |\mathcal{K}
+    (X)|\ \backslash \ |L|$ inkluzija. Če je $\alpha \in |\mathcal{K}(X)|\ 
+    \backslash \ |L|$, potem je po lemi \ref{lem:sibka}  $\alpha = t\beta + 
+    (1-t)\gamma$, za $\beta \in \k(U_x), \ \gamma \in |L|$ in $0<t\leq 1$. 
+    Definirajmo $r:|\mathcal{K}(X)|\ \backslash \ |L|\rightarrow \k(U_x)$ 
+    kot $r(\alpha)=\beta$. Ker je $\alpha$ zvezna in je zožitev $r|_{(|\mathcal{K}(X)|\ \backslash \ |L|)\cap 
+    \overline{\sigma}}:(|\mathcal{K}(X)|\ \backslash \ |L|)\cap 
+    \overline{\sigma} \rightarrow \overline{\sigma}$ zvezna, za vsak 
+    $\sigma \in \k(X)$ , sledi in je da je $r$ zvezna. Definirajmo zdaj linearno homotopijo $H:(|\mathcal{K}(X)|\ \backslash \ |L|) \times I \rightarrow (|\mathcal{K}(X)|\ \backslash \ |L|)$ med $1_{(|\mathcal{K}(X)|\ \backslash \ |L|)}$ in $ir$ kot 
+    $$
+    H(\alpha,s)=(1-s)\alpha + s\beta.
+    $$
+    H je dobro definirana, in zvezna, saj je vsaka zožitev 
+    $$
+    H|_{((|\mathcal{K}(X)|\ \backslash \ |L|)\cap 
+    \overline{\sigma})\times I}:((|\mathcal{K}(X)|\ \backslash \ |L|)\cap 
+    \overline{\sigma})\times I \rightarrow \overline{\sigma}
+    $$
+    dobro definirana in zvezna, $\sigma \in \k(X)$.
+
+    Ker je vsak element iz $U_x$ primerljiv z $x$, je $\k(U_x)$ 
+    simplicialni stožec, zato je po trditvi \ref{kr neki} $|\k(U_x)|$ 
+    kontraktibilen in zato je kontraktibilen tudi $\mu_X^{-1}
+    (U_x)=|\mathcal{K}(X)|\ \backslash \ |L|$.
+\end{dokaz}
+
+
+Če imamo torej Končen topološki prostor $X$, mu priredimo simplicialni kompleks
+$\k(X)$, Geometrijska realizacija $\k(X)$ tega kompleksa pa je šibko homotopsko ekvivalentna 
+začetnemu prostoru $X$. Torej lahko za vsak prostor, ki je homeomorfen geometrijski realizaciji
+nekega simplicialnega kompleksa, najdemo njegov končen model tj. končen topološki prostor, ki mu
+je šibko homotopsko ekvivalenten.
+
+\begin{primer}
+    nek primer
+\end{primer}
+
+\begin{definicija}
+    Naj bo $K$ končen simplicialni kompleks. Končen $T_0$-
+    prostor $\chi(K)$ prirejen k $K$ je delno urejena množica simpleksov v $K$, urejena glede na inkluzijo.
+    Naj bo $\varphi:K\rightarrow L$ simplicialna preslikava, potem preslikavo  $\chi(\varphi):\chi(K)\rightarrow \chi(L)$ definiramo kot 
+    $\chi(\varphi)(\sigma)=\varphi(\sigma)$ za vsak simpleks $\sigma \in K$
+\end{definicija}
+
+
+\begin{primer}
+    primer preslikave
+\end{primer}
+
+\begin{lema}
+    \label{lem:komutira}
+    Naj bo $f :X\rightarrow Y$ zvezna preslikava med dvema $T_0$ prostoroma, potem naslednji diagram komutira
+
+    \[\begin{tikzcd}
+        {|\k(X)|}\arrow{r}{|\k(f)|} \arrow[swap]{d}{\mu_X} & {|\k(Y)|} \arrow{d}{\mu_Y} \\
+       X \arrow{r}{f} & Y
+       \end{tikzcd}
+       \]
+    
+\end{lema}
+
+
+
+\begin{dokaz}
+    \begin{align*}
+        $$
+        f\mu_X(\alpha)&=f(min(\textit{support}(\alpha)))\overset{*}{=}min(f(\textit{support}(\alpha))) \\
+        &=min(\textit{support}(|\k(f)(\alpha)))=\mu_Y|\k(f)|(\alpha)
+        $$
+    \end{align*}
+
+    Pri čemer $*$ velja zaradi zveznosti $f$, druge enakosti pa veljajo kar po definiciji.
+\end{dokaz}
+
+Če je $K$ končen kompleks, potem je $\k(\chi(K))$ prva baricentrična subdivizija.
+definirajmo $\chi$-\textit{McCordovo preslikavo} $\mu_K=\mu_{\chi(K)}S_K^{-1}: |K|\rightarrow \chi(K)$. 
+Ker je kompozitum dveh šibkih homotopskih ekvivalenc tudi šibka homotopska ekvivalenca, takoj sledi naslednji izrek.
+
+\begin{izrek}
+    $\chi$-McCordova preslkava $\mu_K$ je šibka homotopska
+     ekvivalenca za vsak končen simplicialni kompleks $K$.
+\end{izrek}
+
+
+\begin{trditev}
+    Naj bo $\varphi: K\rightarrow L$ simplicialna preslikava med končnima kompleksoma. Potem naslednji diagram komutira do homotopije natančno
+    \\
+  
+\[\begin{tikzcd}
+    {|K|} \arrow{r}{|\varphi|} \arrow[swap]{d}{\mu_K} & {|L|} \arrow{d}{\mu_L} \\
+    \chi(K) \arrow{r}{\chi(\varphi)} & \chi(L)
+    \end{tikzcd}
+    \]
+\end{trditev}
+
+\begin{proof}
+    Najprej poiščimo homotopijo med $|\varphi|s_K$ in $s_L|\varphi'|$, kjer je $\varphi'=\k\chi(\varphi)$ preslikava med baricentričnima subdivizijama $K'$ in $L'$.
+    Naj bo $S=\{\sigma_1,\sigma_2,\cdots,\sigma_r\}$ simpleks 
+    v $K'$ in naj bo $\sigma_1 \subsetneq \sigma_2 \subsetneq 
+    \cdots \subsetneq \sigma_r$ veriga simpleksov iz $K$. Naj bo $\alpha$
+    točka v zaprtem simpleksu $\overline{S}$. Potem je $S_K(\alpha)
+    \in \overline{\sigma_r}\subseteq |K|$ in  $|\varphi|S_K(\alpha) \in 
+    \overline{\varphi_r}\subseteq |L|.$ \
+    Velja pa tudi $|\varphi'|(\alpha)\in\
+    {\varphi(\sigma_1),\varphi(\sigma_2),\cdots,\varphi(\sigma_r)\}$
+    in potem $S_L|\varphi'|(\alpha) \in \overline{\varphi(\sigma_r)}.$ Zato 
+    je linearna homotopija
+
+
+
+    \begin{centering}
+        $$
+        H:|K'|\times I \rightarrow |L| \\
+        H: (\alpha,t) \mapsto (1-t)|\varphi|S_K(\alpha) + tS_L|\varphi'|(\alpha)\\
+        $$
+    \end{centering}
+zvezna in dobro definirana in zato $|\varphi|S_K(\alpha) \simeq 
+S_L|\varphi'|$. Iz leme \ref{lem:komutira} sledi, da naslednji diagram komutira 
+\[\begin{tikzcd}[row sep=large, column sep=large]
+    {|\k(\chi(K))|}\arrow{r}
+   {|\k(\chi(\varphi)|} \arrow[swap]{d}{\mu_{\chi(K)}} & {|\k(\chi(L))|} \arrow{d}{\mu_{\chi(L)}} \\
+   \chi(K) \arrow{r}{\chi(\varphi)} & \chi(L)
+   \end{tikzcd}
+   \]
+in zato
+
+\begin{align*}
+    $
+    \mu_L|\varphi|=\mu_{\chi(L)}S_L^{-1}|\varphi| \simeq \mu_{\chi(L)}|\varphi'&|S_K^{-1} \\
+    =\chi(\varphi)\mu_{\chi(K)}S_K^{-1} =\chi(\varphi)\mu_K&
+    $
+  \end{align*}
+\end{proof}
+
+Iz lastnosti 2 od 3 (to je treba še dokazati) in dejstva, da je preslikava, ki je homotopna šibki homotopski ekvivalenci isto šibka homotopska ekvivalenca, takoj sledi naslednja trditev.
+
+\begin{trditev}
+    Naj bo $\varphi : K\rightarrow L$ simplicialna preslikava med končnima kompleksoma, potem je $|\varphi|$ šibka homotopska ekvivalenca, natanko tedaj, ko je $\chi(\varphi)$ šibka homotopska ekvivalenca.
+\end{trditev}

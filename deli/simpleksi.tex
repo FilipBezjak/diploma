@@ -1,0 +1,180 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{verbatim}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{tikz-cd}
+
+
+\makeatletter
+\DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
+\newcommand{\morphic@sqcdot}[2]{%
+\sbox\z@{$\m@th#1\centerdot$}%
+\ht\z@=.33333\ht\z@
+\vcenter{\box\z@}%
+}
+\makeatother
+
+\makeatletter
+\DeclareRobustCommand{\k}{
+    \mathcal{K}
+}
+
+\makeatletter
+\DeclareRobustCommand{\h}{
+    \mathcal{H}
+}
+\makeatletter
+\DeclareRobustCommand{\si}{
+    \bar{\sigma}
+}
+
+
+\makeatletter
+\DeclareRobustCommand{\pot}{
+    $\h-$pot
+}
+
+
+\DeclareMathOperator*{\supp{supp}
+
+\newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
+
+\title{Minimalni končni modeli prostorov}
+\author{Filip Bezjak \\ Mentor: dr. Petar Pavešić}
+
+
+\setlength\parindent{24pt}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+
+\theoremstyle{definition}
+\newtheorem{primer}{Primer}
+
+\theoremstyle{plain}
+\newtheorem{trditev}{Trditev}
+
+\theoremstyle{plain}
+\newtheorem{posledica}{Posledica}
+
+\theoremstyle{plain}
+\newtheorem{opomba}{Opomba}
+
+\theoremstyle{plain}
+\newtheorem{lema}{Iema}
+
+\newenvironment{dokaz}{\begin{proof}[\bfseries\upshape\proofname]}{\end{proof}}
+
+\begin{document}
+
+
+\section{Simpleksi}
+
+
+\textit{Simpleks} ali $n$-simpleks je $n$-razsežni analog trikotnika. Točka je $0$-simpleks, $1$-simpleks je daljica, $2$-simpleks je trikotnik,
+$3$-simpleks je tetraeder. $n$-simpleks definiramo kot množico svojih $n+1$ oglišč. \textit{Simplicialni kompleks $K$} je sestavljen iz množice oglišč $V_K$ in množice simpleksov $S_K$, sestavljene iz končnih nepraznih podmnožic od $V_K$, pri čemer je vsak element $S_k$ simpleks in vsaka podmnožica simpleksa je simpleks. Pišemo $\sigma \in K$ in $v \in K$, če je $\sigma \in S_K$ ter $v \in V_K$. Dimenzija $K$ je enaka maksimumu dimenzij njegovih simpleksov, $n$-dimenzionalnemu simpleksialnemu kompleksu rečemo tudi \textit{n-kompleks}. Omejili se bomo samo na končne komplekse, torej $n \in \mathbb{N}$.
+
+Če je simpleks $\sigma$ vsebovan  v simpleksu $\tau$, mu rečemo \textit{lice} od $\tau$, rečemo mu \textit{pravo lice}, če $\tau\neq \sigma$. 
+Simpleksu rečemo \textit{maksimalen simpleks}, če ni pravo lice nobenemu drugemu simpleksu. Subkompleks $L\in K$ simplicialnega kompleksa
+ $K$ je Simplicialni kompleks, tak da $V_L\subseteq V_K$ in $S_L\subseteq S_K$
+
+
+Naj bo $\sigma = \{v_0,v_1,\ldots,v_n\}$ $n$-simpleks. Zaprt
+simpleks $\bar{\sigma}$ je množica formalnih konveksnih kombinacij $\mymathop{\Sigma}_{i=0}^{n}\alpha_i v_i$
+pri čemer je $\alpha_i \ge 0$ za vsak $0\le i \le n$ in $\mymathop{\Sigma}_{i=0}^{n}\alpha_i = 1$. Zaprt simpleks je metričen prostor z metriko
+
+\begin{equation}
+    \label{eq:metrika}    
+d(\mymathop{\Sigma}_{i=0}^{n}\alpha_i v_i,\mymathop{\Sigma}_{i=0}^{n}\beta_i v_i) = \sqrt{\mymathop{\Sigma}_{i=0}^{n}(\alpha_i - \beta_i)^2}.
+\end{equation}
+Če so $v_i$ linearno neodvisne točke v $\mathbb{R}^m$ za nek $m\geq n$, potem je $\bar{\sigma}$ homeomorfen prostoru 
+$\{\mymathop{\Sigma}_{i=0}^{n}\alpha_i v_i, | \mymathop{\Sigma}_{i=0}^{n}\alpha_i = 1 \text{ in } \alpha_i \ge 0 \}\subseteq \mathbb{R}^m$, 
+kar pomeni, da lahko vsak zaprt simpleks predstavimo kot podprostor $\mathbb{R}^m$ z evklidsko topologijo.
+
+\textit{Geometrijska realizacija} $|K|$ simplicialnega kompleksa $K$ je 
+množica formalnih konveksnih kombinacij $\underset{v \in K}{\Sigma}\alpha_v v$, takih da je $\{v | \alpha_v > 0\}$ simpleks v $K$ in 
+$\mymathop{\Sigma}_{v\in K}\alpha_v=1$. Rečemo, da $|K|$ realizira $K$. Za točko $x\in |K|$ označimo $\supp(x)=\{v | \alpha_v > 0\}$, 
+tej množici pravimo nosilec od $x$. Topologijo na $\si$ definiramo na naslednji način. $U \subseteq |K|$ je odprta, natanko tedaj, ko je $U \cap 
+\si$ odprta, za vsak $\sigma \in K$. Kot prej, če so $v\in K$ linearno neodvisne točke v $\mathbb{R}^m$ za nek $m\geq |V_K|$, potem je 
+$|K|$ homeomorfen prostoru $\{\mymathop{\Sigma}_{v\in K}^{n}\alpha_v v | \mymathop{\Sigma}_{v\in K}^{n}\alpha_v = 1 \text{, } \alpha_i
+\ge 0 \text{ in } \{v | \alpha_v > 0\} \text{ je simpleks v $K$}\} \subseteq \mathbb{R}^m$, kar spet pomeni, da lahko vsak simplicialni
+kompleks predstavimo kot podprostor v $\mathbb{R}^{|V_K|}$ z evklidsko topologijo.
+Če $L\subseteq K$, potem je $|L|\subseteq |K|$ zaprta podmnožica.
+
+\begin{opomba}
+    Če je $K$ $n-$kompleks, potem se ga da realizirati v $\mathbb{R}^{2n+1}$. To pomeni, da obstaja podprostor v
+    $\mathbb{R}^{2n+1}$, ki je homeomorfen $|K|$. Vsak graf je geometrijska realizacija $1-$kompleksa, zato ga 
+    lahko realiziramo v $\mathbb{R}^{2\cdot 1 +1}=\mathbb{R}^{3}$, kar je pa znano dejstvo iz teorije grafov.
+\end{opomba}
+
+
+\textit{Polieder} je geometrijska realizacija Simplicialnega kompleksa $|K|$, \textit{triangulacija} poliedra $X$ pa je simplicialni kompleks, katerega geometrijska realizacija je homeomorfna $X$.
+
+Ker topologija na $|K|$ sovpada z topologijo na $\bar{\sigma}$, za vsak $\sigma\in K$ in je $U \subseteq |K|$ odprta, natanko tedaj, ko je $U \cap 
+\si$ odprta, za vsak $\sigma \in K$, sledi, da je preslikava $f$ iz $|K|$ v nek topološki prostor $X$ zvezna, natanko tedaj, ko je $f|_{\bar{\sigma}}: \bar{\sigma} \rightarrow X$ zvezna za vsak $\sigma\in K$. Tudi $H:|K|\times I \rightarrow X$ je zvezna, natanko tedaj, ko je zvezna $H|_{\si\times I}:\si\times I \rightarrow X$, za vsak $\sigma\in K$.
+
+
+\textit{Simplicialna preslikava} $\phi :K \rightarrow L$, med 
+simplicialnima kompleksoma $K$ in $L$, je preslikava med 
+oglišči, $V_K \rightarrow V_L$, ki slika simplekse v 
+simplekse. Preslikava $\phi$ inducira zvezno preslikavo med 
+kompleksoma $|\phi| :|K| \rightarrow |L|$, kot $|\phi|:
+\underset{v \in K}{\Sigma}\alpha_v v \mapsto
+\underset{v \in K}{\Sigma}\alpha_v \phi(v)$.
+
+\begin{primer}
+    simplicialna preslikava
+\end{primer}
+    
+\textit{Baricentrična subdivizija} simplicialnega kompleksa 
+$K$ je simplicialni kompleks $K'$, čigar oglišča so 
+simpleksi $\sigma \in K$, simpleksi v $K'$ so pa verige 
+simpleksov v $K$, urejenih z inkluzijo. Torej $\sigma' \in K'$, če $\sigma' = \{\sigma_0, \sigma_1,...,\sigma_n\}$ in $\sigma_0\subsetneq \sigma_1\subsetneq...\subsetneq\sigma_n$. \textit{Težišče} simpleksa $\sigma \in K$ je točka $b(\sigma)=\underset{v\in \sigma}{\Sigma} \frac{v}{\#\sigma}$.
+
+Definirajmo linearno preslikavo $S_K: |K'| \rightarrow |K|$, s predpisom $S_K(\sigma) = b(\sigma)$. Linearnost pomeni, da velja $S_K(\underset{\sigma\in \sigma'}{\Sigma} a_\sigma \sigma) =  \underset{\sigma\in \sigma'}{\Sigma} a_\sigma S_K(\sigma).$
+
+\begin{primer}
+Naj bo $K=\sigma=\{\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\}\}$ 3-simpleks.
+\\
+\\
+\\
+\\
+Slika
+\\
+\\
+\\
+\\
+\\
+Poglejmo si preslikavo $S_K: |K'| \rightarrow |K|$. Naj bo $x$ tako kot na sliki. %Zaradi preglednosti označimo
+%$A:=\{a\}, AB:=\{a,b\},
+%ABC:=\{a,b,c\}$ in analogno še za $B, C, AC, BC$.
+Potem je 
+$K'_x:=\supp(x)=\{\{a\},\{a,b\},\{a,b,c\}\}$ in $x= \underset{\sigma\in K'_x}{\Sigma} \alpha_{i_\sigma} \sigma$. Zato
+
+%\begin{align*}
+ %   $$
+  %  S_K(x)&=S_K(\underset{\sigma\in K'_x}{\Sigma} \alpha_{i_{\sigma}} 
+   % \sigma) =  \underset{\sigma\in K'_x}{\Sigma} \alpha_{i_{\sigma}} 
+    %S_K(\sigma)\\
+%    &=\alpha_1S_K(\{a\})+\alpha_2S_K(\{a,b\})+\alpha_3S_K(\{a,b,c\}) \\ 
+ %   &=\alpha_1a+\alpha_2\frac{a+b}{2}+\alpha_3\frac{a+b+c}{3}.
+  %  $$
+%\end{align*}
+Preslikava $S_K$ je očitno homeomorfizem.
+
+
+\end{primer}
+\end{document}

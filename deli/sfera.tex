@@ -1,68 +1,8 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage[slovene]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{verbatim}
-
-\usepackage{url}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{dsfont}
-\usepackage{amssymb}
-\usepackage{hyperref}
 
 
 
-\makeatletter
-\DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
-\newcommand{\morphic@sqcdot}[2]{%
-\sbox\z@{$\m@th#1\centerdot$}%
-\ht\z@=.33333\ht\z@
-\vcenter{\box\z@}%
-}
-\makeatother
+\section{Minimalni model sfere}
 
-\makeatletter
-\DeclareRobustCommand{\k}{
-    \mathcal{K}
-}
-
-\newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
-
-\title{Minimalni končni modeli prostorov}
-\author{Filip Bezjak \\ Mentor: dr. Petar Pavešić}
-
-
-\setlength\parindent{24pt}
-
-\theoremstyle{definition}
-\newtheorem{definicija}{Definicija}
-
-\theoremstyle{plain}
-\newtheorem{izrek}{Izrek}
-
-\theoremstyle{plain}
-\newtheorem{primer}{Primer}
-
-\theoremstyle{plain}
-\newtheorem{posledica}{Posledica}
-
-\theoremstyle{plain}
-\newtheorem{trditev}{Trditev}
-
-\theoremstyle{plain}
-\newtheorem{opomba}{Opomba}
-
-\theoremstyle{plain}
-\newtheorem{lema}{Iema}
-
-\newenvironment{dokaz}{\begin{proof}[\bfseries\upshape\proofname]}{\end{proof}}
-
-\begin{document}
-
-\maketitle
 
 \begin{definicija}
     Končni topološki prostor je \textit{model} prostora $X$, če mu je šibko homotopsko ekvivalenten. Model je \textit{minimalen}, če ima izmed vseh modelov najmanjšo kardinalnost.
@@ -71,14 +11,15 @@
 Spomnimo se, da je minimalni končni prostor, prostor brez odpravljivih točk, ker pa je vsak končen prostor homotopen svojemu jedru, sledi, da je vsak minimalni končni model prostora tudi minimalen končen prostor.
 
 \begin{trditev}
-    Končen prostor $\mathcal{S}^n(S^0)$ je končni model n-dimenzionalne sfere $S^n$ za vsak $n\geq 0$
+    Končen prostor $\mathds{S}^n(S^0)$ je končni model n-dimenzionalne sfere $S^n$ za vsak $n\geq 0$
 \end{trditev}
 
 \begin{dokaz}
-    po opombi \ref{op:nekaj} velja $|\k(\mathcal{S}^n(S^0))|=|\k(S^0\circledast S^0 \circledast \cdots \circledast S^0)|=|\k(S^0)\ast
-    \k(S^0) \ast \cdots \ast \k(S^0)|=|\k(S^0)|\ast
+    Vemo že, da je $\mathds{S}^n(S^0)$ šibko homotopsko ekvivalenten $|\k(\mathds{S}^n(S^0))|$,
+    po opombi \ref{op:join} pa velja $|\k(\mathds{S}^n(S^0))|=|\k(\underbrace{S^0\circledast S^0 \circledast \cdots \circledast S^0}_\text{$n+1$-krat})|=
+    |\k(S^0)\ast\k(S^0) \ast \cdots \ast \k(S^0)|=|\k(S^0)|\ast
     |\k(S^0)| \ast \cdots \ast |\k(S^0)|=S^0\ast
-    S^0 \ast \cdots \ast S^0$
+    S^0 \ast \cdots \ast S^0=S^n$
 \end{dokaz}
 
 Zdaj bomo še dokazali, da je $\mathcal{S}^n(S^0)$ minimalni končni model za $S^n$. Še več, pokazali bomo, da ima vsak prostor, šibko homotopsko ekvivalenten $S^n$ vsaj $2n+2$ točk, če ima pa natanko $2n+2$ točk pa je homeomorfen $\k(\mathcal{S}^n(S^0))$.
@@ -112,7 +53,6 @@ Dimenzija prirejenega kompleksa $\k(X)$ sovpada z $ht(X)$.
        in je $X\neq \ast$, minimalen prostor, sledi da $X$ nima minimuma, 
        torej mora obstajati točka $y_0\in X$, za katero velja $y_0 \ngeq x_0$.
         Zato je $y_0$ različna od drugih $2h+1$ točk in zato $#X\geq 2h+2$.
-
         Predpodstavimo zdaj, da ima $X$ natanko $2h+2$ točk, torej 
         $$
         X=\{x_0,x_1,\cdots x_h,y_0,y_1,\cdots y_h,\}
@@ -150,7 +90,3 @@ Ker je $\mathds{S}^n(S^0)$ model za $S^n$, čigar višina je enaka $n$ in ima
 $2n+2$ točk, je $\mathds{S}^n(S^0)$ minimalni model za $S^n$. Model je 
 enoličen, saj je vsak model za $S^n$ na $2n+2$ točkah homeomorfen 
 $\mathds{S}^n(S^0)$.
-
-\begin{\section{Minimalni model končnega grafa}
-    
-\end{document}

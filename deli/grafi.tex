@@ -1,0 +1,139 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{verbatim}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{tikz-cd}
+
+
+\makeatletter
+\DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
+\newcommand{\morphic@sqcdot}[2]{%
+\sbox\z@{$\m@th#1\centerdot$}%
+\ht\z@=.33333\ht\z@
+\vcenter{\box\z@}%
+}
+\makeatother
+
+\makeatletter
+\DeclareRobustCommand{\k}{
+    \mathcal{K}
+}
+
+\makeatletter
+\DeclareRobustCommand{\h}{
+    \mathcal{H}
+}
+\makeatletter
+\DeclareRobustCommand{\si}{
+    \bar{\sigma}
+}
+
+
+\makeatletter
+\DeclareRobustCommand{\pot}{
+    $\h-$pot
+}
+
+
+
+\newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
+
+\title{Minimalni končni modeli prostorov}
+\author{Filip Bezjak \\ Mentor: dr. Petar Pavešić}
+
+
+\setlength\parindent{24pt}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+
+\theoremstyle{definition}
+\newtheorem{primer}{Primer}
+
+\theoremstyle{plain}
+\newtheorem{trditev}{Trditev}
+
+\theoremstyle{plain}
+\newtheorem{posledica}{Posledica}
+
+\theoremstyle{plain}
+\newtheorem{opomba}{Opomba}
+
+\theoremstyle{plain}
+\newtheorem{lema}{Iema}
+
+\newenvironment{dokaz}{\begin{proof}[\bfseries\upshape\proofname]}{\end{proof}}
+
+\begin{document}
+
+
+\section{Minimalni modeli končnih grafov}
+
+Graf v topologiji je topološki prostor, ki ga dobimo iz običajnega grafa 
+$G=(E,V)$, če oglišča iz $V$ zamenjamo s točkami in vsako povezavo $e\in 
+E$, $e=xy$, za $x,y\in V$, zamenjamo z enotskim intervalom, pri čemer 
+identificiramo $0$ in $x$ ter $1$ in $y$.
+Graf je torej geometrijska realizacija enodimenzionalnega simplicialnega 
+kompleksa. Graf je končen, če ima končno mnogo oglišč.
+
+
+\begin{definicija}
+    Naj bo $K$ simplicialni kompleks dimenzije $n$ in naj $s_m$ označuje število $m-$simpleksov v $K$
+    \textit{Eulerjeva karakteristika} $\chi(X)$ simplicialnega kompleksa $K$, je  $\chi(X)=\sum_{i=0}^n (-1)^m s_m$
+\end{definicija}
+
+Če se omejimo na enodimenzionalne simplicialne komplekse, potem ta definicija sovpada z definicijo eulerjeve karakteristike grafa, ki je definirana kot $V-E$, kjer je $V$ število oglišč, $E$ pa število robov v grafu. Eulerjeva karakteristika dreves je enaka 1.
+
+\begin{lema}
+    Naj bo $G$ končen graf, in naj bo $e=\{u,v\}$ povezava v grafu in $u\neq v$, potem se vsaka homotopija 
+\end{lema}
+
+\begin{dokaz}
+    dokazali bomo v treh delih 
+
+    Prvo dokažimo, da je je $G\times \{0\}\cup e\times I$ deformacijski retrakt od $G\times I$. Nato bomo dokazali, da se vsa
+\end{dokaz}
+\begin{trditev}
+    $G\times \{0\}\cup e\times I$ deformacijski retrakt od $G\times I$.
+\end{trditev}
+
+
+\begin{trditev}
+    Naj bo $G$ končen graf, in naj bo $e=\{u,v\}$ povezava v grafu in $u\neq v$. potem je $G/_e$ deformacijski retrakt od $G$.
+\end{trditev}
+
+\begin{posledica}
+    Naj bo $G$ končen graf, in naj bo $T$ vpeto drevo. Potem sta prostora $G$ in $G/_T$ homotopsko ekvivalentna.
+\end{posledica}
+
+Naj bo $T$ vpeto drevo grafa $G$, $\chi(T)=1$. $G$ dobimo iz $T$ tako, da mu dodajamo povezave 
+oziroma $1-$simplekse, zato je $\chi(G)$ enako $1-n$, kjer je $n$ število povezav v $G$, ki niso v 
+$T$. Prostor $G/_e$ dobimo iz $G$, tako da krajišči povezave zlepimo v eno točko, povezavo pa 
+izbrišemo, torej ima nov prostor eno oglišče in eno povezavo manj, zato se eulerjeva karakteristika 
+ohranja. $G/_T$ je prostor z enim ogliščem $x_0$ in $n$ povezavami, ki se začnejo in končajo v istem 
+oglišču in je homeomorfen šopu $n=1-\chi(G)$ krožnic, kar označimo z $\vee_{i=1}^{n}S^1$.
+
+Minimalni model grafa je torej enak minimalnemu modelu  $\vee_{i=1}^{n}S^1$. Poglejmo si 
+fundamentalno grupo  $\pi_i(\vee_{i=1}^{n}S^1,x_0)$, kjer je $x_0$ točka, v kateri so krožnice 
+staknjene. Vsak ekvivalenčni razred zank predstavimo z zaporedjem krožnic, ki jih prepotuje in s 
+smerjo v kateri gre čez krožnico. Če s $s_i$ označimo $i-$to krožnico, potem lahko ekvivalenčni 
+zank  predstavimo kot zaporedje $s_{i_1}^{j_1}s_{i_2}^{j_2}\cdots s_{i_m}^{j_m}$, za $m\in N$ in 
+$j\in \{-1,1\}.$ Tu $j$ označuje smer po kateri se premikamo po krožnici. Stik zank 
+$s_{i_1}^{j_1}\cdots s_{i_m}^{j_m}$ in $s_{k_1}^{l_1}\cdots s_{k_m'}^{l_h}$ pa je ekvivalenten 
+stiku zaporedij $s_{i_1}^{j_1}\cdots s_{i_m}^{j_m}s_{k_1}^{l_1}\cdots s_{k_m'}^{l_h}$.
+Seveda velja $s_i s_i^{-1}=s_i^{-1}s_i=1$, kjer $1$ predstavlja trivialno zanko. 
+    Torej vidimo, da je fundamentalna grupa $\pi_i(\vee_{i=1}^{n}S^1,x_0)$ enaka prosti grupi z $n$
+generatorji, ki jo označimo z $F_n$.

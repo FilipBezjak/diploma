@@ -1,82 +1,3 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage[slovene]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{verbatim}
-
-\usepackage{url}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{dsfont}
-\usepackage{amssymb}
-\usepackage{hyperref}
-
-
-
-\makeatletter
-\DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
-\newcommand{\morphic@sqcdot}[2]{%
-\sbox\z@{$\m@th#1\centerdot$}%
-\ht\z@=.33333\ht\z@
-\vcenter{\box\z@}%
-}
-\makeatother
-
-\makeatletter
-\DeclareRobustCommand{\k}{
-    \mathcal{K}
-}
-
-
-
-\makeatletter
-\DeclareRobustCommand{\h}{
-    \mathcal{H}
-}
-\makeatletter
-\DeclareRobustCommand{\si}{
-    \bar{\sigma}
-}
-
-
-\makeatletter
-\DeclareRobustCommand{\pot}{
-    $\h-$pot
-}
-
-
-\newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
-
-\title{Minimalni končni modeli prostorov}
-\author{Filip Bezjak \\ Mentor: dr. Petar Pavešić}
-
-
-\setlength\parindent{24pt}
-
-\theoremstyle{definition}
-\newtheorem{definicija}{Definicija}
-
-\theoremstyle{plain}
-\newtheorem{izrek}{Izrek}
-
-\theoremstyle{plain}
-\newtheorem{trditev}{Trditev}
-
-\theoremstyle{definition}
-\newtheorem{primer}{Primer}
-
-\theoremstyle{plain}
-\newtheorem{opomba}{Opomba}
-
-\theoremstyle{plain}
-\newtheorem{lema}{Iema}
-
-\newenvironment{dokaz}{\begin{proof}[\bfseries\upshape\proofname]}{\end{proof}}
-
-\begin{document}
-
 
 \section{Zanke v Hassejevem diagramu}
 
@@ -109,7 +30,7 @@ označimo $\mathfrak{e}(e)=y$. \textit{Inverz} $\h-$roba $e=(x,y)$ je $\h-$rob $
 
 $\h-$pot v $(X,x_0)$ je zaporedje (lahko tudi prazno), $\h-$robov $\xi=e_1e_2\cdots e_n$, 
 za katero velja, da je $\mathfrak{e}(e_i)=\mathfrak{o}(e_i+1)$, za vsak $0\leq i \leq n-1$.
- Začetek $\h-$poti $\xi$ je  $\mathfrak{o}(\xi)=e_1$, konez pa $\mathfrak{e}(\xi)=e_n$, 
+ Začetek $\h-$poti $\xi$ je  $\mathfrak{o}(\xi)=e_1$, konec pa $\mathfrak{e}(\xi)=e_n$, 
  začetek in konec prazne poti je $\mathfrak{o}(\emptyset)=\mathfrak{e}(\emptyset)=x_0$
  Če je $\xi=e_1,e_2\cdots e_n$ $\h-$pot, definiramo $\overline{\xi}=e_n^{-1},\cdots 
  e_2^{-1}e_n^{-1}$. Če sta $\xi$ in $\xi'$ $\h-$poti in velja $\mathfrak{e}(\xi)=
@@ -120,12 +41,10 @@ za katero velja, da je $\mathfrak{e}(e_i)=\mathfrak{o}(e_i+1)$, za vsak $0\leq i
  E(\h(X))$ za vsak $1\leq i \leq n$ ali pa je $e_i^{-1}\in E(\h(X))$ za vsak $1\leq i \leq n$.
  \textit{Zanka} iz $x_0$ je \pot, ki se začne in konča v $x_0$. Za zanki $\xi$ in
   $\xi'$ rečemo, da sta blizu, če obstajajo monotone $\h-$poti $\xi_1,\xi_2,\xi_3,\xi_4$,
-   take, da  sta množici $\{\xi,\xi'}$ in $\{\xi_1\xi_2\xi_3\xi_4,\xi_1\xi_4\}$ enaki.
+   take, da  sta množici $\{\xi,\xi'\}$ in $\{\xi_1\xi_2\xi_3\xi_4,\xi_1\xi_4\}$ enaki.
 
  \begin{primer}
     poti ki sta si blizu.
  \end{primer}
 
-
-
-\end{document}
+hkjhkjhkjhkjhkj

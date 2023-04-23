@@ -1,0 +1,56 @@
+
+\section{Konstrukcije novih topoloških prostorov}
+
+
+V tem poglavju bomo definirali nekaj osnovnih konstrukcij iz algebraične topologije in jih uporabili na simplicialnih kompleksih in končnih ter splošnih topoloških prostorih
+
+\textit{Join} Topoloških prostorov $X$ in $Y$ je topološki prostor $X\ast Y = X\times Y 
+\times I /_{\sim}$, pri čemer $(x, y_1, 0) \sim (x, y_2, 0)$ in  $(x_1, y, 1) \sim (x2, y, 1)$. 
+Torej $X\times Y\times \{0\}$ strnemo na $X$ in $X\times Y\times \{1\}$ na $Y$. Intuitivno, 
+to pomeni, da vsako točko na $X$ z intervalom povežemo z vsako točko na $Y$
+Posebna primera joina sta "stožec" $CX$, ki je join točke in prostora $X$, 
+$$\{\bullet\}\ast X=X\times I /_{(X\times \{0\})}$$
+in \textit{suspenzija} $\Sigma X$, ki je join $X$ in prostora na dveh točkah, $S^0$.
+
+$$
+\Sigma X=S^0\ast X = X\times I /_{(X\times \{0\},X\times \{1\})}
+$$
+Naj bosta $X$ in $Y$ topološka prostora in $x_0\in X$ ter $y_0\in Y$, potem je 
+\textit{Wedge sum} $X\bigvee Y$ kvocient disjunktne unije $X\bigsqcup Y$, pri
+ katerem identificiramo $x_0$ in $y_0$. Na primer $S^1\bigvee S^1$ je prostor,
+  ki ga dobimo, če staknemo dve krožnici v eni točki in je homeomorfen "\textbf{8}".
+
+
+
+
+\textit{Simplicialni "Join" $K\ast L$} (včasih tudi $KL$) kompleksov $K$ in $L$ z disjunktnima množicama ogljišč je kompleks
+
+$$
+K\ast L=K\cup L \cup \{\sigma \cup \tau| \sigma \in K, \tau \in L \}
+$$
+
+\begin{primer}
+    simplicialni join dveh 1-simpleksov je 3 simpleks. Slika?
+\end{primer}
+
+\textit{Simplicialni stožec} $aK$ z bazo $K$ je join $K$ in ogljišča $a\notin K$
+Za vsaka končna simplicialna kompleksa $K$ in $L$ velja, da je geometrijska realizacija $|K\ast L|$ homeomorfna topološkemu joinu $|K|\ast |L|$ (dokaz).
+
+Če je $K$ 0-kompleks z dvema ogljiščema, potem je $|K\ast L|=|K|\ast |L|=S^0\ast |L| = \Sigma |L|$.
+
+\begin{definicija}
+    \textit{Ne-Hausdorffov join} $X\circledast Y$ dveh končnih $T_0-$
+    prostorov $X$ in $Y$ je disjunktna unija $X\bigsqcup Y$, v kateri
+     pustimo ureditev v $X$ in v $Y$ in nastavimo $x\leq y$ za vsaka 
+     $x\in X$ in $y\in Y$.
+\end{definicija}
+Ta join je asociativen in v splošnem ni komutativen, tako kot pri topološkem
+ joinu imamo posebna primera ne-Hausdorffovega stožca $\mathds{C}(X)=X\circledast
+  D^0$ in ne Hausdorffova Suspenzija $\mathds{S}(X)=X \circledast S^0$. 
+  $D^0$ pomeni 0 dimenzionalni disk, kar je točka.
+
+  Ne-Hausdorffova suspenzija reda $n$ je definirana rekurzivno, kot $\mathds{S}(\mathds{S}^{n-1}(X))$.
+  \begin{opomba}
+    \label{op:join}
+    Velja $\k(X\circledast Y) = \k(Y)\ast \k(X)$ (dokaz?)
+  \end{opomba}
