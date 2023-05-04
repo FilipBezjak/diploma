@@ -45,7 +45,7 @@
 }
 
 
-\DeclareMathOperator*{\supp{supp}
+\DeclareMathOperator*{\supp}{supp}
 
 \newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
 
@@ -176,5 +176,52 @@ $K'_x:=\supp(x)=\{\{a\},\{a,b\},\{a,b,c\}\}$ in $x= \underset{\sigma\in K'_x}{\S
 Preslikava $S_K$ je očitno homeomorfizem.
 
 
+
 \end{primer}
+\begin{izrek}
+    \textit{Simplicial approximation theorem}. Naj bosta $K$ in $L$ simplicialna kompleksa in naj bo $f:|K| \rightarrow |L|$ zvezna. Potem obstaja $n\in N$ in simplicialna preslikava
+    $g:K^n\rightarrow L$, taka da je $|g|$ homotopna $f$.
+\end{izrek}
+
+
+\subsection{Poti v simplicialnem kompleksu}
+
+\textit{Edge path} dolžine $n$ simplicialnega kompleksa $K$ je zaporedje
+$(v_0,v_1,...,v_{n})$ oglišč v $K$, takih, da je $\{v_{i-1},v_i\}$ simpleks v K, za vsak $i$ (dovolimo tudi $v_{i-1}=v_i)$. Edge-path je edge loop, če $a_n=a_0$. Če sta $\alpha =(v_0,v_1,...,v_{n})$ in $\beta=(u_0,v_1,...,v_{m})$, definiramo stik poti $\alpha\sqcdot \beta$ kot $(v_0,v_1,...,v_{n}u_0,u_1,...,v_{m})$. 
+
+\begin{definicija}
+    Naj bo $\alpha$ edge-path. \textit{Elementarna skrčitev} poti $\alpha$ je edge-path, ki ga dobimo iz $\alpha$, če "naredimo en izmed naslednjih muvov"
+
+    \begin{itemize}
+        \item zamenjamo $...,a_{i-1},a_i,...$ z $...,a_i,...$ če $a_{i-1}=a_i$
+        \item zamenjamo $...,a_{i-1},a_i,a_{i+1},...$ z $...,a_{i-1},...$ če $a_{i-1}=a_{i+1}$
+        \item zamenjamo $...,a_{i-1},a_i,a_{i+1},...$ z $...,a_{i-1},a_{i+1},...$ če je $\{a_{i-1},a_i,a_{i+1}\}$ simpleks v $K$
+    \end{itemize}
+
+    Rečemo, da je $\beta$ \textit{elementarna razširitev} $\alpha$, če je $\alpha$ elementarna skrčitev od $\beta$. Rečemo, da sta $\alpha$ in $\beta$ \textit{ekvivalentna}, če lahko $\alpha$ dobimo iz $\beta$ z končnim zaporednjem elementarnih skrčitev in razširitev. Ta relacija je očitno ekvialenčna relacija na edge paths.
+\end{definicija}
+
+\begin{primer}
+    primer
+\end{primer}
+
+    Naj bo $K$ simplicialni kompleks in $b$ oglišče v $K$. Z $E(K,b)$ označimo množico ekvivalenčnih razredov edge zank z izhodiščem v $b$. Ekvivalenčni razred zanke $\alpha$ označimo z $[\alpha]$.
+
+    \begin{trditev}
+        Množica $E(K,b)$ z množenjem, ki ga inducira stik poti, tj. za $[\alpha],[\beta] \in E(K,b)$  $[\alpha][\beta]=[\alpha \beta]$, tvori grupo.
+    \end{trditev}
+\begin{proof}
+    Dobra definiranost množenja in asociativnost sta očitni. Identiteta je ekvivalenčni razred poti $(b)$. Iverz od $(b,b_1,...,b_{n-1},b)$ je $(b,b_{n-1},...,b_1,b)$.
+\end{proof}
+
+\begin{izrek}
+    \label{iz:grupa lomljenk}
+$E(K,b)$ je izomorfna $\pi_q(K,b)$
+\end{izrek}
+
+\begin{proof}
+    dokazzzz
+\end{proof}
+
+
 \end{document}

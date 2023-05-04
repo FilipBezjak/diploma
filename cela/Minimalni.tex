@@ -13,6 +13,7 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{tikz-cd}
+\usepackage{ mathrsfs }
 
 
 \makeatletter
@@ -43,7 +44,7 @@
 
 
 
-\DeclareMathOperator*{\htt{ht}
+\DeclareMathOperator*{\htt}{ht}
 
 \makeatletter
 \DeclareRobustCommand{\pot}{
@@ -96,18 +97,18 @@ zanimive.
 
 Ena izmed glavnih nalog algebraične topologije je iskanje prostorov, ki so si 
 na nek način podobni oziroma ekvivalentni. Prvi pojem podobnosti, ki ga spoznamo
-je homeomorfizem. Dva prostora sta homeomorfna, če lahko enega zvezno spremenimo v drugega in pri tem prostora ne lepimo in ga ne trgamo oziroma če med njima obstaja homeomorfizem. Ekvivalenco med dvema 
-prostoroma pa lahko definiramo na načine, ki so veliko širši kot homeomorfizem
+je homeomorfizem. Dva prostora sta homeomorfna, če lahko enega zvezno spremenimo v drugega in pri tem prostora ne lepimo in ga ne trgamo, oziroma če med njima obstaja homeomorfizem. Ekvivalenco med dvema 
+prostoroma pa lahko definiramo na načine, ki so veliko širši kot homeomorfizem.
 Na primer torus $S^1\times B^2$ in sfera $S^1$ imata podobno obliko, vendar nista
  homeomorfna. Zato bomo definirali homotopsko in šibko homotopsko ekvivalenco, ki bosta povezali prostore s podobnimi oblikami.
 
-Spomnimo se, \textit{homotopija} je taka družina preslikav $f_t(x):X \rightarrow Y$, da je prirejena preslikava $F(x,t)=f_t(x):X \times I \rightarrow Y$ zvezna. Rečemo, da sta preslikavi $f_0$ in $f_1$ homotopni in pišemo $f_0 \simeq f_1$
+Spomnimo se, \textit{homotopija} je taka družina preslikav $f_t(x):X \rightarrow Y$, da je prirejena preslikava $F(x,t):X \times I \rightarrow Y$, definirana kot $F(x,t)=f_t(x)$, zvezna. Rečemo, da sta preslikavi $f_0$ in $f_1$ homotopni in pišemo $f_0 \simeq f_1$
 
 
 \begin{definicija}
     Preslikava  $f : X \rightarrow Y$ je \textit{homotopska ekvivalenca} prostorov $X$ in $Y$, če obstaja preslikava $g: Y\rightarrow X$, taka da
-    je $f g \simeq 1_Y$ in $gf \simeq 1_X$. Rečemo, da sta prostora $X$ in
-    $Y$  \textit{homotopsko ekvivalentna}.
+    je $f g \simeq 1_Y$ in $gf \simeq 1_X$. Preslikavo $g$ imenujemo \textit{homotopski inverz od f}. Če taka preslikava $f$ obstaja, rečemo, da sta prostora $X$ in
+    $Y$  \textit{homotopsko ekvivalentna}, oziroma, da imata isti \textit{homotopski tip}.
 \end{definicija}
 
 \begin{definicija}
@@ -119,7 +120,7 @@ Spomnimo se, \textit{homotopija} je taka družina preslikav $f_t(x):X \rightarro
       \rightarrow A$ retrakcija, $i:A\rightarrow X$ pa inkluzija. Homotopijo $H$ imenujemo \textit{deformacijska 
       retrakcija}. Če homotopija $H$ miruje na množici $A$ jo imenujemo 
       \textit{krepka deformacijska retrakcija} prostor $A$ pa 
-      \textit{krepki deformacijski} retrakt prostora X.
+      \textit{krepki deformacijski} retrakt prostora X. Za prostor $X$ rečemo, da je \textit{kontraktibilen}, če obstaja deformacijska retrakcija na točko.
 \end{definicija}
 
 Če je $A\subseteq X$ in je $A$ deformacijski retrakt od $X$, potem sta 
@@ -129,7 +130,7 @@ $X$ in $A$ homotopsko ekvivalentna prostora. Res, če je $i:A\rightarrow
    prostora $A$ in $B$ homotopsko ekvivalentna, je, da poiščemo prostor
     $X$, ki vsebuje $A$ in $B$, kot deformacijska retrakta. 
 
-Homotopija $f_t: X\rightarrow X$, ki nam da deformacijsko retrakcijo 
+Homotopija $f_t: X\rightarrow X$, ki nam da krepko deformacijsko retrakcijo 
 prostora $X$ na podprostor $A$, ima lastnost, da velja 
 $f_t|_A=1_A$, za vse $t$. V splošnem, homotopija 
 $f_t:X\rightarrow Y$, katere zožitev na podprostor $A\subseteq X$ je 
@@ -138,11 +139,12 @@ deformacijskia retrakcija $X$ na $A$ je torej homotopija med retraktom
  $ir$ in identiteto $1_X$, relativno $A$, kjer je $r:X\rightarrow A$ retrakt in $i:A\rightarrow X$ inkluzija.
 
 
-\begin{primer}
-    nek primer.
-\end{primer}
+\begin{figure}
+    \includegraphics[width=0.6\linewidth]{def-retract.png}
+    \caption{Punktiran disk se deformacijsko retrakira na robno sfero $S^1$}
+\end{figure}
 
-Šibko homotopsko ekvivalenco pa opišemo s pomočjo homotopskih grup, ki
+Šibko homotopsko ekvivalenco pa opišemo preko homotopskih grup, ki
  jih bomo definirali v nadaljevanju. Prva homotopska grupa se imenuje
   fundamentalna grupa in je grupa ekvivalenčnih razredov zank v prostoru, 
  tj. poti z enako začetno in končno točko.
@@ -156,7 +158,7 @@ Pot v prostoru $X$ je zvezna preslikava $ f: I \rightarrow X$, pri čemer je $I$
         sta krajišči $f_t(0) = x_0$ in $f_t(1) = x_1$ neodvisni od $t$ in
 %t po homotopiji, s po intervalu poti
         \item 
-        je prirejena preslikava $F:I\times X \rightarrow X$ definirana s $F(s,t) = f_t(s)$ zvezna.
+        je prirejena preslikava $F:I\times X \rightarrow X$ definirana s $F(t,s) = f_t(s)$ zvezna.
     \end{itemize}
     Za poti $f_1$ in $f_0$, ki sta povezani s homotopiijo $f_t$ rečemo, da sta homotopni in označimo $f_1 \simeq f_0$.
 \end{definicija}
@@ -171,13 +173,13 @@ Pot v prostoru $X$ je zvezna preslikava $ f: I \rightarrow X$, pri čemer je $I$
     Preveriti moramo 3 lastnosti ekvivalenčnih relacij, refleksivnost, simetričnost in tranzitivnost.
 
     Najprej preverimo refleksivnost. Naj bo $f : I \rightarrow X$ pot v prostoru $X$. Homotopijo definiramo kot $f_t(s)=f(s)$.
-
+    
     Naj velja $f \simeq g$ in naj bo $f_t(s)$ homotopija med $f$ in $g$, 
     torej $f_0=f$ in $f_1=g$. Homotopijo med $g$ in $f$ definiramo kot 
     $g_t(s)=f_{1-t}(s)$. Velja $g_0=f_1=g$ in $g_1=f_0=f$ in ker je 
     $g_t(s)$ kompozitum zveznih preslikav, je zvezna. Sledi, da je 
     relacija homotopije simetrična.
-
+    
     Naj bodo $f, g \text{ in } h$ poti v $X$ in naj velja $f \simeq g$ 
     in $g \simeq h$. in naj bo $f_t(s)$ homotopija med $f$ in $g$ in 
     $g_t(s)$ homotopija med $g$ in $h$. Definirajmo 
@@ -198,6 +200,14 @@ $$ f\sqcdot g(s) \begin{cases}
 \end{cases}
 $$
 
+    Definirajmo še \textit{reparametrizacijo} poti $f$ kot kompozitum $f 
+    \phi$, kjer je $\phi: I \rightarrow I$ neka zvezna preslikava, za 
+    katero velja $\phi(0)= 0$ in $\phi(1)=1$. Reparametrizacija poti 
+    ohranja homotopski razred, saj sta $f\phi$ in $f$ povezani preko 
+    $f\phi_t$, pri čemer je $\phi_t(s)=(1-t)\phi(s)+ts$. Vidimo, da 
+    $\phi_t(s)$ leži med $\phi(s)$ in $s$, torej na $I$, zato je 
+    $f\phi_t(s)$ dobro definirana.
+
 Če se omejimo samo na poti $f:I \rightarrow X$ z enako začetno in končno točko $f(0) = f(1) = x_0$, govorimo o zankah, za $x_0$ pa rečemo, da je izhodišče.
 Množico vseh homotopskih razredov $[f]$, z izhodiščem $x_0$ označimo z $\pi_1(X,x_0)$.
 
@@ -207,26 +217,18 @@ Množico vseh homotopskih razredov $[f]$, z izhodiščem $x_0$ označimo z $\pi_
 
 \begin{dokaz}
     Najprej preverimo dobro definiranost produkta. Naj velja $[f]=[f']$, preko homotopije $f_t$ in $[g]=[g']$ preko $g_t$. Potem sta $f\sqcdot g$ in $f'\sqcdot g'$ homotopni preko
-    $h_t(s) =f_t \sqcdot g_t$. Vidimo, da $h_0=f_0 \sqcdot g_0=f \sqcdot g$ in $h_1=f_1 \sqcdot g_1=f'\sqcdot g'$. Ker je $f_t(1)=g_t(0)$ za vsak t in sta $ft(s)$ in $g_t(s)$ zvezni, sledi, da je tudi $h_t(s)$ zvezna, torej velja [$f\sqcdot g$]=[$f'\sqcdot g'$].
-
-    Definirajmo še \textit{reparametrizacijo} poti $f$ kot kompozitum $f 
-    \phi$, kjer je $\phi: I \rightarrow I$ neka zvezna preslikava, za 
-    katero velja $\phi(0)= 0$ in $\phi(1)=1$. Reparametrizacija poti 
-    ohranja homotopski razred, saj sta $f\phi$ in $f$ povezani preko 
-    $f\phi_t$, pri čemer je $\phi_t(s)=(1-t)\phi(s)+ts$. Vidimo, da 
-    $\phi_t(s)$ leži med $\phi(s)$ in $s$, torej na $I$, zato je 
-    $f\phi_t(s)$ dobro definirana.
+    $h_t(s) =f_t \sqcdot g_t$. Vidimo, da $h_0=f_0 \sqcdot g_0=f \sqcdot g$ in $h_1=f_1 \sqcdot g_1=f'\sqcdot g'$. Ker je $f_t(1)=g_t(0)$ za vsak t in sta $f_t(s)$ in $g_t(s)$ zvezni, sledi, da je tudi $h_t(s)$ zvezna, torej velja [$f\sqcdot g$]=[$f'\sqcdot g'$].
 
     Naj bodo $f$, $g$ in $h$ poti v $X$ in naj bo $f(1)=g(0)$ in 
     $g(1)=h(0)$, potem sta oba stika $(f\sqcdot g) \sqcdot h$ in 
     $f\sqcdot (g \sqcdot h)$ definirana, $(f\sqcdot g) \sqcdot h$ pa je
-     reparametrizacija $f\sqcdot (g \sqcdot h)$ preko odsekoma linearne 
+     reparametrizacija poti $f\sqcdot (g \sqcdot h)$ preko odsekoma linearne 
      funkcije
     $$
     \phi(s)=\begin{cases}
-        \frac{s}{2}, &s \in [0,\frac{1}{2}] \\
-        s, & s \in [\frac{1}{2},\frac{3}{4}]\\
-        2s, & s \in [\frac{3}{4},1],
+        2s, & s \in [0,\frac{1}{4}],
+        s+\frac{1}{4}, & s \in [\frac{1}{4},\frac{1}{2}]\\
+        \frac{s}{2}+\frac{1}{2}, &s \in [\frac{1}{2},1] \\
     \end{cases}
     $$ zato sta poti homotopni, torej je množenje v $\pi_1(X,x_0)$ asociativno.
 
@@ -235,7 +237,7 @@ Množico vseh homotopskih razredov $[f]$, z izhodiščem $x_0$ označimo z $\pi_
         2s, &s \in [0,\frac{1}{2}] \\
         1, & s \in [\frac{1}{2},1],\\
         \end{cases}
-    $$, zato velja $fc\simeq f$, podobno velja tudi  $cf\simeq f$, kjer je $c$ konstantna pot $c(s)=f(0)$. Sklepamo, da je $c(s)=x_0$ dvostranska enota v grupi  $\pi_1(X,x_0)$
+    $$zato velja $fc\simeq f$, podobno velja tudi  $cf\simeq f$, kjer je $c$ konstantna pot $c(s)=f(0)$. Sklepamo, da je $c(s)=x_0$ dvostranska enota v grupi  $\pi_1(X,x_0)$
 
     Inverz poti $f$ definiramo kot $\bar{f}(s)=f(1-s)$. Definirajmo $h_t=f_t\sqcdot \bar{f_t}$, pri čemer je 
     $$
@@ -268,26 +270,18 @@ $$
 Dokaz te trditve je enak dokazu za $n=1$, saj je v stik poti vpletena le prva komponenta poti.
 
 \begin{definicija}
-    Topološka prostora sta \textit{šibko homotopsko ekvivalentna}, če so njune homotopske grupe izomorfne za vsak $n \in \mathds{N}$.
+    Topološka prostora $X$ in $Y$ sta \textit{šibko homotopsko ekvivalentna}, če obstaja preslikava $f:X\rightarrow Y$, ki inducira izomorfizen $\pi_1(X,x_0)\rightarrow \pi_1(Y,f(x_0))$ za vsak $n \in \mathbb{N}$. Preslikavi $f$ rečemo \textit{šibka homotopska ekvivalenca.}
 \end{definicija}
 
-Homeomorfni prostori so homotopsko ekvivalentni, homotopsko ekvivalentni prostori so si tudi šibsko homotopsko ekvivalentni. Obratno v splošnem ne velja.
-
-\begin{definicija}
-    Preslikava je \textit{šibka homotopska ekvivalenca}, če preko kompozicije inducira izomorfizem na vse homotopske grupe.
-\end{definicija}
-Če med prostoroma obstaja šibka homotopska ekvivalenca, potem sta prostora šibko homotopsko ekvivalentna.
-
-\begin{trditev}
-    
-\end{trditev}
-
+Homeomorfni prostori so homotopsko ekvivalentni, homotopsko ekvivalentni prostori so tudi šibsko homotopsko ekvivalentni. Obratno v splošnem ne velja.
 \section{Simpleksi}
 
-    \textit{Simpleks} ali $n$-simpleks je $n$-razsežni analog trikotnika. Točka je $0$-simpleks, $1$-simpleks je daljica, $2$-simpleks je trikotnik,
-$3$-simpleks je tetraeder. $n$-simpleks definiramo kot množico svojih $n+1$ oglišč. \textit{Simplicialni kompleks $K$} je sestavljen iz množice oglišč $V_K$ in množice simpleksov $S_K$, sestavljene iz končnih nepraznih podmnožic od $V_k$, pri čemer je vsak element $S_k$ simpleks in vsaka podmnožica simpleksa je simpleks. Pišemo $\sigma \in K$ in $v \in K$, če je $\sigma \in S_K$ ter $v \in V_K$. Dimenzija $K$ je enaka supremumu dimenzij njegovih simpleksov, $n$-dimenzionalnemu simpleksialnemu kompleksu rečemo tudi \textit{n-kompleks}. Omejili se bomo samo na končne komplekse, torej $n \in \mathbb{N}$.
+\textit{Simpleks} ali $n$-simpleks je $n$-razsežni analog trikotnika. Točka je $0$-simpleks, $1$-simpleks je daljica, $2$-simpleks je trikotnik,
+$3$-simpleks je tetraeder. $n$-simpleks definiramo kot množico svojih $n+1$ oglišč. \textit{Simplicialni kompleks $K$} je sestavljen iz množice oglišč $V_K$ in množice simpleksov $S_K$, sestavljene iz končnih nepraznih podmnožic od $V_K$, pri čemer je vsak element $S_k$ simpleks in vsaka podmnožica simpleksa je simpleks. Pišemo $\sigma \in K$ in $v \in K$, če je $\sigma \in S_K$ ter $v \in V_K$. Dimenzija $K$ je enaka maksimumu dimenzij njegovih simpleksov, $n$-dimenzionalnemu simpleksialnemu kompleksu rečemo tudi \textit{n-kompleks}. Omejili se bomo samo na končne komplekse, torej $n \in \mathbb{N}$.
 
-Če je simpleks $\sigma$ vsebovan  v simpleksu $\tau$, mu rečemo \textit{lice} od $\tau$, rečemo mu \textit{pravo lice}, če $\tau\neq \sigma$. Simpleksu rečemo \textit{maksimalen simpleks}, če ni pravo lice nobenemu drugemu simpleksu. Subkompleks $L\in K$ simplicialnega kompleksa $K$ je Simplicialni kompleks, tak da $V_L\subseteq V_K$ in $S_L\subseteq S_K$
+Če je simpleks $\sigma$ vsebovan  v simpleksu $\tau$, mu rečemo \textit{lice} od $\tau$, rečemo mu \textit{pravo lice}, če $\tau\neq \sigma$. 
+Simpleksu rečemo \textit{maksimalen simpleks}, če ni pravo lice nobenemu drugemu simpleksu. Subkompleks $L\in K$ simplicialnega kompleksa
+ $K$ je simplicialni kompleks, tak da $V_L\subseteq V_K$ in $S_L\subseteq S_K$
 
 
 Naj bo $\sigma = \{v_0,v_1,\ldots,v_n\}$ $n$-simpleks. Zaprt
@@ -295,17 +289,34 @@ simpleks $\bar{\sigma}$ je množica formalnih konveksnih kombinacij $\mymathop{\
 pri čemer je $\alpha_i \ge 0$ za vsak $0\le i \le n$ in $\mymathop{\Sigma}_{i=0}^{n}\alpha_i = 1$. Zaprt simpleks je metričen prostor z metriko
 
 \begin{equation}
-\label{eq:metrika}
-d($\mymathop{\Sigma}_{i=0}^{n}\alpha_i v_i$,\mymathop{\Sigma}_{i=0}^{n}\beta_i v_i) = \sqrt{\mymathop{\Sigma}_{i=0}^{n}(\alpha_i - \beta_i)^2}
+    \label{eq:metrika}    
+d(\mymathop{\Sigma}_{i=0}^{n}\alpha_i v_i,\mymathop{\Sigma}_{i=0}^{n}\beta_i v_i) = \sqrt{\mymathop{\Sigma}_{i=0}^{n}(\alpha_i - \beta_i)^2}.
 \end{equation}
+Če so $v_i$ linearno neodvisne točke v $\mathbb{R}^m$ za nek $m\geq n$, potem je $\bar{\sigma}$ homeomorfen prostoru 
+$\{\mymathop{\Sigma}_{i=0}^{n}\alpha_i v_i, | \mymathop{\Sigma}_{i=0}^{n}\alpha_i = 1 \text{ in } \alpha_i \ge 0 \}\subseteq \mathbb{R}^m$, 
+kar pomeni, da lahko vsak zaprt simpleks predstavimo kot podprostor $\mathbb{R}^m$ z evklidsko topologijo.
 
 \textit{Geometrijska realizacija} $|K|$ simplicialnega kompleksa $K$ je 
-množica formalnih konveksnih kombinacij $\underset{v \in K}{\Sigma}\alpha_v v$, takih da je $\{v | \alpha_v \textgreater 0\}$ simpleks v $K$ in $\mymathop{\Sigma}_{v\in K}\alpha_v=1$. Za točko $x\in |K|$ označimo support$(x)=\{v | \alpha_v \textgreater 0\}$, tej množici pravimo nosilec od $x$.
-Na $|K|$ lahko gledamo kot unijo zaprtih simpleksov $\bar{\sigma}$, za $\sigma \in K$. Množica $U\subseteq |K|$ je odprta natanko tedaj, ko je $U \cap \hat{\sigma}$ odprta, glede na metriko na $\hat{\sigma}$, za vsak $\sigma \in K$, lahko zato na $|K|$ definiramo metriko tako kot pri \ref{eq:metrika}. Če $L\subseteq K$, potem je $|L|\subseteq |K|$ zaprta podmnožica (mogoče dokaz?).
+množica formalnih konveksnih kombinacij $\underset{v \in K}{\Sigma}\alpha_v v$, takih da je $\{v | \alpha_v > 0\}$ simpleks v $K$ in 
+$\mymathop{\Sigma}_{v\in K}\alpha_v=1$. Rečemo, da $|K|$ realizira $K$. Za točko $x\in |K|$ označimo $\supp(x)=\{v | \alpha_v > 0\}$, 
+tej množici pravimo nosilec od $x$. Topologijo na $\si$ definiramo na naslednji način. $U \subseteq |K|$ je odprta, natanko tedaj, ko je $U \cap 
+\si$ odprta, za vsak $\sigma \in K$. Kot prej, če so $v\in K$ linearno neodvisne točke v $\mathbb{R}^m$ za nek $m\geq |V_K|$, potem je 
+$|K|$ homeomorfen prostoru $\{\mymathop{\Sigma}_{v\in K}^{n}\alpha_v v | \mymathop{\Sigma}_{v\in K}^{n}\alpha_v = 1 \text{, } \alpha_i
+\ge 0 \text{ in } \{v | \alpha_v > 0\} \text{ je simpleks v $K$}\} \subseteq \mathbb{R}^m$, kar spet pomeni, da lahko vsak simplicialni
+kompleks predstavimo kot podprostor v $\mathbb{R}^{|V_K|}$ z evklidsko topologijo.
+Če $L\subseteq K$, potem je $|L|\subseteq |K|$ zaprta podmnožica.
+
+\begin{opomba}
+    Če je $K$ $n-$kompleks, potem se ga da realizirati v $\mathbb{R}^{2n+1}$. To pomeni, da obstaja podprostor v
+    $\mathbb{R}^{2n+1}$, ki je homeomorfen $|K|$. Vsak graf je geometrijska realizacija $1-$kompleksa, zato ga 
+    lahko realiziramo v $\mathbb{R}^{2\cdot 1 +1}=\mathbb{R}^{3}$, kar je pa znano dejstvo iz teorije grafov.
+\end{opomba}
+
 
 \textit{Polieder} je geometrijska realizacija Simplicialnega kompleksa $|K|$, \textit{triangulacija} poliedra $X$ pa je simplicialni kompleks, katerega geometrijska realizacija je homeomorfna $X$.
 
-Ker metrika na $|K|$ sovpada z metriko na $\bar{\sigma}$, za vsak $\sigma\in K$, sledi, da je preslikava $f$ iz $|K|$ v nek topološki prostor $X$ zvezna, natanko tedaj, ko je $f|_{\bar{\sigma}}: \bar{\sigma} \rightarrow X$ zvezna za vsak $\sigma\in K$. Tudi $H:|K|\times I \rightarrow X$ je zvezna, natanko tedaj, ko je zvezna $H|_{\si\times I}:\si\times I \rightarrow X$, za vsak $\sigma\in K$.
+Ker topologija na $|K|$ sovpada z topologijo na $\bar{\sigma}$, za vsak $\sigma\in K$ in je $U \subseteq |K|$ odprta, natanko tedaj, ko je $U \cap 
+\si$ odprta, za vsak $\sigma \in K$, sledi, da je preslikava $f$ iz $|K|$ v nek topološki prostor $X$ zvezna, natanko tedaj, ko je $f|_{\bar{\sigma}}: \bar{\sigma} \rightarrow X$ zvezna za vsak $\sigma\in K$. Tudi $H:|K|\times I \rightarrow X$ je zvezna, natanko tedaj, ko je zvezna $H|_{\si\times I}:\si\times I \rightarrow X$, za vsak $\sigma\in K$.
 
 
 \textit{Simplicialna preslikava} $\phi :K \rightarrow L$, med 
@@ -343,21 +354,67 @@ Poglejmo si preslikavo $S_K: |K'| \rightarrow |K|$. Naj bo $x$ tako kot na sliki
 %$A:=\{a\}, AB:=\{a,b\},
 %ABC:=\{a,b,c\}$ in analogno še za $B, C, AC, BC$.
 Potem je 
-$K'_x:=\text{supp}(x)=\{\{a\},\{a,b\},\{a,b,c\}\}$ in $x= \underset{\sigma\in K'_x}{\Sigma} \alpha_{i_\sigma} \sigma$. Zato
+$K'_x:=\supp(x)=\{\{a\},\{a,b\},\{a,b,c\}\}$ in $x= \underset{\sigma\in K'_x}{\Sigma} \alpha_{i_\sigma} \sigma$. Zato
 
 \begin{align*}
-    $$
-    S_K(x)&=S_K(\underset{\sigma\in K'_x}{\Sigma} \alpha_{i_{\sigma}} 
-    \sigma) =  \underset{\sigma\in K'_x}{\Sigma} \alpha_{i_{\sigma}} 
-    S_K(\sigma)\\
-    &=\alpha_1S_K(\{a\})+\alpha_2S_K(\{a,b\})+\alpha_3S_K(\{a,b,c\}) \\ 
-    &=\alpha_1a+\alpha_2\frac{a+b}{2}+\alpha_3\frac{a+b+c}{3}.
-    $$
+S_K(x)&=S_K(\underset{\sigma\in K'_x}{\Sigma} \alpha_{i_{\sigma}} 
+ \sigma) =  \underset{\sigma\in K'_x}{\Sigma} \alpha_{i_{\sigma}} 
+S_K(\sigma)\\
+&=\alpha_1S_K(\{a\})+\alpha_2S_K(\{a,b\})+\alpha_3S_K(\{a,b,c\}) \\ 
+&=\alpha_1a+\alpha_2\frac{a+b}{2}+\alpha_3\frac{a+b+c}{3}.
 \end{align*}
 Preslikava $S_K$ je očitno homeomorfizem.
 
+
+
+\end{primer}
+\begin{izrek}
+    \textit{Simplicial approximation theorem}. Naj bosta $K$ in $L$ simplicialna kompleksa in naj bo $f:|K| \rightarrow |L|$ zvezna. Potem obstaja $n\in N$ in simplicialna preslikava
+    $g:K^n\rightarrow L$, taka da je $|g|$ homotopna $f$.
+\end{izrek}
+
+
+\subsection{Poti v simplicialnem kompleksu}
+
+\textit{Rob} simplicialnega kompleksa $K$ je urejeni par $e=(v,v')$, tak da je $\{v,v'\}$ Simpleks v $K$. Oglišču $v$ rečemo \textit{začetek} $e$ in označimo 
+$v=\mathfrak{o}(e)$, oglišču $v'$ pa \textit{konec} od $e$, 
+označimo $\mathfrak{e}(e)=v'$. \textit{Lomljenka} dolžine $n$ je zaporedje
+$(e_0,e_1,...,e_{n})$ robov v $K$(lahko tudi prazno), za katerega velja, da je $\mathfrak{e}(e_i)=\mathfrak{o}(e_i+1)$, za vsak $0\leq i \leq n-1$
+Lomljenka je sklenjena, če $a_n=a_0$. Če sta $\alpha =(v_0,v_1,...,v_{n})$ in $\beta=(u_0,v_1,...,v_{m})$, definiramo stik lomljenk $\alpha\sqcdot \beta$ kot $(v_0,v_1,...,v_{n}u_0,u_1,...,v_{m})$.
+
+\begin{definicija}
+    Naj bo $\alpha$ edge-path. \textit{Elementarna skrčitev} poti $\alpha$ je edge-path, ki ga dobimo iz $\alpha$, če "naredimo en izmed naslednjih muvov"
+
+    \begin{itemize}
+        \item zamenjamo $...,a_{i-1},a_i,...$ z $...,a_i,...$ če $a_{i-1}=a_i$
+        \item zamenjamo $...,a_{i-1},a_i,a_{i+1},...$ z $...,a_{i-1},...$ če $a_{i-1}=a_{i+1}$
+        \item zamenjamo $...,a_{i-1},a_i,a_{i+1},...$ z $...,a_{i-1},a_{i+1},...$ če je $\{a_{i-1},a_i,a_{i+1}\}$ simpleks v $K$
+    \end{itemize}
+
+    Rečemo, da je $\beta$ \textit{elementarna razširitev} $\alpha$, če je $\alpha$ elementarna skrčitev od $\beta$. Rečemo, da sta $\alpha$ in $\beta$ \textit{ekvivalentna}, če lahko $\alpha$ dobimo iz $\beta$ z končnim zaporednjem elementarnih skrčitev in razširitev. Ta relacija je očitno ekvialenčna relacija na edge paths.
+\end{definicija}
+
+\begin{primer}
+    primer
 \end{primer}
 
+    Naj bo $K$ simplicialni kompleks in $v_0$ oglišče v $K$. Z $E(K,v_0)$ označimo množico ekvivalenčnih razredov sklenjenih lomljenk z izhodiščem v $v_0$. Ekvivalenčni razred sklenjene lomljenke $\alpha$ označimo z $[\alpha]$.
+
+    \begin{trditev}
+        Množica $E(K,b)$ z množenjem, ki ga inducira stik poti, tvori grupo.
+    \end{trditev}
+\begin{proof}
+    Dobra definiranost množenja in asociativnost sta očitni. Identiteta je ekvivalenčni razred poti $(v_0)$. Iverz od $(v,v_1,...,v_{n-1},v)$ je $(v,v_{n-1},...,v_1,v)$.
+\end{proof}
+
+\begin{izrek}
+    \label{iz:grupa lomljenk}
+$E(K,b)$ je izomorfna $\pi_q(K,b)$
+\end{izrek}
+
+\begin{proof}
+    dokazzzz
+\end{proof}
 \section{Končni topološki prostori in delno urejene množice}
 
 \textit{Končni topološki prostor} je topološki prostor s končno mnogo točkami, 
@@ -366,7 +423,7 @@ Preslikava $S_K$ je očitno homeomorfizem.
 vsebuje, oziroma presek vseh odprtih množic, ki vsebujejo $x$. Ta množica je odprta, saj je topologija zaprta za končne preseke.
     Točke uredimo s pravilom $ x\le y \text{, če } U_x \subseteq  U_y$. S tem dobimo šibko ureditev. 
     Antisimetričnost po definiciji sovpada z lastnostjo $T_0$, zato, relacija postane delna ureditev,
-     natanko takrat, ko je topologija $T_0$, in disktretna, ko je topologija $T_1$.
+     natanko takrat, ko je topologija $T_0$.
     \\ \indent Obratno, naj bo $X$ šibko urejena množica. Na njej lahko definiramo topologijo z bazo $\{y \in X | y\le x\}_{x \in X}$. Če je
 $y \le x$, je $y$ vsebovan v vsaki bazni množici, ki vsebuje $x$, torej je $y \in U_x$. Po drugi strani, če je $y\in
 U_x$, potem je $y \in \{y \in X | y \le x\}$, torej velja, da je $y \le x$ natanko tedaj ko je $y \in U_x$. Iz tega je razvidno, da so končni prostori in šibke ureditve enaki objekti, gledani z drugačnega stališča.
@@ -385,16 +442,16 @@ Povezave $(x,y)$ ne rišemo s puščico iz $x$ v $y$, ampak bomo $x$ in $y$ pove
 \end{primer}
 
 \begin{definicija}
-    Element $x$ je \textit{maksimalni element} delno urejene množice $X$, če $\forall y \in X, y\geq x \Rightarrow y = x$.
+    Element $x\in X$ je \textit{maksimalni element} delno urejene množice $X$, če $\forall y \in X, y\geq x \Rightarrow y = x$.
     $x$ je \textit{maksimum} v $X$, če $\forall y \in X, x\geq y$.
 \end{definicija}
 
-Končna delno urejena množica ima maksimum, natanko tedaj, ko ima enoličen maksimalni element. \textit{Minimalni element} in \textit{minimum} definiramo dualno/dualno?.
+Končna delno urejena množica ima maksimum, natanko tedaj, ko ima enoličen maksimalni element. \textit{Minimalni element} in \textit{minimum} definiramo analogno.
 
 Elementa $x$ in $y$ sta \textit{primerljiva}, če je $x\leq y$ ali $y\leq x$. \textit{Veriga} v $X$ je podmožica $S\subseteq X$, v kateri je vsak par elementov primerljiv, \textit{antiveriga} v $X$ je podmožica $S\subseteq X$, v kateri ni noben par elementov primerljiv. 
 
-Odprtim množicam v $X$ ustrezajo \textit{"down seti??"}, zaprtim pa \textit{"up seti??"}. Podmnožica $U$
- šibko urejene množice $X$ je down set, če $\forall x\in X, iz y\leq x$, sledi da $y\in U$. Up set definiramo podobno/analogno/dualno??.
+Odprtim množicam v $X$ ustrezajo \textit{navzdol zaprte množice}, zaprtim pa \textit{navzgor zaprte množice}. Podmnožica $U$
+ šibko urejene množice $X$ je navzdol zaprta, če $\forall x\in X,$ iz $y\leq x$, sledi da $y\in U$. Navzgor zaprte množice definiramo analogno.
 Z $F_x$ definiramo zaprtje množice $\{x\}$. $F_x=\{y\in X; y\geq x\}$. Vidimo, da $y\in F_x \Leftrightarrow x\in U_y$.
 
 Tudi morfizmi šibko urejenih množic in morfizmi končnih topoloških prostorov sovpadajo.
@@ -406,9 +463,9 @@ Funkcija $f:X\rightarrow Y$ med končnima prostoroma je zvezna, natanko tedaj, k
 \end{trditev}
 
 \begin{dokaz}
-    Naj bo $f$ zvezna in naj $x\leq x'$ za $x, x' \in X$. Zaradi zveznosti je $f^{-1}(U_{f(x')})$ odprta. Ker velja $f(x')\in U_{f(x')}$, sledi, da $x'\in f^{-1}(U_{f(x')})$, ker je to down set, je tudi $x\in f^{-1}(U_{f(x')})$, na "enakosti" uporabimo $f$ in dobimo $f(x)\in U_{f(x')}$, torej $f(x)\leq f(x')$ in $f$ ohranja ureditev.
+    Naj bo $f$ zvezna in naj $x\leq x'$ za $x, x' \in X$. Zaradi zveznosti je $f^{-1}(U_{f(x')})$ odprta. Ker velja $f(x')\in U_{f(x')}$, sledi, da $x'\in f^{-1}(U_{f(x')})$, ker je to navzdol zaprta množica, je tudi $x\in f^{-1}(U_{f(x')})$, na enakosti uporabimo $f$ in dobimo $f(x)\in U_{f(x')}$, torej $f(x)\leq f(x')$ in $f$ ohranja ureditev.
 
-    Naj bo zdaj $f$ preslikava, ki ohranja ureditev. Pokažimo, da je $f^{-1}(U_y)$ down set za vsako bazno množico $U_y$. Naj bo $x\leq x'$ in $x'\in f^{-1}(U_y)$, torej $f(x') \in U_y$, ker f ohranja ureditev in je $U_y$ down set, sledi da $f(x)\in U_y$, zato je $x\in f^{-1}(U_y)$, torej je $f^{-1}(U_y)$ down set, torej odprt.
+    Naj bo zdaj $f$ preslikava, ki ohranja ureditev. Pokažimo, da je $f^{-1}(U_y)$ down set za vsako bazno množico $U_y$. Naj bo $x\leq x'$ in $x'\in f^{-1}(U_y)$, torej $f(x') \in U_y$, ker f ohranja ureditev in je $U_y$ navzdol zaprta, sledi da $f(x)\in U_y$, zato je $x\in f^{-1}(U_y)$, torej je $f^{-1}(U_y)$ navzdol zaprta, torej odprta.
 
 
 \end{dokaz}
@@ -424,7 +481,7 @@ Funkcija $f:X\rightarrow Y$ med končnima prostoroma je zvezna, natanko tedaj, k
 \end{dokaz}
 Ta lema nam pove, da v končnih prostorih obstajajo netrivialne poti, zato v splošnem fundamentalna grupa končnega prostora ni trivialna.
 
-Naj bosta $X$ in $Y$ končni šibki ureditvi. Z $Y^X$ označimo končno množico zveznih preslikav iz $X$ v $Y$ in jo opremimo z "ureditvijo po točkah" in sicer $f\leq g$, če velja $f(x) \leq g(x), \forall x\in X$. S tem dobimo na $Y^X$ delno ureditev in topologijo. \textit{Ograja} v $X$ je zaporedje $x_0,x_1,...,x_n$ točk v $X$, taka, da sta vsaki zaporedni točki primerljivi. $X$ je \textit{order 
+Naj bosta $X$ in $Y$ končni šibki ureditvi. Z $Y^X$ označimo končno množico zveznih preslikav iz $X$ v $Y$ in jo opremimo z ureditvijo po točkah in sicer $f\leq g$, če velja $f(x) \leq g(x), \forall x\in X$. S tem dobimo na $Y^X$ delno ureditev in topologijo. \textit{Ograja} v $X$ je zaporedje $x_0,x_1,...,x_n$ točk v $X$, taka, da sta vsaki zaporedni točki primerljivi. $X$ je \textit{order 
 connected}, če za vsaki točki $x,y\in X$ obstaja ograja, ki se začne z $x$ in konča z $y$.
 \begin{lema}
     Naj bo $X$ končen prostor. Naslednje trditve so ekvivalentne:
@@ -441,7 +498,7 @@ connected}, če za vsaki točki $x,y\in X$ obstaja ograja, ki se začne z $x$ in
 \begin{dokaz}
     Če je $X$ order connected, potem je po lemi \ref{lem:pot}, povezan tudi s potmi.
     Dokazati je treba le še da order-connectedness sledi iz povezanosti. Naj bo torej $X$ povezan, $x\in X$ in $A=\{y\in X| \text{obstaja ograja med $x$ in $y$}\}$. Če 
-    je $z\leq x$, potem je tudi $z\in A$, zato je $A$ down set. Analogno pokažemo, da je $A$ up set. Ker je $X$ povezan, sledi, da $A=X$, zato je $X$ order connected.
+    je $z\leq x$, potem je tudi $z\in A$, zato je $A$ navzdol zaprta. Analogno pokažemo, da je $A$ navzgor zaprta. Ker je $X$ povezan, sledi, da $A=X$, zato je $X$ order connected.
 \end{dokaz}
 
 \begin{trditev}
@@ -451,7 +508,7 @@ Naj bosta $f,g: X\rightarrow Y$ preslikavi med končnima prostoroma in $A\subset
 
 \begin{dokaz}
     Obstoj homotopije $H:f\simeq g$ rel $A$ je ekvivalenten obstoju take poti $\alpha: I \rightarrow Y^X$, da velja $\alpha(t)|_A=f|_A$, kar je ekvivalentno obstoju poti 
-    $\alpha: I \rightarrow M$, kjer je $M\subseteq Y^X$, taka, ki vsebuje preslikave, ki na $A$ sovpadajo z $f$. Po lemi \ref{lem:povezanost} to pomeni, da obstaja ograja 
+    $\alpha: I \rightarrow M$, kjer je $M\subseteq Y^X$, taka množica, ki vsebuje preslikave, ki na $A$ sovpadajo z $f$. Po lemi \ref{lem:povezanost} to pomeni, da obstaja ograja 
     med $f$ in $g$ v $M$.
 \end{dokaz}
 
@@ -471,14 +528,12 @@ Naj bosta $f,g: X\rightarrow Y$ preslikavi med končnima prostoroma in $A\subset
 
 
 \begin{definicija}
-    Točka $x \in X$ je \textit{navzdol odvečna}, če ima $\{y\in X | y \le x\}$ maksimum in \textit{navzgor odvečna}, če ima $\{y\in X | y \ge x\}$ minimum. 
+    Točka $x \in X$ je \textit{navzdol odvečna}, če ima $\bar{U}_x=\{y\in X | y < x\}$ maksimum in \textit{navzgor odvečna}, če ima $\bar{F}_x\{y\in X | y > x\}$ minimum. 
     Točka je odvečna, če je eno ali drugo.
 \end{definicija}
 
-\begin{primer}
-    Primer odvečne točke
-\end{primer}
-
+Navzgor odvečne točke v Hassejevem diagramu so tiste, ki imajo 
+izhodno stopnjo enako ena, navzdol odvečne, pa tiste, ki imajo vhodno stopnjo enako ena.
 \begin{trditev}
 Naj bo $X$ $T_0$ prostor in $x\in X$ odvečna točka, potem je $X\backslash \{x\}$ krepak deformacijski retrakt od $X$.
 \end{trditev}
@@ -562,7 +617,6 @@ Naj bo $X$ končen $T_0$ prostor, potem je $X$ minimalen končen prostor, natank
     $x'$. Zato $z\leq y$, torej je $y$ maksimum v 
     $\hat{U}_x$.
 \end{dokaz}
-
 \section{Minimalni modeli prostorov}
 
 \begin{definicija}
@@ -815,7 +869,6 @@ Iz lastnosti 2 od 3 (to je treba še dokazati) in dejstva, da je preslikava, ki 
 \begin{trditev}
     Naj bo $\varphi : K\rightarrow L$ simplicialna preslikava med končnima kompleksoma, potem je $|\varphi|$ šibka homotopska ekvivalenca, natanko tedaj, ko je $\chi(\varphi)$ šibka homotopska ekvivalenca.
 \end{trditev}
-
 \section{Konstrukcije novih topoloških prostorov}
 
 
@@ -871,8 +924,6 @@ Ta spoj je asociativen in v splošnem ni komutativen, tako kot pri topološkem
     \label{op:spoj}
     Velja $\k(X\circledast Y) = \k(Y)\ast \k(X)$ (dokaz?)
   \end{opomba}
-
-
 \section{Minimalni model sfere}
 
 
@@ -962,8 +1013,6 @@ Ker je $\mathds{S}^n(S^0)$ model za $S^n$, čigar višina je enaka $n$ in ima
 $2n+2$ točk, je $\mathds{S}^n(S^0)$ minimalni model za $S^n$. Model je 
 enoličen, saj je vsak model za $S^n$ na $2n+2$ točkah homeomorfen 
 $\mathds{S}^n(S^0)$.
-
-
 \section{Zanke v Hassejevem diagramu}
 
 Pokazali bomo, kako se fundamentalna grupa končnega $T_0$ 
@@ -971,31 +1020,18 @@ prostora izraža preko prirejenega Hassejevega diagrama.
 Hassejev diagram končnega $T_0$ prostora $X$ označimo z 
 $\h(X)$, z $E(\h(X))$ pa označimo množico njegovih robov.
 
-\textit{Edge path} simplicialnega kompleksa $K$ je zaporedje
-$(v_0,v_1)(v_1,v_2),...,(v_{r-1},v_{r})$ urejenih parov 
-oglišč, pri čemer je $\{v_1,v_{i+1}\}$ simpleks za vsak $i$. 
-Če \textit{edge path} vsebuje dva zaporedna para 
-$(v_i,v_{i+1})$ in $(v_{i+1},_v_{i+2})$ in je 
-$\{v_i,v_{i+1},_v_{i+2}\}$ simpleks, potem ju lahko 
-zamenjamo z parom $(v_i,v_{i+1})$ in dobimo ekvivalentno a 
-krajšo pot. Za poti $(v_0,v_1)(v_1,v_2),...,(v_{r-1},v_{r})$ 
-in $(u_0,u_1)(u_1,u_2),...,(u_{s-1},u_{s})$ definiramo stik 
-poti.....???
-Omejili se bomo na zanke, torej poti, ki se začnejo in končaj
-o z $v_0$. Z $E(K,v_0)$ označimo množico ekvivalenčnih razredov
- zank z začetno točko $v_0$.....
 
-
-Naj bo $(X,x_0)$ končen pointed $T_0$ prostor. Urejen par 
+\begin{definicija}
+    Naj bo $(X,x_0)$ končen pointed $T_0$ prostor. Urejen par 
 $e=(x,y)$ imenujemo $\mathcal{H}-$rob od $X$, če $(x,y)\in 
 E(\mathcal{H}(\mathcal{X}))$, ali $(y,x)\in 
-E(\h(X))$. Točki $x$ rečem \textit{začetek} $x$ in označimo 
+E(\h(X))$. Točki $x$ rečemo \textit{začetek} $x$ in označimo 
 $x=\mathfrak{o}(e)$, točki $y$ pa \textit{konec} od $e$, 
 označimo $\mathfrak{e}(e)=y$. \textit{Inverz} $\h-$roba $e=(x,y)$ je $\h-$rob $e^{-1}=(y,x)$
 
 $\h-$pot v $(X,x_0)$ je zaporedje (lahko tudi prazno), $\h-$robov $\xi=e_1e_2\cdots e_n$, 
-za katero velja, da je $\mathfrak{e}(e_i)=\mathfrak{o}(e_i+1)$, za vsak $0\leq i \leq n-1$.
- Začetek $\h-$poti $\xi$ je  $\mathfrak{o}(\xi)=e_1$, konec pa $\mathfrak{e}(\xi)=e_n$, 
+za katerega velja, da je $\mathfrak{e}(e_i)=\mathfrak{o}(e_i+1)$, za vsak $0\leq i \leq n-1$.
+ Začetek $\h-$poti $\xi$ je  $\mathfrak{o}(\xi)=\mathfrak{e_1}$, konec pa $\mathfrak{e}(\xi)=\mathfrak{e_n}$, 
  začetek in konec prazne poti je $\mathfrak{o}(\emptyset)=\mathfrak{e}(\emptyset)=x_0$
  Če je $\xi=e_1,e_2\cdots e_n$ $\h-$pot, definiramo $\overline{\xi}=e_n^{-1},\cdots 
  e_2^{-1}e_n^{-1}$. Če sta $\xi$ in $\xi'$ $\h-$poti in velja $\mathfrak{e}(\xi)=
@@ -1008,11 +1044,214 @@ za katero velja, da je $\mathfrak{e}(e_i)=\mathfrak{o}(e_i+1)$, za vsak $0\leq i
   $\xi'$ rečemo, da sta blizu, če obstajajo monotone $\h-$poti $\xi_1,\xi_2,\xi_3,\xi_4$,
    take, da  sta množici $\{\xi,\xi'\}$ in $\{\xi_1\xi_2\xi_3\xi_4,\xi_1\xi_4\}$ enaki.
 
- \begin{primer}
-    poti ki sta si blizu.
- \end{primer}
+   Rečemo, da sta zanki $\xi$ in $\xi'$ $\h-$ekvivalentni, če obstaja končno zaporednje zank $\xi=\xi_1,\xi_2,...,\xi_n=\xi'$, tako da sta vsaki zaporedni zanki $\h-$ekvivalentni. Z $[\xi]$ označimo $\h-$ ekvivalenčni razred zanke $\xi$ in z $\mathscr{H}(X,x_0)$ množico teh razredov.
+\end{definicija}
 
-hkjhkjhkjhkjhkj
+    \begin{figure}[h!]
+          \centering
+          \includegraphics[width=0.6\linewidth]{poti.png}
+        \caption{Primer poti ki sta blizu}
+        \end{figure}
+
+\begin{izrek}
+    Naj bo $(X,x_0)$ končen pointed $T_0$ prostor. Potem je množenje $[\xi][\xi']=[\xi\xi']$ dobro definirano in inducira grupno strukturo na $\mathscr{H}(X,x_0)$
+\end{izrek}
+
+\begin{dokaz}
+    Dobra definiranost in asociativnost sta očitni, enota je $[\emptyset]$. Naj bosta $\xi$ in $\xi'$ poti, $e$ $\h-$rob in $\mathfrak{e}(\xi)=\mathfrak{o}(\xi')=\mathfrak{o}(e)$. potem sta poti $[\xi \xi']$ in $[\xi e e^{-1} \xi']$, saj je $e$ monotona pot. Iz tega takoj sledi, da Da je inverz od $[e_1 e_2...e_n]$ enak $[e_n^{-1}...e_2^{-1}e_1^{-1}]$.
+\end{dokaz}
+
+
+\begin{izrek}
+    Naj bo $(X,x_0)$ končen pointed $T_0$ prostor. Potem je grupa sklenjenih lomljenk $E(\k(X),x_0)$ izomorfna $\mathscr{H}(X,x_0)$.
+\end{izrek}
+
+\begin{dokaz}
+    Definirajmo 
+    \begin{align*}
+\varphi:\mathcal{H}(X,x_0)&\rightarrow E(\k(X),x_0)\\
+\langle e_1e_2...e_n\rangle&\mapsto [e_1e_2...e_n]\\
+\emptyset &\mapsto [(x_0,x_0)]
+    \end{align*}.
+
+    Najprej pokažimo, da je $\varphi$ dobro definiran, torej da iz  $\langle e_1e_2...e_n\rangle =\langle f_1f_2...f_n\rangle $ sledi $[e_1e_2...e_n]=[f_1f_2...f_n]$.
+    Naj bosta zanki $\xi_1 \xi_2 \xi_3 \xi_4$ in $\xi_1 \xi_4 $ blizu in naj bosta $\xi_2 = e_1e_2...e_n$ in $\xi_3 = e'_1e'_2...e'_m$ monotoni $\h-$poti. Potem velja 
+\begin{align*}
+    [\xi_1 \xi_2 \xi_3 \xi_4]&=[\xi_1 e_1e_2...e_{n-1}\mathfrak{o}(e_n)\mathfrak{e}(e_n) \xi_3 \xi_4]\\
+    &=[\xi_1 e_1e_2...e_{n-2}\mathfrak{o}(e_{n-1})\mathfrak{e}(e_n) \xi_3 \xi_4]=\cdots=[\xi_1\mathfrak{e}(\xi_1)\mathfrak{e}(e_n) \xi_3 \xi_4]
+\end{align*}
+in analogno 
+$$
+[\xi_1\mathfrak{e}(\xi_1)\mathfrak{e}(e_n) \xi_3 \xi_4]=[\xi_1\mathfrak{e}(\xi_1)\mathfrak{e}(e_n) \mathfrak{o}(e'_1)\mathfrak{o}(\xi_4) \xi_4]
+$$
+in zato 
+\begin{align*}
+    [\xi_1 \xi_2 \xi_3 \xi_4]&=[\xi_1\mathfrak{e}(\xi_1)\mathfrak{e}(e_n) \mathfrak{o}(e'_n)\mathfrak{o}(\xi_4) \xi_4]\\
+    &=[\xi_1(\mathfrak{e}(\xi_1)\mathfrak{e}(e_n)) (\mathfrak{e}(e_n)\mathfrak{e}(\xi_1)) \xi_4]=[\xi_1(\mathfrak{e}(\xi_1) \mathfrak{e}(\xi_1)) \xi_4]=[\xi_1 \xi_4].
+\end{align*}
+
+
+Obratno, če je $\xi =(x_0,x_1)(x_1,x_2)...(x_{n-1},x_n)$ lomljenka v $\k(X)$ z $x_0=x_n$, potem sta $x_i$ in $x_{i-1}$ primerljiva za vsak $1\leq i \leq n$, zato lahko najdemo monotone $\h-$poti $\xi_1, \xi_2,... \xi_n$, take da $\mathfrak{o}(\xi_{i-1})=\mathfrak{e}(\xi_i)$ za $1\leq i \leq n$. Definirajmo
+
+\begin{align*}
+    \psi: E(\k(X),x_0)&\rightarrow \mathcal{H}(X,x_0),\\
+    [\xi]&\mapsto \langle\xi_1, \xi_2,... \xi_n\rangle.
+\end{align*}
+
+Definicija je neodvisna od izbire $\h-$poti $\xi_i$, saj če se izbiri razlikujeta za kak $i=k$, potem sta $\xi_1...\xi_k...\xi_n$ in $\xi_1...\xi'_k...\xi_n$ $\h-$ekvivalentni, saj sta obe blizu $\xi_1...\xi_k\xi_k^{-1}\xi_k...\xi_n$, torej $\langle \xi_1...\xi_k...\xi_n \rangle = \langle \xi_1...\xi'_k...\xi_n \rangle$
+
+Definicija je neodvisna od izbire predstavnika. Recimo da sta $\xi(x,y)(y,x)\xi'$ in $\xi(x,z)\xi'$ ekvivalentni lomljenki v $\k(X)$, ki se začneta in končata v $x_0$, pri čemer sta $\xi$ in $\xi'$ lomljenki, $x,y$ in $z$ pa so primerljivi.
+Če $y$ leži med $x$ in $z$, lahko najdemo monotono $\mathcal{H}-$pot od $x$ do $z$, ki vsebuje $y$ in nadomesti \pot od $x$ do $y$ in od $y$ do $z$ in zato je $\psi$ ekvivalentno definirana na $\xi(x,y)(y,x)\xi'$ in $\xi(x,z)\xi'$.
+Če je $z\leq x \leq y$ lahko poiščemo monotone $\mathcal{H}-$poti $\alpha$ od $x$ do $y$ in $\beta$ od $z$ do $x$, potem bo $\overline{\alpha}\overline{\beta}$ nadomestila pot $(y,z)$ in $\overline{\beta}$ bo nadomestila pot $(x,z)$. Dokazati moramo le še, da velja $\langle\gamma \alpha \overline{\alpha}\overline{\beta}\gamma'\rangle=\langle \gamma\overline{\beta}\gamma\rangle$, za $\h-$poti $\gamma$ in $\gamma'$, kar je pa trivialno. Preostale kombinacije $x,y$ in $z$ dokažemo analogno.
+
+Očitno sta $\varphi$ in $\psi$ drug drugemu inverzna in zato sta izomorfizma.
+\end{dokaz}
+
+Ker sta grupi $E(\k(X),x_0)$ in $\pi_1(|\k(X)|,x_0)$ izomorfni, takoj sledi naslednji rezultat.
+
+\begin{posledica}
+    Naj bo $(X,x_0)$ končen pointed $T_0$ prostor, potem $\pi_1(X,x_0)=\mathscr{H}(X,x_0)$.
+\end{posledica}
+\section{Minimalni modeli grafov}
+
+Graf v topologiji je topološki prostor, ki ga dobimo iz običajnega grafa 
+$G=(E,V)$, če oglišča iz $V$ zamenjamo s točkami in vsako povezavo $e\in 
+E$, $e=xy$, za $x,y\in V$, zamenjamo z enotskim intervalom, pri čemer 
+identificiramo $0$ in $x$ ter $1$ in $y$.
+Graf je torej geometrijska realizacija enodimenzionalnega simplicialnega 
+kompleksa. Graf je končen, če ima končno mnogo oglišč. 
+
+Brez dokaza bomo upoštevali dejstvo, da je za enodimenzionalne poliedre 
+šibki homotopski tip odvisen le od fundamente grupe, kar pomeni, da sta 
+sta prostora šibko homotopsko ekvivalentna, natanko tedaj, ko imata 
+izomorfno fundamentalno grupo.
+
+
+\begin{definicija}
+    Naj bo $K$ simplicialni kompleks dimenzije $n$ in naj $s_m$ označuje število $m-$simpleksov v $K$.
+    \textit{Eulerjeva karakteristika} $\chi(K)$ simplicialnega kompleksa $K$, je  $\chi(X)=\sum\limits_{i=0}^n (-1)^m s_m$
+\end{definicija}
+
+Če se omejimo na enodimenzionalne simplicialne komplekse oziroma grafe, 
+potem je eulerjeva karakteristika enaka $V-E$, kjer je $V$ število 
+oglišč, $E$ pa 
+število robov v grafu. Eulerjeva karakteristika dreves je enaka 1.
+
+\begin{trditev}
+    Naj bo $G$ topološki graf in $e$ njegova povezava. Potem je
+    $G\times \{0\}\cup e\times I$ deformacijski retrakt od $G\times I$.
+\end{trditev}
+
+\begin{dokaz}
+    Obstaja retrakcija $r: I\times I \rightarrow I\times \{0\} \cup \partial I \times I$, naprimer radialna projekcija iz točke $(1/2,2)\in I\times \mathbb{R}$. Ta retrakcija nam porodi deformacijsko retrakcijo $r_t=tr+(1-t)Id$. Ta deformacijska retrakcija nam porodi deformacijsko retrakcijo $G\times I \rightarrow G$
+\end{dokaz}
+
+\begin{trditev}
+    Naj bo $G$ končen topološki graf in  $e=\{u,v\}$ povezava v grafu za $u\neq v$, potem se vsak par preslikav $G\times \{0\}\rightarrow G$ in $e\times I \rightarrow G$, ki sovpada na $e\times \{0\}$, da razširiti do preslikave $G\times I \rightarrow G$
+\end{trditev}
+
+\begin{dokaz}
+    Ker je $e$ zaprt v $G$, lahko preslikavi združimo v preslikavo $G\times \{0\}\cup e\times I\rightarrow G$, ki je zvezna, saj je zvezna na zaprtih podprostorih $G\times \{0\}$ in $e\times I$. Če to komponiramo z retrakcijo $G\times I \rightarrow G\times \{0\}\cup e\times I$, dobimo razširitev $G\times I \rightarrow G.$
+\end{dokaz}
+
+Recimo, da imamo preslikavo $f_0:G\rightarrow G$ in homotopijo $f_t:e\rightarrow G$, preslikave $f_0|A$, potem nam ta trditev pove, da lahko to homotopijo razširimo do homotopije $f_t:G\rightarrow G$ dane preslikave $f_0$.
+
+\begin{trditev}
+    Naj bo $G$ končen topološki graf in  $e=\{u,v\}$ povezava v grafu za $u\neq v$. Potem sta prostora $G$ in $G/_e$ homotopsko ekvivalentna.
+\end{trditev}
+
+\begin{dokaz}
+    Naj bo $i:e\rightarrow G$ inkluzija. Povezava $e$ je kontraktibilna, torej obstaja homotopija $r_t:e \rightarrow e$ in $r_0=id_e$. Naj bo $f_t:G\rightarrow G$ razširitev homotopije $ir_t$ in naj velja $f_0=id_G$.
+
+    Ker $f_t(e)\subseteq e$, kompozicija $qf_t:G\rightarrow G/e$ slika $e$ v točko, zato obstaja $\bar{f}_t:G/_e\rightarrow G/_e$, taka da velja $gf_t=\bar{f}_tq$. Pri $t=1$ je $f_1(e)$ enaka točki, v katero se $e$ kontrakira. Zato $f_1$ inducira preslikavo $g:G/_e \rightarrow G$, da velja $gq=f_1$. Ker velja $qg(\bar{x})=qgq(x)=qf_1(x)=\bar{f}_1 q(x)=\bar{f}_1(\bar{x})$, sledi, da je $qg=\bar{f}$. Zato sta $q$ in $g$ homotopska inverza, saj je $gq=f_1\simeq f_0=id_G$ in $qg=\bar{f}_1\simeq \bar{f}_0 = id_{G/e}$
+\end{dokaz}
+
+\begin{posledica}
+    Naj bo $G$ končen graf, in naj bo $T$ vpeto drevo. Potem sta 
+    prostora $G$ in $G/_T$ homotopsko ekvivalentna.
+\end{posledica}
+
+Naj bo $T$ vpeto drevo grafa $G$. Velja $\chi(T)=1$. $G$ dobimo iz $T$ tako, da mu dodajamo povezave 
+oziroma $1-$simplekse, zato $\chi(G)=1-n$, kjer je $n$ število povezav v $G$, ki niso v 
+$T$. Prostor $G/_e$ dobimo iz $G$, tako da krajišči povezave zlepimo v eno točko, povezavo pa 
+izbrišemo, torej ima nov prostor eno oglišče in eno povezavo manj, zato se eulerjeva karakteristika 
+ohranja. $G/_T$ je prostor z enim ogliščem $x_0$ in $n$ povezavami, ki se začnejo in končajo v istem 
+oglišču, torej je homeomorfen šopu $n=1-\chi(G)$ krožnic, kar označimo z $\bigvee\limits_{i=1}^{n}S^1$.
+
+\begin{posledica}
+    \label{pos:karakteristika}
+    Šibki homotopski tip grafa je odvisen le od eulerjeve karakteristike
+\end{posledica}
+
+Minimalni model grafa je torej enak minimalnemu modelu  $\bigvee\limits_{i=1}^{n}S^1$. Poglejmo si 
+fundamentalno grupo  $\pi_1(\bigvee\limits_{i=1}^{n}S^1,x_0)$, kjer je $x_0$ točka, v kateri so krožnice 
+staknjene. Vsak ekvivalenčni razred zank predstavimo z zaporedjem krožnic, ki jih prepotuje in s 
+smerjo v kateri gre čez krožnico. Če s $s_i$ označimo $i-$to krožnico, potem lahko ekvivalenčni 
+zank  predstavimo kot zaporedje $s_{i_1}^{j_1}s_{i_2}^{j_2}\cdots s_{i_m}^{j_m}$, za $m\in N$ in 
+$j\in \{-1,1\}.$ Tu $j$ označuje smer po kateri se premikamo po krožnici. Stik zank 
+$s_{i_1}^{j_1}\cdots s_{i_m}^{j_m}$ in $s_{k_1}^{l_1}\cdots s_{k_m'}^{l_h}$ pa je ekvivalenten 
+stiku zaporedij $s_{i_1}^{j_1}\cdots s_{i_m}^{j_m}s_{k_1}^{l_1}\cdots s_{k_m'}^{l_h}$.
+Seveda velja $s_i s_i^{-1}=s_i^{-1}s_i=1$, kjer $1$ predstavlja trivialno zanko. 
+Torej vidimo, da je fundamentalna grupa $\pi_1(\bigvee\limits_{i=1}^{n}S^1,x_0)$ enaka prosti grupi z $n$
+generatorji, ki jo označimo z $F_n$.
+
+\begin{trditev}
+    Naj bo $X$ povezan topološki prostor in naj $x,x_0\in X, x\neq x_0$, taka da $x$ ni niti maksimalen, niti minimalen. Potem inkluzija asociiranih simplicialnih kompleksov $\k(X\backslash\{x\})\subseteq \k(X)$ inducira epimorfizem 
+    $$
+i_\star:E(\k(X\backslash\{x\}),x_0)\rightarrow E(\k(X),x_0)
+    $$
+    med njunima grupama sklenjenih lomljenk.
+\end{trditev}
+
+\begin{dokaz}
+    Pokazati moramo, da je vsaka lomljenka v $\k(X)$ z izhodiščem $x_0$ ekvivalentna neki drugi lomljenki, ki ne gre skozi $x$.
+    Recimo, da je $y\leq x$ in je (y,x)(x,z) lomljenka v $\k(X)$. Če je $x\leq z$, potem je $(y,z)(x,z)\equiv(y,z)$, saj je $\{x,y,z\}$ simpleks. Če je pa $z< X$, potem obstaja $w>x$, saj $x$ ni maksimalen. Zato je $(y,x)(x,z)\equiv(y,x)(x,w)(w,x)(x,z)\equiv (y,w)(w,z)$. Če je $y\geq x$ je dokaz analogen.
+\end{dokaz}
+
+Če povezanemu prostoru $X$ postopoma odstranjujemo točke, ki niso minimalne ali maksimalne, v vsakem koraku dobimo epimorfizem med fundamentalnima grupama, ki pa ni nujno izomorfizem, saj imamo lahko v $\k(X\backslash\{x\})$ dve neekvivalentni zanki, ki sta v $\k(X)$ ekvivalentni.
+
+
+
+\begin{posledica}
+    Naj bo $X$ povezan končen $T_0$ prostor. Potem obstaja povezan $T_0$ prostor $Y\subseteq X$, višine kvečjemu $1$ in epimorfizem iz $\pi_1(Y,x)$ v $\pi_1(X,x)$.
+\end{posledica}
+
+\begin{trditev}
+    Naj bo $n\in\mathbb{N}$. Če je $X$ minimalen model za 
+    $\bigvee\limits_{i=1}^{n}S^1$, potem $\htt(X)=1$.
+\end{trditev}
+
+\begin{dokaz}
+    Naj bo $X$ minimalen model za $\bigvee\limits_{i=1}^{n}S^1$. Potem obstaja povezan $T_0-$podprostor $Y\subseteq X$ višine $1$ in epimorfizem iz $\pi_1(Y,x)$ v $\pi_1(X,x)=F_n$.
+
+    Ker je $\htt(Y)=1$, je $Y$ model za grafa, torej $\pi_1(Y,x)=F_m$, za $m\geq n$.
+
+    V $\h(Y)$ imamo $m$ robov, ki niso v vpetem drevesu prirejenega grafa $\k(Y)$, zato lahko odstranimo $m-n$ robov iz $\h(Y)$ tako, da ostane povezan in dobljen prostor $Z$ je model za $\bigvee\limits_{i=1}^{n}S^1$.
+
+    Velja $\#Z=\#Y\leq \#X$, ampak ker je $X$ končen minimalen model, mora veljati $\#X\leq\#Z$ in zato $X=Z$, torej je višina $X$ enaka 1.
+\end{dokaz}
+
+Naj bo $X$ minimalen model za $\bigvee\limits_{i=1}^{n}S^1$. Vpeljimo naslednje oznake, $i:=\#\{y\in X| y \text{je minimalen}\}$ in $j:=\#\{y\in X| y \text{je maksimalen}\}$. Potem $\#X=i+j$ in $\#E(\h(X))\leq ij$. Ker je $\chi(X)=1-n$, velja $n\leq 1 - (i+j) + ij=(i-1)(j-1)$. Navedimo glavni izrek razdelka.
+
+\begin{izrek}
+    Naj bo $n\in\mathbb{N}$. Končen $T_0-$prostor $X$ je minimalni model za  $\bigvee\limits_{i=1}^{n}S^1$ natanko tedaj, ko je $\htt(X)=1$, $\#X=\min\{i+j|(i-j)(i-j)\geq n\}$ in $\#E(\h(X))= \#X + n -1.$
+\end{izrek}
+
+\begin{dokaz}
+    Pokazali smo že, da če je $X$ minimalen model za $\bigvee\limits_{i=1}^{n}S^1$, potem $\htt(X)=1$ in $\#X=\min\{i+j|(i-j)(i-j)\geq n\}$. 
+    Če sta $i$ in $j$ taka, da $(i-j)(i-j)\geq n$, potem definiramo prostor $Y=\{x_1,x_2,...x_i,y_1,y_2,...y_j\}$ z ureditvijo $y_k<x_l$ 
+    za vse $k$ in $l$, ki je model za $\bigvee\limits_{i=1}^{(i-1)(j-1)}S^1$. Potem lahko odstranimo $(i-1)(j-1)-n$ robov iz $\h(X)$ in tako dobimo povezan prostor kardinalnosti $i+j$, ki je model za $\bigvee\limits_{i=1}^{n}S^1$. Torej $\#X\leq \#Y=i+j$. To drži za vsaka $i$ in $j$, za katera velja $n\leq (i-1)(j-1)$, zato $\#X=\min\{i+j|(i-j)(i-j)\geq n\}$, zaradi minimalnosti $X$. $\#E(\h(X))= \#X + n -1$ pa sledi, ker $\chi(X)= 1-n$.
+
+    Dokažimo še v drugo smer. Naj velja  $\htt(X)=1$, $\#X=\min\{i+j|(i-j)(i-j)\geq n\}$ in $\#E(\h(X))= \#X + n -1.$ Dokazati moramo le, da je $X$ povezan, saj potem iz prve in tretje predpodstavke sledi, da je $X$ model za  $\bigvee\limits_{i=1}^{n}S^1$, iz druge pa sledi, da je model minimalen.
+
+    Naj bodo $X_l$ komponente povezanosti od $X$, za $1\leq l \leq k$. Z $M_l$ označimo množico maksimalnih elementov v $X_l$, z $m_l$ pa $X\backslash M_l$. Naj $i=\# \sum\limits_{l=1}^k \# M_l$ in $j==\# \sum\limits_{l=1}^k \# m_l$. Ker $i+j=\# X =\min \{s+t|(s-1)(t-1)\geq n\}$, sledi, da $(i-2)(j-1)<n=\# E(\h(X))-\# X +1=E(\h(X)) -(i+j) +1$ in zato $ij - E(\h(X))<j-1$. To pomeni, da se $\k(X)$ od polnega dvodelnega grafa $(\cup m_l,\cup M_l)$
+    razlikuje v manj kot $j-1$ robovih. Ker za $r\neq l$ ne obstaja povezava med ogliščem v $m_l$ in ogliščem v $M_r$, velja
+    $$
+        j-1>\sum\limits_{l=1}^{k}\# M(j- \# m_l)\geq \sum\limits_{l=1}^{k}(j- \# m_l)=(k-1)j.
+    $$
+
+    Zato $k=1$ in dokaz je končan.
+\end{dokaz}
 
  \end{document}
 

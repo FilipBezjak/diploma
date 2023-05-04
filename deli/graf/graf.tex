@@ -1,0 +1,231 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{verbatim}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{tikz-cd}
+
+
+\makeatletter
+\DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
+\newcommand{\morphic@sqcdot}[2]{%
+\sbox\z@{$\m@th\#1\centerdot$}%
+\ht\z@=.33333\ht\z@
+\vcenter{\box\z@}%
+}
+\makeatother
+
+\makeatletter
+\DeclareRobustCommand{\k}{
+    \mathcal{K}
+}
+
+\makeatletter
+\DeclareRobustCommand{\h}{
+    \mathcal{H}
+}
+\makeatletter
+\DeclareRobustCommand{\si}{
+    \bar{\sigma}
+}
+
+
+\DeclareMathOperator*{\supp}{supp}
+
+
+
+\DeclareMathOperator*{\htt}{ht}
+
+
+\makeatletter
+\DeclareRobustCommand{\pot}{
+    $\h-$pot
+}
+
+
+
+\newcommand\mymathop[1]{\mathop{\operatorname{\#1}}}
+
+\title{Minimalni končni modeli prostorov}
+\author{Filip Bezjak \\ Mentor: dr. Petar Pavešić}
+
+
+\setlength\parindent{24pt}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+
+\theoremstyle{definition}
+\newtheorem{primer}{Primer}
+
+\theoremstyle{plain}
+\newtheorem{trditev}{Trditev}
+
+\theoremstyle{plain}
+\newtheorem{posledica}{Posledica}
+
+\theoremstyle{plain}
+\newtheorem{opomba}{Opomba}
+
+\theoremstyle{plain}
+\newtheorem{lema}{Iema}
+
+\newenvironment{dokaz}{\begin{proof}[\bfseries\upshape\proofname]}{\end{proof}}
+
+\begin{document}
+
+
+\section{Minimalni modeli končnih grafov}
+
+Graf v topologiji je topološki prostor, ki ga dobimo iz običajnega grafa 
+$G=(E,V)$, če oglišča iz $V$ zamenjamo s točkami in vsako povezavo $e\in 
+E$, $e=xy$, za $x,y\in V$, zamenjamo z enotskim intervalom, pri čemer 
+identificiramo $0$ in $x$ ter $1$ in $y$.
+Graf je torej geometrijska realizacija enodimenzionalnega simplicialnega 
+kompleksa. Graf je končen, če ima končno mnogo oglišč. 
+
+Brez dokaza bomo upoštevali dejstvo, da je za enodimenzionalne poliedre 
+šibki homotopski tip odvisen le od fundamente grupe, kar pomeni, da sta 
+sta prostora šibko homotopsko ekvivalentna, natanko tedaj, ko imata 
+izomorfno fundamentalno grupo.
+
+
+\begin{definicija}
+    Naj bo $K$ simplicialni kompleks dimenzije $n$ in naj $s_m$ označuje število $m-$simpleksov v $K$.
+    \textit{Eulerjeva karakteristika} $\chi(K)$ simplicialnega kompleksa $K$, je  $\chi(X)=\sum\limits_{i=0}^n (-1)^m s_m$
+\end{definicija}
+
+Če se omejimo na enodimenzionalne simplicialne komplekse oziroma grafe, 
+potem je eulerjeva karakteristika enaka $V-E$, kjer je $V$ število 
+oglišč, $E$ pa 
+število robov v grafu. Eulerjeva karakteristika dreves je enaka 1.
+
+\begin{trditev}
+    Naj bo $G$ topološki graf in $e$ njegova povezava. Potem je
+    $G\times \{0\}\cup e\times I$ deformacijski retrakt od $G\times I$.
+\end{trditev}
+
+\begin{dokaz}
+    Obstaja retrakcija $r: I\times I \rightarrow I\times \{0\} \cup \partial I \times I$, naprimer radialna projekcija iz točke $(1/2,2)\in I\times \mathbb{R}$. Ta retrakcija nam porodi deformacijsko retrakcijo $r_t=tr+(1-t)Id$. Ta deformacijska retrakcija nam porodi deformacijsko retrakcijo $G\times I \rightarrow G$
+\end{dokaz}
+
+\begin{trditev}
+    Naj bo $G$ končen topološki graf in  $e=\{u,v\}$ povezava v grafu za $u\neq v$, potem se vsak par preslikav $G\times \{0\}\rightarrow G$ in $e\times I \rightarrow G$, ki sovpada na $e\times \{0\}$, da razširiti do preslikave $G\times I \rightarrow G$
+\end{trditev}
+
+\begin{dokaz}
+    Ker je $e$ zaprt v $G$, lahko preslikavi združimo v preslikavo $G\times \{0\}\cup e\times I\rightarrow G$, ki je zvezna, saj je zvezna na zaprtih podprostorih $G\times \{0\}$ in $e\times I$. Če to komponiramo z retrakcijo $G\times I \rightarrow G\times \{0\}\cup e\times I$, dobimo razširitev $G\times I \rightarrow G.$
+\end{dokaz}
+
+Recimo, da imamo preslikavo $f_0:G\rightarrow G$ in homotopijo $f_t:e\rightarrow G$, preslikave $f_0|A$, potem nam ta trditev pove, da lahko to homotopijo razširimo do homotopije $f_t:G\rightarrow G$ dane preslikave $f_0$.
+
+\begin{trditev}
+    Naj bo $G$ končen topološki graf in  $e=\{u,v\}$ povezava v grafu za $u\neq v$. Potem sta prostora $G$ in $G/_e$ homotopsko ekvivalentna.
+\end{trditev}
+
+\begin{dokaz}
+    Naj bo $i:e\rightarrow G$ inkluzija. Povezava $e$ je kontraktibilna, torej obstaja homotopija $r_t:e \rightarrow e$ in $r_0=id_e$. Naj bo $f_t:G\rightarrow G$ razširitev homotopije $ir_t$ in naj velja $f_0=id_G$.
+
+    Ker $f_t(e)\subseteq e$, kompozicija $qf_t:G\rightarrow G/e$ slika $e$ v točko, zato obstaja $\bar{f}_t:G/_e\rightarrow G/_e$, taka da velja $gf_t=\bar{f}_tq$. Pri $t=1$ je $f_1(e)$ enaka točki, v katero se $e$ kontrakira. Zato $f_1$ inducira preslikavo $g:G/_e \rightarrow G$, da velja $gq=f_1$. Ker velja $qg(\bar{x})=qgq(x)=qf_1(x)=\bar{f}_1 q(x)=\bar{f}_1(\bar{x})$, sledi, da je $qg=\bar{f}$. Zato sta $q$ in $g$ homotopska inverza, saj je $gq=f_1\simeq f_0=id_G$ in $qg=\bar{f}_1\simeq \bar{f}_0 = id_{G/e}$
+\end{dokaz}
+
+\begin{posledica}
+    Naj bo $G$ končen graf, in naj bo $T$ vpeto drevo. Potem sta 
+    prostora $G$ in $G/_T$ homotopsko ekvivalentna.
+\end{posledica}
+
+Naj bo $T$ vpeto drevo grafa $G$. Velja $\chi(T)=1$. $G$ dobimo iz $T$ tako, da mu dodajamo povezave 
+oziroma $1-$simplekse, zato $\chi(G)=1-n$, kjer je $n$ število povezav v $G$, ki niso v 
+$T$. Prostor $G/_e$ dobimo iz $G$, tako da krajišči povezave zlepimo v eno točko, povezavo pa 
+izbrišemo, torej ima nov prostor eno oglišče in eno povezavo manj, zato se eulerjeva karakteristika 
+ohranja. $G/_T$ je prostor z enim ogliščem $x_0$ in $n$ povezavami, ki se začnejo in končajo v istem 
+oglišču, torej je homeomorfen šopu $n=1-\chi(G)$ krožnic, kar označimo z $\bigvee\limits_{i=1}^{n}S^1$.
+
+\begin{posledica}
+    \label{pos:karakteristika}
+    Šibki homotopski tip grafa je odvisen le od eulerjeve karakteristike
+\end{posledica}
+
+Minimalni model grafa je torej enak minimalnemu modelu  $\bigvee\limits_{i=1}^{n}S^1$. Poglejmo si 
+fundamentalno grupo  $\pi_1(\bigvee\limits_{i=1}^{n}S^1,x_0)$, kjer je $x_0$ točka, v kateri so krožnice 
+staknjene. Vsak ekvivalenčni razred zank predstavimo z zaporedjem krožnic, ki jih prepotuje in s 
+smerjo v kateri gre čez krožnico. Če s $s_i$ označimo $i-$to krožnico, potem lahko ekvivalenčni 
+zank  predstavimo kot zaporedje $s_{i_1}^{j_1}s_{i_2}^{j_2}\cdots s_{i_m}^{j_m}$, za $m\in N$ in 
+$j\in \{-1,1\}.$ Tu $j$ označuje smer po kateri se premikamo po krožnici. Stik zank 
+$s_{i_1}^{j_1}\cdots s_{i_m}^{j_m}$ in $s_{k_1}^{l_1}\cdots s_{k_m'}^{l_h}$ pa je ekvivalenten 
+stiku zaporedij $s_{i_1}^{j_1}\cdots s_{i_m}^{j_m}s_{k_1}^{l_1}\cdots s_{k_m'}^{l_h}$.
+Seveda velja $s_i s_i^{-1}=s_i^{-1}s_i=1$, kjer $1$ predstavlja trivialno zanko. 
+Torej vidimo, da je fundamentalna grupa $\pi_1(\bigvee\limits_{i=1}^{n}S^1,x_0)$ enaka prosti grupi z $n$
+generatorji, ki jo označimo z $F_n$.
+
+\begin{trditev}
+    Naj bo $X$ povezan topološki prostor in naj $x,x_0\in X, x\neq x_0$, taka da $x$ ni niti maksimalen, niti minimalen. Potem inkluzija asociiranih simplicialnih kompleksov $\k(X\backslash\{x\})\subseteq \k(X)$ inducira epimorfizem 
+    $$
+i_\star:E(\k(X\backslash\{x\}),x_0)\rRghtarrow E(\k(X),x_0)
+    $$
+    med njunima $edgepath$ grupama.
+\end{trditev}
+
+\begin{dokaz}
+    Pokazati moramo, da je vsaka lomljenka v \k(X) z izhodiščem $x_0$ ekvivalentna neki drugi lomljenki, ki ne gre skozi $x$.
+    Recimo, da je $y\leq x$ in je (y,x)(x,z) lomljenka v $\k(X)$. Če je $x\leq z$, potem je $(y,z)(x,z)\equiv(y,z)$, saj je $\{x,y,z\}$ simpleks. Če je pa $z< X$, potem obstaja $w>x$, saj $x$ ni maksimalen. Zato je $(y,x)(x,z)\equiv(y,x)(x,w)(w,x)(x,z)\equiv (y,w)(w,z)$. Če je $y\geq x$ je dokaz analogen.
+\end{dokaz}
+
+Če povezanemu prostoru $X$ postopoma odstranjujemo točke, ki niso minimalne ali maksimalne, v vsakem koraku dobimo epimorfizem med fundamentalnima grupama, ki pa ni nujno izomorfizem, saj imamo lahko v $\k(X\backslash\{x\})$ dve neekvivalentni zanki, ki sta v $\k(X)$ ekvivalentni.
+
+
+
+\begin{posledica}
+    Naj bo $X$ povezan končen $T_0$ prostor. Potem obstaja povezan $T_0$ prostor $Y\subseteq X$, višine kvečjemu $1$ in epimorfizem iz $\pi_1(Y,x)$ v $\pi_1(X,x)$.
+\end{posledica}
+
+\begin{trditev}
+    Naj bo $n\in\mathbb{N}$. Če je $X$ minimalen model za 
+    $\bigvee\limits_{i=1}^{n}S^1$, potem $\htt(X)=1$.
+\end{trditev}
+
+\begin{dokaz}
+    Naj bo $X$ minimalen model za $\bigvee\limits_{i=1}^{n}S^1$. Potem obstaja povezan $T_0-$podprostor $Y\subseteq X$ višine $1$ in epimorfizem iz $\pi_1(Y,x)$ v $\pi_1(X,x)=F_n$.
+
+    Ker je $\htt(Y)=1$, je $Y$ model za grafa, torej $\pi_1(Y,x)=F_m$, za $m\geq n$.
+
+    V $\h(Y)$ imamo $m$ robov, ki niso v vpetem drevesu prirejenega grafa $\k(Y)$, zato lahko odstranimo $m-n$ robov iz $\h(Y)$ tako, da ostane povezan in dobljen prostor $Z$ je model za $\bigvee\limits_{i=1}^{n}S^1$.
+
+    Velja $\#Z=\#Y\leq \#X$, ampak ker je $X$ končen minimalen model, mora veljati $\#X\leq\#Z$ in zato $X=Z$, torej je višina $X$ enaka 1.
+\end{dokaz}
+
+Naj bo $X$ minimalen model za $\bigvee\limits_{i=1}^{n}S^1$. Vpeljimo naslednje oznake, $i:=\#\{y\in X| y \text{je minimalen}\}$ in $j:=\#\{y\in X| y \text{je maksimalen}\}$. Potem $\#X=i+j$ in $\#E(\h(X))\leq ij$. Ker je $\chi(X)=1-n$, velja $n\leq 1 - (i+j) + ij=(i-1)(j-1)$. Navedimo glavni izrek razdelka.
+
+\begin{izrek}
+    Naj bo $n\in\mathbb{N}$. Končen $T_0-$prostor $X$ je minimalni model za  $\bigvee\limits_{i=1}^{n}S^1$ natanko tedaj, ko je $\htt(X)=1$, $\#X=\min\{i+j|(i-j)(i-j)\geq n\}$ in $\#E(\h(X))= \#X + n -1.$
+\end{izrek}
+
+\begin{dokaz}
+    Pokazali smo že, da če je $X$ minimalen model za $\bigvee\limits_{i=1}^{n}S^1$, potem $\htt(X)=1$ in $\#X=\min\{i+j|(i-j)(i-j)\geq n\}$. 
+    Če sta $i$ in $j$ taka, da $(i-j)(i-j)\geq n$, potem definiramo prostor $Y=\{x_1,x_2,...x_i,y_1,y_2,...y_j\}$ z ureditvijo $y_k<x_l$ 
+    za vse $k$ in $l$, ki je model za $\bigvee\limits_{i=1}^{(i-1)(j-1)}S^1$. Potem lahko odstranimo $(i-1)(j-1)-n$ robov iz $\h(X)$ in tako dobimo povezan prostor kardinalnosti $i+j$, ki je model za $\bigvee\limits_{i=1}^{n}S^1$. Torej $\#X\leq \#Y=i+j$. To drži za vsaka $i$ in $j$, za katera velja $n\leq (i-1)(j-1)$, zato $\#X=\min\{i+j|(i-j)(i-j)\geq n\}$, zaradi minimalnosti $X$. $\#E(\h(X))= \#X + n -1$ pa sledi, ker $\chi(X)= 1-n$.
+
+    Dokažimo še v drugo smer. Naj velja  $\htt(X)=1$, $\#X=\min\{i+j|(i-j)(i-j)\geq n\}$ in $\#E(\h(X))= \#X + n -1.$ Dokazati moramo le, da je $X$ povezan, saj potem iz prve in tretje predpodstavke sledi, da je $X$ model za  $\bigvee\limits_{i=1}^{n}S^1$, iz druge pa sledi, da je model minimalen.
+
+    Naj bodo $X_l$ komponente povezanosti od $X$, za $1\leq l \leq k$. Z $M_l$ označimo množico maksimalnih elementov v $X_l$, z $m_l$ pa $X\backslash M_l$. Naj $i=\# \sum\limits_{l=1}^k \# M_l$ in $j==\# \sum\limits_{l=1}^k \# m_l$. Ker $i+j=\# X =\min \{s+t|(s-1)(t-1)\geq n\}$, sledi, da $(i-2)(j-1)<n=\# E(\h(X))-\# X +1=E(\h(X)) -(i+j) +1$ in zato $ij - E(\h(X))<j-1$. To pomeni, da se $\k(X)$ od polnega dvodelnega grafa $(\cup m_l,\cup M_l)$
+    razlikuje v manj kot $j-1$ robovih. Ker za $r\neq l$ ne obstaja povezava med ogliščem v $m_l$ in ogliščem v $M_r$, velja
+    $$
+        j-1>\sum\limits_{l=1}^{k}\# M(j- \# m_l)\geq \sum\limits_{l=1}^{k}(j- \# m_l)=(k-1)j.
+    $$
+
+    Zato $k=1$ in dokaz je končan.
+\end{dokaz}
+
+\end{document}
