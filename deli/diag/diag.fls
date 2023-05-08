@@ -1,0 +1,6 @@
+PWD c:\Users\Anže\Desktop\dipl\deli\diag
+INPUT C:\Users\Anže\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\Anže\Desktop\dipl\deli\diag\diag.tex
+OUTPUT diag.log
+INPUT C:\Users\Anže\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+INPUT C:\Users\Anže\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
