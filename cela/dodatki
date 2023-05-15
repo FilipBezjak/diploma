@@ -1,0 +1,42 @@
+\makeatletter
+\DeclareRobustCommand{\sqcdot}{\mathbin{\mathpalette\morphic@sqcdot\relax}}
+\newcommand{\morphic@sqcdot}[2]{%
+\sbox\z@{$\m@th#1\centerdot$}%
+\ht\z@=.33333\ht\z@
+\vcenter{\box\z@}%
+}
+\makeatother
+
+\makeatletter
+\DeclareRobustCommand{\k}{
+    \mathcal{K}
+}
+
+\makeatletter
+\DeclareRobustCommand{\h}{
+    \mathcal{H}
+}
+\makeatletter
+\DeclareRobustCommand{\si}{
+    \bar{\sigma}
+}
+
+
+\DeclareMathOperator*{\supp}{supp}
+
+
+
+\DeclareMathOperator*{\htt}{ht}
+
+\makeatletter
+\DeclareRobustCommand{\pot}{
+    $\h-$pot
+}
+
+
+
+\newcommand\mymathop[1]{\mathop{\operatorname{#1}}}
+\hypersetup{colorlinks=false,
+		    linkcolor=red,
+		    urlcolor=red
+		    }		

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.4)  14 MAY 2023 21:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.4)  15 MAY 2023 02:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex
-(c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex
+**c:/Users/Anže/Desktop/dipl/cela/Bezjak-27191055-2022.tex
+(c:/Users/Anže/Desktop/dipl/cela/Bezjak-27191055-2022.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (fmfdelo.cls
 Document Class: fmfdelo 2016/10/13 Zakljucna dela na FMF
@@ -694,85 +694,139 @@ Package: setspace 2022/12/04 v6.7b set line spacing
 ) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/bigints\bigints.sty
 Package: bigints 2010/02/15 Writing big integrals
 Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
-) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/esdiff\esdiff.sty
-Package: esdiff 
+) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
 )
-LaTeX Info: Redefining \k on input line 29.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 64.
+LaTeX Info: Redefining \k on input line 35.
+Package hyperref Info: Option `unicode' set `true' on input line 82.
+Package hyperref Info: Option `psdextra' set `true' on input line 82.
+ (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc-greekbasic.def
+File: puenc-greekbasic.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (greek block) (HO)
+) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\psdextra.def
+File: psdextra.def 2023-02-07 v7.00v Hyperref: Additions to PDF string support
+)
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 82.
+ (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-pdfdoc.def
+File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
+) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\pdfx.sty
+Package: pdfx 2019/02/27 v1.6.3 PDF/X and PDF/A support (CVR/HTH/RRM/PS)
+\pdfx@minorversion=\count340
+ (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+){C:/Users/Anže/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\l8u-penc.def
+File: l8u-penc.def 2017/06/23 v0.8 Custom LaTeX file, for UTF8 encoded letters and symbols
+LaTeX Info: Composite with undeclared \b in encoding L8U on input line 278.
+)
+\pdfxsafeforxmp@toks=\toks57
+\pdfx@tmptoks=\toks58
+Package hyperref Info: Option `unicode' set `true' on input line 1463.
+Package hyperref Info: Option `psdextra' set `true' on input line 1465.
+ (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/generic/colorprofiles\colorprofiles.sty
+Package: colorprofiles 2018/11/01 v1.0.1 color profiles for PDF/X and PDF/A support
+
+(C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/generic/colorprofiles\colorprofiles.tex)) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\AdobeColorProfiles.tex) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\8bit.def
+File: 8bit.def 2008/03/30 v1.1d Input encoding file
+)
+** pdfx: No file Bezjak-27191055-2022.xmpdata . Metadata will be incomplete!
+<<sRGB.icc>> (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\8bit.def
+File: 8bit.def 2008/03/30 v1.1d Input encoding file
+)
+Package hyperref Info: Option `unicode' set `true' on input line 2411.
+Package hyperref Info: Option `unicode' set `true' on input line 2412.
+ (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/generic/pdftex\glyphtounicode.tex) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\glyphtounicode-cmr.tex) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\glyphtounicode-ntx.tex) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/xmpincl\xmpincl.sty
+Package: xmpincl 2021/09/22 v2.4 Include XMP data in pdflatex
+) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\8bit.def
+File: 8bit.def 2008/03/30 v1.1d Input encoding file
+)
+Using XMP template file: pdfa.xmp
+\xmpinclWrite=\write4
+\xmpinclRead=\read4
+\openout4 = `pdfa.xmpi'.
+
+<<pdfa.xmpi>>)
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 105.
  (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count340
+\l__color_backend_stack_int=\count341
 \l__pdf_internal_box=\box71
-) (Minimalni.aux)
-\openout1 = `Minimalni.aux'.
+) (Bezjak-27191055-2022.aux)
+\openout1 = `Bezjak-27191055-2022.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 105.
  (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 64.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 105.
  (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 64.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 105.
  (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 64.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 105.
  (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 64.
+(Font)              <10> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 64.
+(Font)              <7> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 64.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
+(Font)              <5> on input line 105.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 105.
  (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 105.
  (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package hyperref Info: Link coloring OFF on input line 64.
-\@outlinefile=\write4
-\openout4 = `Minimalni.out'.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 105.
+ (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+Package hyperref Info: Link coloring OFF on input line 105.
+ (Bezjak-27191055-2022.out) (Bezjak-27191055-2022.out)
+\@outlinefile=\write5
+\openout5 = `Bezjak-27191055-2022.out'.
 
  (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count341
+\scratchcounter=\count342
 \scratchdimen=\dimen303
 \scratchbox=\box72
-\nofMPsegments=\count342
-\nofMParguments=\count343
-\everyMPshowfont=\toks57
-\MPscratchCnt=\count344
+\nofMPsegments=\count343
+\nofMParguments=\count344
+\everyMPshowfont=\toks59
+\MPscratchCnt=\count345
 \MPscratchDim=\dimen304
-\MPnumerator=\count345
-\makeMPintoPDFobject=\count346
-\everyMPtoPDFconversion=\toks58
+\MPnumerator=\count346
+\makeMPintoPDFobject=\count347
+\everyMPtoPDFconversion=\toks60
 ) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -782,786 +836,159 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 64.
- [1.1{C:/Users/Anže/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-No file Minimalni.toc.
-\tf@toc=\write5
-\openout5 = `Minimalni.toc'.
+(Font)              <14.4> on input line 105.
+ [1.1] (Bezjak-27191055-2022.toc)
+\tf@toc=\write6
+\openout6 = `Bezjak-27191055-2022.toc'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2.2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 64.
+(Font)              <12> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 64.
+(Font)              <8> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 64.
- [3.3]
-
-LaTeX Warning: Reference `sec:delne' on page 4 undefined on input line 70.
-
-
-LaTeX Warning: Reference `sec:1' on page 4 undefined on input line 71.
-
-
-LaTeX Warning: Reference `sec:simpleks' on page 4 undefined on input line 71.
-
-
-LaTeX Warning: Reference `sec:minimal' on page 4 undefined on input line 71.
-
-
-LaTeX Warning: Reference `iz:ksibka' on page 4 undefined on input line 71.
-
-
-LaTeX Warning: Reference `sec:hasse' on page 4 undefined on input line 73.
-
-
-LaTeX Warning: Citation `Solr-0000594456' on page 4 undefined on input line 74.
-
-[4.4]
-<./slike//def-retract.png, id=38, 355.6903pt x 120.8128pt>
+(Font)              <6> on input line 105.
+ [3.3] [4.4]
+<./slike//def-retract.png, id=108, 355.6903pt x 120.8128pt>
 File: ./slike//def-retract.png Graphic file (type png)
 <use ./slike//def-retract.png>
-Package pdftex.def Info: ./slike//def-retract.png  used on input line 125.
+Package pdftex.def Info: ./slike//def-retract.png  used on input line 165.
 (pdftex.def)             Requested size: 426.79134pt x 144.9617pt.
- [5.5 <./slike//def-retract.png>] [6.6]
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:249: Undefined control sequence.
-l.249 ... [f\sqcdot g]$ je grupa za vsak $n \in \N
-                                                  $.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:255: Undefined control sequence.
-l.255 ...tarrow \pi_1(Y,f(x_0))$ za vsak $n \in \N
-                                                  $. Preslikavi $f$ rečemo ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:266: Undefined control sequence.
-l.266 ...amo na končne komplekse, torej $n \in \N
-                                                  $.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:281: Undefined control sequence.
-<recently read> \R 
-                   
-l.281 Če so $v_i$ linearno neodvisne točke v $\R
-                                                  ^m$ za nek $m\geq n$, pote...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:282: Undefined control sequence.
-l.282 ...\text{ in } \alpha_i \ge 0 \}\subseteq \R
-                                                  ^m$,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:283: Undefined control sequence.
-<recently read> \R 
-                   
-l.283 ...t simpleks predstavimo kot podprostor $\R
-                                                  ^m$ z evklidsko topologijo.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:289: Undefined control sequence.
-<recently read> \R 
-                   
-l.289 ... $v\in K$ linearno neodvisne točke v $\R
-                                                  ^m$ za nek $m\geq |V_K|$, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:291: Undefined control sequence.
-l.291 ... \text{ je simpleks v $K$}\} \subseteq \R
-                                                  ^m$, kar spet pomeni, da l...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:292: Undefined control sequence.
-<recently read> \R 
-                   
-l.292 kompleks predstavimo kot podprostor v $\R
-                                               ^{|V_K|}$ z evklidsko topolog...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[7.7]
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:296: Undefined control sequence.
-<recently read> \R 
-                   
-l.296 ...ompleks, potem se ga da realizirati v $\R
-                                                  ^{2n+1}$. To pomeni, da ob...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:297: Undefined control sequence.
-<recently read> \R 
-                   
-l.297     $\R
-             ^{2n+1}$, ki je homeomorfen $|K|$. Vsak graf je geometrijska re...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:298: Undefined control sequence.
-<recently read> \R 
-                   
-l.298     lahko realiziramo v $\R
-                                 ^{2\cdot 1 +1}=\R^{3}$, kar je pa znano dej...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:298: Undefined control sequence.
-l.298     lahko realiziramo v $\R^{2\cdot 1 +1}=\R
-                                                  ^{3}$, kar je pa znano dej...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-<./slike//sk.png, id=65, 187.14127pt x 71.35712pt>
+ [5.5 <./slike//def-retract.png>] [6.6] [7.7]
+<./slike//sk.png, id=139, 187.14127pt x 71.35712pt>
 File: ./slike//sk.png Graphic file (type png)
 <use ./slike//sk.png>
-Package pdftex.def Info: ./slike//sk.png  used on input line 330.
+Package pdftex.def Info: ./slike//sk.png  used on input line 374.
 (pdftex.def)             Requested size: 298.75262pt x 113.92326pt.
-[8.8 <./slike//sk.png>]
-
-LaTeX Warning: Reference `tr:shom' on page 9 undefined on input line 370.
-
-LaTeX Font Info:    Trying to load font information for U+euf on input line 391.
-(C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
+ [8.8 <./slike//sk.png>]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 434.
+ (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-<./slike//lomljenki2.png, id=77, 186.04552pt x 63.51804pt>
+<./slike//lomljenki2.png, id=151, 186.04552pt x 63.51804pt>
 File: ./slike//lomljenki2.png Graphic file (type png)
 <use ./slike//lomljenki2.png>
-Package pdftex.def Info: ./slike//lomljenki2.png  used on input line 401.
+Package pdftex.def Info: ./slike//lomljenki2.png  used on input line 444.
 (pdftex.def)             Requested size: 384.10959pt x 131.14903pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9.9]
-
-LaTeX Warning: Citation `spanier1995algebraic' on page 10 undefined on input line 421.
-
-<./slike//open.png, id=88, 199.02702pt x 196.89307pt>
+<./slike//open.png, id=162, 199.02702pt x 196.89307pt>
 File: ./slike//open.png Graphic file (type png)
 <use ./slike//open.png>
-Package pdftex.def Info: ./slike//open.png  used on input line 454.
+Package pdftex.def Info: ./slike//open.png  used on input line 498.
 (pdftex.def)             Requested size: 128.0387pt x 126.67207pt.
-<./slike//hasse.png, id=89, 573.57143pt x 282.57953pt>
+<./slike//hasse.png, id=163, 573.57143pt x 282.57953pt>
 File: ./slike//hasse.png Graphic file (type png)
 <use ./slike//hasse.png>
-Package pdftex.def Info: ./slike//hasse.png  used on input line 458.
+Package pdftex.def Info: ./slike//hasse.png  used on input line 502.
 (pdftex.def)             Requested size: 533.48915pt x 262.83505pt.
 
-Overfull \hbox (320.09349pt too wide) in paragraph at lines 458--459
+Overfull \hbox (320.09349pt too wide) in paragraph at lines 502--503
  [][] |
  []
 
-[10.10 <./slike//lomljenki2.png>] [11.11 <./slike//open.png> <./slike//hasse.png>]
-
-LaTeX Warning: Reference `lem:pot' on page 12 undefined on input line 521.
-
-
-LaTeX Warning: Reference `lem:povezanost' on page 12 undefined on input line 533.
-
-
-LaTeX Warning: Reference `iz:ograje' on page 12 undefined on input line 549.
-
-[12.12]
-
-LaTeX Warning: Reference `iz:ograje' on page 13 undefined on input line 569.
-
-
-LaTeX Warning: Reference `iz:ograje' on page 13 undefined on input line 586.
-
-
-LaTeX Warning: Reference `iz:identiteta' on page 13 undefined on input line 609.
-
-<./slike//xy.png, id=119, 200.06792pt x 91.80243pt>
+[10.10 <./slike//lomljenki2.png>] [11.11 <./slike//open.png> <./slike//hasse.png>] [12.12]
+<./slike//xy.png, id=199, 200.06792pt x 91.80243pt>
 File: ./slike//xy.png Graphic file (type png)
 <use ./slike//xy.png>
-Package pdftex.def Info: ./slike//xy.png  used on input line 623.
+Package pdftex.def Info: ./slike//xy.png  used on input line 666.
 (pdftex.def)             Requested size: 256.0774pt x 117.5053pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./slike//prv.png, id=120, 196.99854pt x 71.57242pt>
+<./slike//prv.png, id=200, 196.99854pt x 71.57242pt>
 File: ./slike//prv.png Graphic file (type png)
 <use ./slike//prv.png>
-Package pdftex.def Info: ./slike//prv.png  used on input line 630.
+Package pdftex.def Info: ./slike//prv.png  used on input line 673.
 (pdftex.def)             Requested size: 256.0774pt x 93.04956pt.
-<./slike//drug.png, id=121, 175.23383pt x 72.27pt>
+<./slike//drug.png, id=201, 175.23383pt x 72.27pt>
 File: ./slike//drug.png Graphic file (type png)
 <use ./slike//drug.png>
-Package pdftex.def Info: ./slike//drug.png  used on input line 631.
+Package pdftex.def Info: ./slike//drug.png  used on input line 674.
 (pdftex.def)             Requested size: 256.0774pt x 105.62025pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13.13]
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:657: Undefined control sequence.
-l.657 ... $\alpha$ v geometrijski realizaciji $|\K
-                                                  (X)|$ je
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[14.14 <./slike//xy.png> <./slike//prv.png> <./slike//drug.png>]
-
-LaTeX Warning: Reference `iz:ograje' on page 15 undefined on input line 714.
-
-
-LaTeX Warning: Reference `iz:mccord' on page 15 undefined on input line 719.
-
-
-LaTeX Warning: Reference `lem:sibka' on page 15 undefined on input line 750.
-
-[15.15]
-
-LaTeX Warning: Reference `pos:kontr' on page 16 undefined on input line 769.
-
-<./slike//simp.png, id=155, 175.99486pt x 69.22247pt>
+[13.13] [14.14 <./slike//xy.png> <./slike//prv.png> <./slike//drug.png>] [15.15]
+<./slike//simp.png, id=237, 175.99486pt x 69.22247pt>
 File: ./slike//simp.png Graphic file (type png)
 <use ./slike//simp.png>
-Package pdftex.def Info: ./slike//simp.png  used on input line 783.
+Package pdftex.def Info: ./slike//simp.png  used on input line 830.
 (pdftex.def)             Requested size: 426.79134pt x 167.8896pt.
-[16.16 <./slike//simp.png>]
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:856: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.856         H:|K'|\times I \rightarrow |L| \\
-                                               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:856: Missing $ inserted.
-<inserted text> 
-                $
-l.856         H:|K'|\times I \rightarrow |L| \\
-                                               
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:856: Missing } inserted.
-<inserted text> 
-                }
-l.856         H:|K'|\times I \rightarrow |L| \\
-                                               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:856: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.856         H:|K'|\times I \rightarrow |L| \\
-                                               
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:856: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.856         H:|K'|\times I \rightarrow |L| \\
-                                               
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:857: Missing $ inserted.
-<inserted text> 
-                $
-l.857         H: (\alpha
-                        ,t) \mapsto (1-t)|\varphi|S_K(\alpha) + tS_L|\varphi...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:857: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.857 ...hi|S_K(\alpha) + tS_L|\varphi'|(\alpha)\\
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:857: Missing $ inserted.
-<inserted text> 
-                $
-l.857 ...hi|S_K(\alpha) + tS_L|\varphi'|(\alpha)\\
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:857: Missing } inserted.
-<inserted text> 
-                }
-l.857 ...hi|S_K(\alpha) + tS_L|\varphi'|(\alpha)\\
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:857: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.857 ...hi|S_K(\alpha) + tS_L|\varphi'|(\alpha)\\
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:859: Missing $ inserted.
-<inserted text> 
-                $
-l.859     \end{centering}
-                         
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:859: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.859     \end{centering}
-                         
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-
-LaTeX Warning: Reference `lem:komutira' on page 17 undefined on input line 861.
-
-
-LaTeX Warning: Reference `iz:xsibka' on page 17 undefined on input line 882.
-
-
-LaTeX Warning: Reference `iz:ksibka' on page 17 undefined on input line 882.
-
-[17.17]
-<./slike//homeo2.png, id=171, 180.59116pt x 72.60536pt>
+ [16.16 <./slike//simp.png>] [17.17]
+<./slike//homeo2.png, id=256, 180.59116pt x 72.60536pt>
 File: ./slike//homeo2.png Graphic file (type png)
 <use ./slike//homeo2.png>
-Package pdftex.def Info: ./slike//homeo2.png  used on input line 909.
+Package pdftex.def Info: ./slike//homeo2.png  used on input line 951.
 (pdftex.def)             Requested size: 256.0774pt x 102.96957pt.
  [18.18 <./slike//homeo2.png>]
-<./slike//spoj.png, id=180, 215.40442pt x 97.92175pt>
+<./slike//spoj.png, id=264, 215.40442pt x 97.92175pt>
 File: ./slike//spoj.png Graphic file (type png)
 <use ./slike//spoj.png>
-Package pdftex.def Info: ./slike//spoj.png  used on input line 948.
+Package pdftex.def Info: ./slike//spoj.png  used on input line 991.
 (pdftex.def)             Requested size: 256.0774pt x 116.42671pt.
 
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:960: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.960   $\Sus
-             (X)=X \circledast S^0$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:962: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.962 ... $n$ je definirana rekurzivno, kot  $\Sus
-                                                  ^n=\Sus(\Sus^{n-1}(X))$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:962: Undefined control sequence.
-l.962 ... definirana rekurzivno, kot  $\Sus^n=\Sus
-                                                  (\Sus^{n-1}(X))$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:962: Undefined control sequence.
-l.962 ...nirana rekurzivno, kot  $\Sus^n=\Sus(\Sus
-                                                  ^{n-1}(X))$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:977: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.977     Končen prostor $\Sus
-                               ^n(S^0)$ je končni model n-dimenzionalne sfe...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:981: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.981     Vemo že, da je $\Sus
-                               ^n(S^0)$ šibko homotopsko ekvivalenten $|\k(...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:981: Undefined control sequence.
-l.981 ... šibko homotopsko ekvivalenten $|\k(\Sus
-                                                  ^n(S^0))|$,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Underfull \hbox (badness 8056) in paragraph at lines 992--992
+[]\T1/lmr/m/sc/12 Slika 6.|\T1/lmr/m/n/12 Ge-o-me-trij-ska re-a-li-za-cija sim-pli-ci-al-nega spoja dveh
+ []
 
 
-LaTeX Warning: Reference `op:spoj' on page 19 undefined on input line 982.
-
-
-LaTeX Warning: Reference `tr:spoj' on page 19 undefined on input line 982.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:982: Undefined control sequence.
-l.982 ... trditvi \ref{tr:spoj} pa velja $|\k(\Sus
-                                                  ^n(S^0))|=|\k(\underbrace{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:988: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.988 Zdaj bomo še dokazali, da je $\Sus
-                                         ^n(S^0)$ minimalni končni model za...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:988: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.988 ...anko $2n+2$ točk pa je homeomorfen $\Sus
-                                                  ^n(S^0)$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (1.0586pt too wide) in paragraph at lines 1026--1031
+[]\T1/lmr/m/n/12 Vemo �e, da je $\U/msb/m/n/12 S[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 S[]\OT1/lmr/m/n/12 )$ \T1/lmr/m/n/12 �ibko ho-mo-top-sko ek-vi-va-len-ten $\OMS/lmsy/m/n/12 jK\OT1/lmr/m/n/12 (\U/msb/m/n/12 S[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 S[]\OT1/lmr/m/n/12 ))\OMS/lmsy/m/n/12 j$\T1/lmr/m/n/12 , po opombi|
+ []
 
 [19.19 <./slike//spoj.png>]
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:997: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.997 ...t(X)+2$ točk, potem je homeomorfen $\Sus
-                                                  ^{\htt(X)}(S^0)$
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1043: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.1043         To je pa ureditev v $\Sus
-                                        ^h(S^0)$ in zato je $X$ homeomorfen
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1044: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.1044         $\Sus
-                    ^h(S^0)$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-<./slike//sfere.png, id=194, 217.86394pt x 71.96887pt>
+<./slike//sfere.png, id=279, 217.86394pt x 71.96887pt>
 File: ./slike//sfere.png Graphic file (type png)
 <use ./slike//sfere.png>
-Package pdftex.def Info: ./slike//sfere.png  used on input line 1050.
+Package pdftex.def Info: ./slike//sfere.png  used on input line 1093.
 (pdftex.def)             Requested size: 341.43436pt x 112.79807pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1054: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.1054 Ker je $\Sus
-                   ^n(S^0)$ model za $S^n$, čigar višina je enaka $n$ in ima
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1055: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.1055 $2n+2$ točk, je $\Sus
-                             ^n(S^0)$ minimalni model za $S^n$. Model je
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1057: Undefined control sequence.
-<recently read> \Sus 
-                     
-l.1057 $\Sus
-            ^n(S^0)$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 [20.20]
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1089: Undefined control sequence.
-<recently read> \mathscr 
-                         
-l.1089 ...enčni razred zanke $\xi$ in z $\mathscr
-                                                  {H}(X,x_0)$ množico teh r...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-<./slike//poti.png, id=202, 182.96928pt x 104.27528pt>
+<./slike//poti.png, id=286, 182.96928pt x 104.27528pt>
 File: ./slike//poti.png Graphic file (type png)
 <use ./slike//poti.png>
-Package pdftex.def Info: ./slike//poti.png  used on input line 1094.
+Package pdftex.def Info: ./slike//poti.png  used on input line 1137.
 (pdftex.def)             Requested size: 256.0774pt x 145.93982pt.
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1099: Undefined control sequence.
-<recently read> \mathscr 
-                         
-l.1099 ...n inducira grupno strukturo na $\mathscr
-                                                  {H}(X,x_0)$
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1108: Undefined control sequence.
-<recently read> \mathscr 
-                         
-l.1108 ...ljenk $E(\k(X),x_0)$ izomorfna $\mathscr
-                                                  {H}(X,x_0)$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[21.21 <./slike//sfere.png> <./slike//poti.png>]
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1117: Undefined control sequence.
-<argument>  \varphi :\mathscr 
-                              {H}(X,x_0)&\rightarrow E(\k (X),x_0)\\ \langle...
-l.1117     \end{align*}
-                       .
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1117: Undefined control sequence.
-<argument>  \varphi :\mathscr 
-                              {H}(X,x_0)&\rightarrow E(\k (X),x_0)\\ \langle...
-l.1117     \end{align*}
-                       .
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1141: Undefined control sequence.
-<argument> ... E(\k (X),x_0)&\rightarrow \mathscr 
-                                                  {H}(X,x_0),\\ [\xi ]&\maps...
-l.1141 \end{align*}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1141: Undefined control sequence.
-<argument> ... E(\k (X),x_0)&\rightarrow \mathscr 
-                                                  {H}(X,x_0),\\ [\xi ]&\maps...
-l.1141 \end{align*}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1157: Undefined control sequence.
-l.1157     $\pi_1(X,x_0)=\mathscr
-                                 {H}(X,x_0)$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[22.22]
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1190: Undefined control sequence.
-l.1190 ...jekcija iz točke $(1/2,2)\in I\times \R
-                                                  $. Ta retrakcija nam porod...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[23.23] [24.24]
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1282: Undefined control sequence.
-l.1282     Naj bo $n\in\N
-                         $. Če je $X$ minimalen model za
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Anže/Desktop/dipl/cela/Minimalni.tex:1299: Undefined control sequence.
-l.1299     Naj bo $n\in\N
-                         $. Končen $T_0-$prostor $X$ je minimalni model za ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[25.25]
-<./slike//v3.png, id=243, 155.79015pt x 64.32152pt>
+ [21.21 <./slike//sfere.png> <./slike//poti.png>] [22.22] [23.23] [24.24] [25.25]
+<./slike//v3.png, id=327, 155.79015pt x 64.32152pt>
 File: ./slike//v3.png Graphic file (type png)
 <use ./slike//v3.png>
-Package pdftex.def Info: ./slike//v3.png  used on input line 1320.
+Package pdftex.def Info: ./slike//v3.png  used on input line 1364.
 (pdftex.def)             Requested size: 234.73653pt x 96.92073pt.
-<./slike//grafi.png, id=244, 298.935pt x 46.81125pt>
+<./slike//grafi.png, id=328, 298.935pt x 46.81125pt>
 File: ./slike//grafi.png Graphic file (type png)
 <use ./slike//grafi.png>
-Package pdftex.def Info: ./slike//grafi.png  used on input line 1324.
+Package pdftex.def Info: ./slike//grafi.png  used on input line 1368.
 (pdftex.def)             Requested size: 341.43436pt x 53.47107pt.
- (Minimalni.bbl) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-pdfdoc.def
-File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-utf8.def
+ (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [26.26 <./slike//v3.png> <./slike//grafi.png>] (Minimalni.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Minimalni.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Minimalni.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  7CDB80F4C795EC6C4D2A242E748D9725;2325.
+) [26.26 <./slike//v3.png> <./slike//grafi.png>] (Bezjak-27191055-2022.aux)
+Package rerunfilecheck Info: File `Bezjak-27191055-2022.out' has not changed.
+(rerunfilecheck)             Checksum: 06B5D9CFF83B208B95135D5B16F28262;1129.
  ) 
 Here is how much of TeX's memory you used:
- 28998 strings out of 476334
- 551435 string characters out of 5787972
+ 32172 strings out of 476334
+ 597234 string characters out of 5787972
  1875382 words of memory out of 5000000
- 48588 multiletter control sequences out of 15000+600000
- 577890 words of font info for 85 fonts, out of 8000000 for 9000
+ 51692 multiletter control sequences out of 15000+600000
+ 583307 words of font info for 93 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 98i,18n,103p,1034b,1106s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Minimalni.pdf (26 pages, 1180003 bytes).
+ 98i,18n,103p,1049b,2552s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on Bezjak-27191055-2022.pdf (26 pages, 1254513 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
- 92 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 464 PDF objects out of 1000 (max. 8388607)
+ 121 named destinations out of 1000 (max. 500000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 
