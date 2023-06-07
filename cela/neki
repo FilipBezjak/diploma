@@ -1,0 +1,98 @@
+\begin{definicija}
+    Naj bo $K$ končen simplicialni kompleks. Končen $T_0$
+    prostor $\chi(K)$ prirejen $K$, je delno urejena množica simpleksov v $K$, urejena glede na inkluzijo.
+    Naj bo $\varphi:K\rightarrow L$ simplicialna preslikava, potem preslikavo  $\chi(\varphi):\chi(K)\rightarrow \chi(L)$ definiramo kot 
+    $\chi(\varphi)(\sigma)=\varphi(\sigma)$ za vsak simpleks $\sigma \in K$
+\end{definicija}
+
+\begin{lema}
+    Naj bo $f :X\rightarrow Y$ zvezna preslikava med dvema $T_0$ prostoroma, potem naslednji diagram komutira
+    
+    \[\begin{tikzcd}
+        {|\mathcal{K}(X)|}\arrow{r}{|\mathcal{K}(f)|} \arrow[swap]{d}{\mu_X} & {|\mathcal{K}(Y)|} \arrow{d}{\mu_Y} \\
+        X \arrow{r}{f} & Y
+    \end{tikzcd}
+    \]
+    
+    \label{lem:komutira}
+\end{lema}
+
+
+\begin{dokaz}
+    \begin{align*}
+        f\mu_X(\alpha)&=f(\text{min}(\text{supp}(\alpha)))\overset{*}{=}\text{min}(f(\text{supp}(\alpha))) \\
+        &=\text{min}(\text{supp}(|\mathcal{K}(f)|(\alpha)))=\mu_Y|\mathcal{K}(f)|(\alpha)
+    \end{align*}
+
+    Pri čemer $*$ velja zaradi zveznosti $f$, druge enakosti pa veljajo kar po definiciji.
+\end{dokaz}
+
+Če je $K$ končen kompleks, potem je $\mathcal{K}(\chi(K))$ prva baricentrična subdivizija.
+definirajmo $\chi$-\textit{McCordovo preslikavo} $\mu_K=\mu_{\chi(K)}S_K^{-1}: |K|\rightarrow \chi(K)$. 
+Ker je kompozitum dveh šibkih homotopskih ekvivalenc tudi šibka homotopska ekvivalenca, takoj sledi naslednji izrek.
+
+\begin{izrek}
+    $\chi$-McCordova preslkava $\mu_K$ je šibka homotopska
+    ekvivalenca za vsak končen simplicialni kompleks $K$.
+    \label{iz:xsibka}
+\end{izrek}
+
+
+\begin{trditev}
+    Naj bo $\varphi: K\rightarrow L$ simplicialna preslikava med končnima kompleksoma. Potem naslednji diagram komutira do homotopije natančno
+  
+\[\begin{tikzcd}
+    {|K|} \arrow{r}{|\varphi|} \arrow[swap]{d}{\mu_K} & {|L|} \arrow{d}{\mu_L} \\
+    \chi(K) \arrow{r}{\chi(\varphi)} & \chi(L)
+    \end{tikzcd}
+    \]
+\end{trditev}
+
+\begin{dokaz}
+    Najprej poiščimo homotopijo med $|\varphi|s_K$ in $s_L|\varphi'|$, kjer je $\varphi'=\mathcal{K}(\chi(\varphi))$ preslikava med baricentričnima subdivizijama $K'$ in $L'$.
+    Naj bo $S=\{\sigma_1,\sigma_2,\cdots,\sigma_r\}$ simpleks 
+    v $K'$ in naj bo $\sigma_1 \subsetneq \sigma_2 \subsetneq 
+    \cdots \subsetneq \sigma_r$ veriga simpleksov iz $K$. Naj bo $\alpha$
+    točka v zaprtem simpleksu $\overline{S}$. Potem je $S_K(\alpha)
+    \in \overline{\sigma_r}\subseteq |K|$ in  $|\varphi|S_K(\alpha) \in 
+    \overline{\varphi(\sigma_r)}\subseteq |L|.$ \
+    Velja pa tudi $|\varphi'|(\alpha)\in \{\varphi(\sigma_1)$$,\varphi(\sigma_2),\cdots,\varphi(\sigma_r)\}$
+    in potem $S_L|\varphi'|(\alpha) \in \overline{\varphi(\sigma_r)}.$ Zato 
+    je linearna homotopija
+
+        $$
+        H:|K'|\times I \rightarrow |L| \\
+        H: (\alpha,t) \mapsto (1-t)|\varphi|S_K(\alpha) + tS_L|\varphi'|(\alpha)\\
+        $$
+
+zvezna in dobro definirana in zato $|\varphi|S_K(\alpha) \simeq 
+S_L|\varphi'|$. Iz leme \ref{lem:komutira} sledi, da naslednji diagram komutira 
+\[\begin{tikzcd}[row sep=large, column sep=large]
+    {|\mathcal{K}(\chi(K))|}\arrow{r}
+   {|\mathcal{K}(\chi(\varphi))|} \arrow[swap]{d}{\mu_{\chi(K)}} & {|\mathcal{K}(\chi(L))|} \arrow{d}{\mu_{\chi(L)}} \\
+   \chi(K) \arrow{r}{\chi(\varphi)} & \chi(L)
+   \end{tikzcd}
+   \]
+in zato
+
+\begin{align*}
+    \mu_L|\varphi|=\mu_{\chi(L)}S_L^{-1}|\varphi| \simeq \mu_{\chi(L)}|\varphi'&|S_K^{-1} \\
+    =\chi(\varphi)\mu_{\chi(K)}S_K^{-1} =\chi(\varphi)\mu_K&
+  \end{align*}
+\end{dokaz}
+
+Iz lastnosti 2 od 3 in dejstva, da je preslikava, ki je homotopna šibki homotopski ekvivalenci isto šibka homotopska ekvivalenca, takoj sledi naslednja trditev.
+
+\begin{trditev}
+    Naj bo $\varphi : K\rightarrow L$ simplicialna preslikava med končnima kompleksoma, potem je $|\varphi|$ šibka homotopska ekvivalenca, natanko tedaj, ko je $\chi(\varphi)$ šibka homotopska ekvivalenca.
+\end{trditev}
+
+Iz izrekov \ref{iz:xsibka} in \ref{iz:ksibka} pa takoj sledi naslednji posledici.
+
+\begin{posledica}
+    \begin{itemize}
+
+        \item Naj bosta $X$ in $Y$ končna $T_0$ prostora. Potem sta $X$ in $Y$ šibko homotopsko ekvivalentna, natanko tedaj, ko sta $|\mathcal{K}(X)|$ in $|\mathcal{K}(Y)|$ homotopsko ekvivalentna.
+        \item Naj bosta $K$ in $L$ končna simplicialna kompleksa. Potem sta $|K|$ in $|L|$ homotopsko ekvivalentna, natanko tedaj, ko sta $\chi(K)$ in $\chi(L)$ šibko homotopsko ekvivalentna
+    \end{itemize}
+\end{posledica}

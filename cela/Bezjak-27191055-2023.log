@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.4)  15 MAY 2023 02:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.4)  7 JUN 2023 15:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Anže/Desktop/dipl/cela/Bezjak-27191055-2022.tex
-(c:/Users/Anže/Desktop/dipl/cela/Bezjak-27191055-2022.tex
+**c:/Users/Anže/Desktop/dipl/cela/Bezjak-27191055-2023.tex
+(c:/Users/Anže/Desktop/dipl/cela/Bezjak-27191055-2023.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (fmfdelo.cls
 Document Class: fmfdelo 2016/10/13 Zakljucna dela na FMF
@@ -730,7 +730,7 @@ Package: colorprofiles 2018/11/01 v1.0.1 color profiles for PDF/X and PDF/A supp
 (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/generic/colorprofiles\colorprofiles.tex)) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\AdobeColorProfiles.tex) (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\8bit.def
 File: 8bit.def 2008/03/30 v1.1d Input encoding file
 )
-** pdfx: No file Bezjak-27191055-2022.xmpdata . Metadata will be incomplete!
+** pdfx: No file Bezjak-27191055-2023.xmpdata . Metadata will be incomplete!
 <<sRGB.icc>> (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/pdfx\8bit.def
 File: 8bit.def 2008/03/30 v1.1d Input encoding file
 )
@@ -754,8 +754,8 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count341
 \l__pdf_internal_box=\box71
-) (Bezjak-27191055-2022.aux)
-\openout1 = `Bezjak-27191055-2022.aux'.
+) (Bezjak-27191055-2023.aux)
+\openout1 = `Bezjak-27191055-2023.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
 LaTeX Font Info:    ... okay on input line 105.
@@ -810,9 +810,9 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 105
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 Package hyperref Info: Link coloring OFF on input line 105.
- (Bezjak-27191055-2022.out) (Bezjak-27191055-2022.out)
+ (Bezjak-27191055-2023.out) (Bezjak-27191055-2023.out)
 \@outlinefile=\write5
-\openout5 = `Bezjak-27191055-2022.out'.
+\openout5 = `Bezjak-27191055-2023.out'.
 
  (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -837,9 +837,9 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 105.
- [1.1] (Bezjak-27191055-2022.toc)
+ [1.1] (Bezjak-27191055-2023.toc)
 \tf@toc=\write6
-\openout6 = `Bezjak-27191055-2022.toc'.
+\openout6 = `Bezjak-27191055-2023.toc'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -855,140 +855,150 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 <./slike//def-retract.png, id=108, 355.6903pt x 120.8128pt>
 File: ./slike//def-retract.png Graphic file (type png)
 <use ./slike//def-retract.png>
-Package pdftex.def Info: ./slike//def-retract.png  used on input line 165.
+Package pdftex.def Info: ./slike//def-retract.png  used on input line 164.
 (pdftex.def)             Requested size: 426.79134pt x 144.9617pt.
  [5.5 <./slike//def-retract.png>] [6.6] [7.7]
-<./slike//sk.png, id=139, 187.14127pt x 71.35712pt>
-File: ./slike//sk.png Graphic file (type png)
-<use ./slike//sk.png>
-Package pdftex.def Info: ./slike//sk.png  used on input line 374.
-(pdftex.def)             Requested size: 298.75262pt x 113.92326pt.
- [8.8 <./slike//sk.png>]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 434.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 437.
  (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-<./slike//lomljenki2.png, id=151, 186.04552pt x 63.51804pt>
+) [8.8]
+<./slike//lomljenki2.png, id=149, 186.04552pt x 63.51804pt>
 File: ./slike//lomljenki2.png Graphic file (type png)
 <use ./slike//lomljenki2.png>
-Package pdftex.def Info: ./slike//lomljenki2.png  used on input line 444.
+Package pdftex.def Info: ./slike//lomljenki2.png  used on input line 446.
 (pdftex.def)             Requested size: 384.10959pt x 131.14903pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9.9]
-<./slike//open.png, id=162, 199.02702pt x 196.89307pt>
+ [9.9 <./slike//lomljenki2.png>]
+<./slike//open.png, id=161, 199.02702pt x 196.89307pt>
 File: ./slike//open.png Graphic file (type png)
 <use ./slike//open.png>
-Package pdftex.def Info: ./slike//open.png  used on input line 498.
+Package pdftex.def Info: ./slike//open.png  used on input line 500.
 (pdftex.def)             Requested size: 128.0387pt x 126.67207pt.
-<./slike//hasse.png, id=163, 573.57143pt x 282.57953pt>
+<./slike//hasse.png, id=162, 573.57143pt x 282.57953pt>
 File: ./slike//hasse.png Graphic file (type png)
 <use ./slike//hasse.png>
-Package pdftex.def Info: ./slike//hasse.png  used on input line 502.
+Package pdftex.def Info: ./slike//hasse.png  used on input line 504.
 (pdftex.def)             Requested size: 533.48915pt x 262.83505pt.
 
-Overfull \hbox (320.09349pt too wide) in paragraph at lines 502--503
+Overfull \hbox (320.09349pt too wide) in paragraph at lines 504--505
  [][] |
  []
 
-[10.10 <./slike//lomljenki2.png>] [11.11 <./slike//open.png> <./slike//hasse.png>] [12.12]
-<./slike//xy.png, id=199, 200.06792pt x 91.80243pt>
-File: ./slike//xy.png Graphic file (type png)
-<use ./slike//xy.png>
-Package pdftex.def Info: ./slike//xy.png  used on input line 666.
-(pdftex.def)             Requested size: 256.0774pt x 117.5053pt.
+[10.10 <./slike//open.png> <./slike//hasse.png>] [11.11] [12.12]
+<./slike//hasse0.png, id=197, 143.3355pt x 81.04564pt>
+File: ./slike//hasse0.png Graphic file (type png)
+<use ./slike//hasse0.png>
+Package pdftex.def Info: ./slike//hasse0.png  used on input line 677.
+(pdftex.def)             Requested size: 213.39566pt x 120.66414pt.
+<./slike//hasse1.png, id=198, 171.01099pt x 89.70724pt>
+File: ./slike//hasse1.png Graphic file (type png)
+<use ./slike//hasse1.png>
+Package pdftex.def Info: ./slike//hasse1.png  used on input line 684.
+(pdftex.def)             Requested size: 213.39566pt x 111.9476pt.
+<./slike//hasse2.png, id=199, 157.46904pt x 57.18613pt>
+File: ./slike//hasse2.png Graphic file (type png)
+<use ./slike//hasse2.png>
+Package pdftex.def Info: ./slike//hasse2.png  used on input line 689.
+(pdftex.def)             Requested size: 213.39566pt x 77.50333pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./slike//prv.png, id=200, 196.99854pt x 71.57242pt>
-File: ./slike//prv.png Graphic file (type png)
-<use ./slike//prv.png>
-Package pdftex.def Info: ./slike//prv.png  used on input line 673.
-(pdftex.def)             Requested size: 256.0774pt x 93.04956pt.
-<./slike//drug.png, id=201, 175.23383pt x 72.27pt>
-File: ./slike//drug.png Graphic file (type png)
-<use ./slike//drug.png>
-Package pdftex.def Info: ./slike//drug.png  used on input line 674.
-(pdftex.def)             Requested size: 256.0774pt x 105.62025pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13.13] [14.14 <./slike//xy.png> <./slike//prv.png> <./slike//drug.png>] [15.15]
-<./slike//simp.png, id=237, 175.99486pt x 69.22247pt>
+[13.13 <./slike//hasse0.png> <./slike//hasse1.png>] [14.14 <./slike//hasse2.png>]
+<./slike//simp.png, id=228, 175.99486pt x 69.22247pt>
 File: ./slike//simp.png Graphic file (type png)
 <use ./slike//simp.png>
-Package pdftex.def Info: ./slike//simp.png  used on input line 830.
+Package pdftex.def Info: ./slike//simp.png  used on input line 841.
 (pdftex.def)             Requested size: 426.79134pt x 167.8896pt.
- [16.16 <./slike//simp.png>] [17.17]
-<./slike//homeo2.png, id=256, 180.59116pt x 72.60536pt>
+ [15.15 <./slike//simp.png>]
+<./slike//homeo2.png, id=235, 180.59116pt x 72.60536pt>
 File: ./slike//homeo2.png Graphic file (type png)
 <use ./slike//homeo2.png>
-Package pdftex.def Info: ./slike//homeo2.png  used on input line 951.
+Package pdftex.def Info: ./slike//homeo2.png  used on input line 870.
 (pdftex.def)             Requested size: 256.0774pt x 102.96957pt.
- [18.18 <./slike//homeo2.png>]
-<./slike//spoj.png, id=264, 215.40442pt x 97.92175pt>
+ [16.16 <./slike//homeo2.png>]
+<./slike//spoj.png, id=243, 215.40442pt x 97.92175pt>
 File: ./slike//spoj.png Graphic file (type png)
 <use ./slike//spoj.png>
-Package pdftex.def Info: ./slike//spoj.png  used on input line 991.
+Package pdftex.def Info: ./slike//spoj.png  used on input line 910.
 (pdftex.def)             Requested size: 256.0774pt x 116.42671pt.
 
-Underfull \hbox (badness 8056) in paragraph at lines 992--992
+Underfull \hbox (badness 8056) in paragraph at lines 911--911
 []\T1/lmr/m/sc/12 Slika 6.|\T1/lmr/m/n/12 Ge-o-me-trij-ska re-a-li-za-cija sim-pli-ci-al-nega spoja dveh
  []
 
 
-Overfull \hbox (1.0586pt too wide) in paragraph at lines 1026--1031
-[]\T1/lmr/m/n/12 Vemo �e, da je $\U/msb/m/n/12 S[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 S[]\OT1/lmr/m/n/12 )$ \T1/lmr/m/n/12 �ibko ho-mo-top-sko ek-vi-va-len-ten $\OMS/lmsy/m/n/12 jK\OT1/lmr/m/n/12 (\U/msb/m/n/12 S[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 S[]\OT1/lmr/m/n/12 ))\OMS/lmsy/m/n/12 j$\T1/lmr/m/n/12 , po opombi|
+Overfull \hbox (1.0586pt too wide) in paragraph at lines 945--950
+[]\T1/lmr/m/n/12 Vemo �e, da je $\U/msb/m/n/12 S[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 S[]\OT1/lmr/m/n/12 )$ \T1/lmr/m/n/12 �ibko ho-mo-top-sko ek-vi-va-len-ten $\OMS/lmsy/m/n/12 jK\OT1/lmr/m/n/12 (\U/msb/m/n/12 S[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 S[]\OT1/lmr/m/n/12 ))\OMS/lmsy/m/n/12 j$\T1/lmr/m/n/12 , po opombi |
  []
 
-[19.19 <./slike//spoj.png>]
-<./slike//sfere.png, id=279, 217.86394pt x 71.96887pt>
+[17.17 <./slike//spoj.png>]
+<./slike//minsfera-prva.png, id=257, 40.91055pt x 70.04141pt>
+File: ./slike//minsfera-prva.png Graphic file (type png)
+<use ./slike//minsfera-prva.png>
+Package pdftex.def Info: ./slike//minsfera-prva.png  used on input line 985.
+(pdftex.def)             Requested size: 85.35696pt x 146.15079pt.
+<./slike//minsfera_vodoravna.png, id=258, 44.35779pt x 71.8928pt>
+File: ./slike//minsfera_vodoravna.png Graphic file (type png)
+<use ./slike//minsfera_vodoravna.png>
+Package pdftex.def Info: ./slike//minsfera_vodoravna.png  used on input line 1002.
+(pdftex.def)             Requested size: 85.35696pt x 138.3606pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18.18 <./slike//minsfera-prva.png>]
+<./slike//minsfera-zadnja.png, id=267, 41.89925pt x 67.6834pt>
+File: ./slike//minsfera-zadnja.png Graphic file (type png)
+<use ./slike//minsfera-zadnja.png>
+Package pdftex.def Info: ./slike//minsfera-zadnja.png  used on input line 1024.
+(pdftex.def)             Requested size: 85.35696pt x 137.88637pt.
+<./slike//sfere.png, id=268, 217.86394pt x 71.96887pt>
 File: ./slike//sfere.png Graphic file (type png)
 <use ./slike//sfere.png>
-Package pdftex.def Info: ./slike//sfere.png  used on input line 1093.
+Package pdftex.def Info: ./slike//sfere.png  used on input line 1037.
 (pdftex.def)             Requested size: 341.43436pt x 112.79807pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20.20]
-<./slike//poti.png, id=286, 182.96928pt x 104.27528pt>
+
+Underfull \vbox (badness 1292) has occurred while \output is active []
+
+ [19.19 <./slike//minsfera_vodoravna.png> <./slike//minsfera-zadnja.png>]
+<./slike//poti.png, id=278, 182.96928pt x 104.27528pt>
 File: ./slike//poti.png Graphic file (type png)
 <use ./slike//poti.png>
-Package pdftex.def Info: ./slike//poti.png  used on input line 1137.
+Package pdftex.def Info: ./slike//poti.png  used on input line 1081.
 (pdftex.def)             Requested size: 256.0774pt x 145.93982pt.
- [21.21 <./slike//sfere.png> <./slike//poti.png>] [22.22] [23.23] [24.24] [25.25]
-<./slike//v3.png, id=327, 155.79015pt x 64.32152pt>
+ [20.20 <./slike//sfere.png> <./slike//poti.png>] [21.21] [22.22] [23.23] [24.24]
+<./slike//v3.png, id=318, 155.79015pt x 64.32152pt>
 File: ./slike//v3.png Graphic file (type png)
 <use ./slike//v3.png>
-Package pdftex.def Info: ./slike//v3.png  used on input line 1364.
+Package pdftex.def Info: ./slike//v3.png  used on input line 1310.
 (pdftex.def)             Requested size: 234.73653pt x 96.92073pt.
-<./slike//grafi.png, id=328, 298.935pt x 46.81125pt>
+<./slike//grafi.png, id=319, 298.935pt x 46.81125pt>
 File: ./slike//grafi.png Graphic file (type png)
 <use ./slike//grafi.png>
-Package pdftex.def Info: ./slike//grafi.png  used on input line 1368.
+Package pdftex.def Info: ./slike//grafi.png  used on input line 1314.
 (pdftex.def)             Requested size: 341.43436pt x 53.47107pt.
  (C:\Users\Anže\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [26.26 <./slike//v3.png> <./slike//grafi.png>] (Bezjak-27191055-2022.aux)
-Package rerunfilecheck Info: File `Bezjak-27191055-2022.out' has not changed.
-(rerunfilecheck)             Checksum: 06B5D9CFF83B208B95135D5B16F28262;1129.
+) [25.25 <./slike//v3.png> <./slike//grafi.png>] (Bezjak-27191055-2023.aux)
+Package rerunfilecheck Info: File `Bezjak-27191055-2023.out' has not changed.
+(rerunfilecheck)             Checksum: 0B5576B68ECC7D8EDD40D4947A57E88C;1120.
  ) 
 Here is how much of TeX's memory you used:
- 32172 strings out of 476334
- 597234 string characters out of 5787972
- 1875382 words of memory out of 5000000
- 51692 multiletter control sequences out of 15000+600000
+ 32051 strings out of 476334
+ 594667 string characters out of 5787972
+ 1877382 words of memory out of 5000000
+ 51574 multiletter control sequences out of 15000+600000
  583307 words of font info for 93 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 98i,18n,103p,1049b,2552s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on Bezjak-27191055-2022.pdf (26 pages, 1254513 bytes).
+ 98i,18n,103p,1056b,2552s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Anže/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on Bezjak-27191055-2023.pdf (25 pages, 1220794 bytes).
 PDF statistics:
- 464 PDF objects out of 1000 (max. 8388607)
- 121 named destinations out of 1000 (max. 500000)
- 200 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 455 PDF objects out of 1000 (max. 8388607)
+ 116 named destinations out of 1000 (max. 500000)
+ 210 words of extra memory for PDF output out of 10000 (max. 10000000)
 
