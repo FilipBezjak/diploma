@@ -9,5 +9,5 @@
 \contentsline {section}{\tocsection {}{7}{Minimalni model sfere}}{17}{section.7}%
 \contentsline {section}{\tocsection {}{8}{Zanke v Hassejevem diagramu}}{20}{section.8}%
 \contentsline {section}{\tocsection {}{9}{Minimalni modeli grafov}}{22}{section.9}%
-\contentsline {section}{\tocsection {}{}{Slovar strokovnih izrazov}}{25}{section*.18}%
-\contentsline {section}{\tocsection {}{}{Literatura}}{25}{section*.19}%
+\contentsline {section}{\tocsection {}{}{Slovar strokovnih izrazov}}{25}{section*.19}%
+\contentsline {section}{\tocsection {}{}{Literatura}}{26}{section*.20}%
